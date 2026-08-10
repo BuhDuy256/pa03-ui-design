@@ -1,0 +1,876 @@
+<title>Hưng — Scenario 3 Drawing Sheets</title>
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --edge:#d6dae1; --edge-soft:#e8ebef;
+  --fg:#1b1f26; --fg-dim:#5c6470; --fg-faint:#878f9b;
+  --accent:#1d4ed8; --accent-soft:#e8edfb;
+  --pen-black:#16181d; --pen-green:#0f7a3d; --pen-red:#c62828; --pen-blue:#1552b8;
+  --paper:#ffffff; --paper-edge:#16181d;
+  --ok:#0f7a3d; --warn:#b45309;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14161a; --panel:#1d2026; --edge:#333842; --edge-soft:#272b33;
+    --fg:#e9ecf1; --fg-dim:#a5adba; --fg-faint:#7b838f;
+    --accent:#7ea2ff; --accent-soft:#1e2740; --ok:#4ade80; --warn:#fbbf24;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14161a; --panel:#1d2026; --edge:#333842; --edge-soft:#272b33;
+  --fg:#e9ecf1; --fg-dim:#a5adba; --fg-faint:#7b838f;
+  --accent:#7ea2ff; --accent-soft:#1e2740; --ok:#4ade80; --warn:#fbbf24;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.55;font-size:16px}
+.wrap{max-width:1120px;margin:0 auto;padding:32px 20px 96px}
+header.top{border-bottom:2px solid var(--fg);padding-bottom:20px;margin-bottom:8px}
+.eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--fg-dim);margin:0 0 8px}
+h1{font-size:clamp(26px,4vw,38px);margin:0 0 6px;letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--fg-dim);margin:0;max-width:64ch}
+.standby{background:var(--warn);color:#fff;display:inline-block;padding:3px 10px;border-radius:5px;
+  font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px}
+.bar{position:sticky;top:0;z-index:20;background:var(--panel);border:1px solid var(--edge);
+  border-radius:10px;padding:12px 16px;margin:20px 0 28px;display:flex;gap:16px;
+  align-items:center;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.bar strong{font-variant-numeric:tabular-nums}
+.track{flex:1;min-width:160px;height:8px;background:var(--edge-soft);border-radius:99px;overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+button.mini{font:inherit;font-size:13px;padding:5px 12px;border-radius:7px;cursor:pointer;
+  border:1px solid var(--edge);background:transparent;color:var(--fg-dim)}
+button.mini:hover{border-color:var(--accent);color:var(--accent)}
+button.mini:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0 0 20px}
+.legend div{background:var(--panel);border:1px solid var(--edge);border-left-width:5px;
+  border-radius:8px;padding:9px 13px;font-size:14px}
+.lg-k{border-left-color:var(--pen-black)!important}
+.lg-g{border-left-color:var(--pen-green)!important}
+.lg-r{border-left-color:var(--pen-red)!important}
+.lg-b{border-left-color:var(--pen-blue)!important}
+.callout{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;
+  padding:14px 18px;margin:0 0 30px;font-size:14.5px}
+.callout p{margin:0 0 8px} .callout p:last-child{margin:0}
+h2.proto{font-size:24px;margin:46px 0 4px;padding-top:22px;border-top:1px solid var(--edge);letter-spacing:-.01em}
+h2.proto:first-of-type{border-top:0}
+.proto-note{color:var(--fg-dim);margin:0 0 22px;font-size:15px;max-width:70ch}
+h3.grp{font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--fg-faint);margin:34px 0 14px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.grid.sb{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.item{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:14px;
+  display:flex;flex-direction:column;gap:11px}
+.item.done{opacity:.5}
+.item.fac{border-color:var(--pen-red);border-width:2px}
+.item.wide{grid-column:1/-1}
+.hd{display:flex;gap:9px;align-items:flex-start}
+.hd input{width:19px;height:19px;margin:2px 0 0;accent-color:var(--ok);cursor:pointer;flex:none}
+.hd label{font-weight:650;font-size:15px;cursor:pointer;line-height:1.3}
+.hd .no{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+  color:var(--fg-faint);display:block;font-weight:400;letter-spacing:.06em}
+.why{font-size:13.5px;color:var(--fg-dim);margin:0}
+.why b{color:var(--fg)}
+.flag{font-size:13px;border-left:3px solid var(--warn);padding:6px 0 6px 10px;margin:0;color:var(--fg-dim)}
+.flag.red{border-left-color:var(--pen-red)}
+.stage{display:flex;justify-content:center;padding:6px 0;gap:12px;flex-wrap:wrap;flex-direction:column;align-items:center}
+.phone{background:var(--paper);border:2.5px solid var(--paper-edge);color:var(--pen-black);
+  display:flex;flex-direction:column;width:168px;height:298px;border-radius:16px;padding:14px 12px;position:relative}
+.gest{background:var(--paper);border:2.5px solid var(--paper-edge);border-radius:8px;width:168px;
+  height:96px;display:block}
+.scr{flex:1;display:flex;flex-direction:column;gap:7px;text-align:center;align-items:center;justify-content:flex-start}
+.scr.mid{justify-content:center}
+.t-ttl{font-size:13.5px;font-weight:700}
+.t-huge{font-size:27px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.t-big{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.t-md{font-size:13px} .t-sm{font-size:11.5px}
+.g{color:var(--pen-green)} .r{color:var(--pen-red)} .b{color:var(--pen-blue)}
+.wt{font-weight:700}
+.btn{border:2px solid var(--pen-black);border-radius:7px;padding:7px 8px;font-size:11.5px;
+  font-weight:700;width:100%;text-align:center}
+.btn.tall{padding:11px 8px}
+.lst{width:100%;text-align:left;font-size:11px;display:flex;flex-direction:column;gap:5px}
+.blank{flex:1}
+.lock{position:absolute;top:12px;right:13px;font-size:13px}
+.ring{font-size:32px;line-height:1}
+.faccard{background:var(--paper);border:2.5px dashed var(--pen-red);border-radius:10px;
+  padding:14px;width:100%;color:var(--pen-black)}
+.faccard h4{margin:0 0 10px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--pen-red);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.twopane{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.twopane figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.twopane figcaption{font-size:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--pen-red);font-weight:700}
+.mini-phone{background:var(--paper);border:2px solid var(--paper-edge);border-radius:11px;
+  width:118px;height:150px;padding:10px 8px;display:flex;flex-direction:column}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.frame{background:var(--paper);border:2.5px solid var(--paper-edge);border-radius:8px;
+  width:100%;aspect-ratio:4/3;display:block}
+.cap{font-size:13px;color:var(--fg);margin:0;line-height:1.45}
+.cap b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;
+  color:var(--fg-faint);display:block;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.card-tpl{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:18px 20px;margin-top:14px}
+.card-tpl dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:14.5px}
+.card-tpl dt{font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--fg-dim);padding-top:3px}
+.card-tpl dd{margin:0}
+footer.end{margin-top:56px;border-top:2px solid var(--fg);padding-top:22px;font-size:14.5px;color:var(--fg-dim)}
+footer.end ul{padding-left:20px} footer.end li{margin:5px 0}
+footer.end strong{color:var(--fg)}
+@media print{
+  body{background:#fff;color:#000}
+  .bar,.legend,button.mini{display:none}
+  .wrap{max-width:none;padding:0}
+  .item{break-inside:avoid;page-break-inside:avoid;border-color:#999}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .phone{width:78mm;height:139mm}
+  h2.proto{break-before:page;page-break-before:always}
+  h2.proto:first-of-type{break-before:auto;page-break-before:auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">PA3 · Group02 · Drawing Workspace</p>
+  <span class="standby">Standby — descoped, ready to draw</span>
+  <h1>Hưng — Scenario 3</h1>
+  <p class="sub">Control the run without stopping or mis-tapping. Persona: Anh · UC-05.
+  15 participant sheets, 12 storyboard frames, 3 explanation cards, 3 facilitator cards.
+  Every pre-flight fix is already applied — trace and go.</p>
+</header>
+
+<div class="bar">
+  <strong><span id="n">0</span> / 30</strong>
+  <span class="track"><i id="fill"></i></span>
+  <button class="mini" id="reset">Clear all</button>
+  <button class="mini" onclick="window.print()">Print</button>
+</div>
+
+<div class="legend">
+  <div class="lg-k"><b>Black</b> — frames, labels, body text</div>
+  <div class="lg-g"><b>Green</b> — ● running, ✓ success</div>
+  <div class="lg-r"><b>Red</b> — alerts, lock states, FACILITATOR headers</div>
+  <div class="lg-b"><b>Blue</b> — ♫ music</div>
+</div>
+
+<div class="callout">
+  <p><b>This block is on standby.</b> Scenario 3 was cut when the team dropped to two people.
+  If time appears, this is drawable with no further design work — but draw it in prototype
+  order (3A complete, then 3B, then 3C). <b>A half-finished 3B is worth less than a finished
+  3A</b>, because a prototype with missing states cannot be tested at all.</p>
+  <p><b>If you draw these, they need videos too.</b> R1 asks for a YouTube clip demonstrating
+  <i>every</i> paper prototype — three more sheets means three more recordings, uploads, and
+  incognito link checks. Do not draw them on the night before if the videos cannot follow.</p>
+</div>
+
+<p class="flag"><b>Pen, not pencil. Unlined paper.</b> All Scenario 3 sheets are phone-shaped
+≈ 9 × 16 cm. Label the back of every sheet with its code before you move on.</p>
+
+<!-- ============================= 3A ============================= -->
+<h2 class="proto">3A — Run Lock Interface</h2>
+<p class="proto-note"><b>How it differs:</b> control stays on the phone but is
+<b>locked behind a hold</b>, so accidental input is impossible. 3B moves control to another
+device; 3C removes the target instead of locking it.</p>
+
+<div class="callout">
+  <p><b>The lock is the idea — do not draw this as "bigger buttons".</b> The original had
+  nothing locked, which reduced 3A to a sizing tweak and would not survive a grader asking
+  what makes it different from 3B and 3C. <b>A tap does nothing. A hold is the only way in.</b></p>
+  <p>It also asked for a tap <i>and then</i> a hold — two deliberate steps for an action whose
+  whole point is speed while running. Holding <i>is</i> the confirmation.</p>
+</div>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c1"><label for="c1"><span class="no">3A · Sheet 1</span>Run Screen (locked)</label></div>
+    <div class="stage"><div class="phone"><span class="lock r">🔒</span><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="t-md">5.2 km</div>
+      <div class="blank"></div>
+      <div class="btn tall">HOLD TO PAUSE</div>
+      <div class="btn tall">HOLD FOR MUSIC</div>
+    </div></div></div>
+    <p class="why">Locked running screen. Padlock small but unmistakable; <b>buttons edge to
+    edge, ~2 cm tall.</b></p>
+    <p class="flag red">Hold ≈1.5 s → Sheet 2. <b>A tap does nothing</b> → card F-3A.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c2"><label for="c2"><span class="no">3A · Sheet 2</span>Holding</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-big">Holding…</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="ring">◐</div>
+      <div class="t-md wt">1.2 s</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-sm">Keep holding to pause</div>
+    </div></div></div>
+    <p class="why">Confirms the hold registered, so the runner is not left wondering whether
+    the screen is broken or their finger is in the wrong place.</p>
+    <p class="flag"><b>Draw ◐ as a ring filling clockwise</b> — a partly shaded circle. It is
+    the only moving element in 3A and the only thing that tells the runner it heard them.
+    Released early → card F-3A.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c3"><label for="c3"><span class="no">3A · Sheet 3</span>Paused</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">PAUSED</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-huge">5.2<span class="t-md"> km</span></div>
+      <div class="blank"></div>
+      <div class="btn tall">RESUME</div>
+      <div class="btn tall">END RUN</div>
+    </div></div></div>
+    <p class="why">Only the necessary actions. <b>Tap RESUME.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c4"><label for="c4"><span class="no">3A · Sheet 4</span>Music Controls</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Music Controls</div>
+      <div class="t-md b">♫ Track</div>
+      <div class="blank"></div>
+      <div class="btn tall">SKIP TRACK</div>
+      <div class="btn tall">PLAY / PAUSE</div>
+      <div class="btn tall">BACK</div>
+    </div></div></div>
+    <p class="why">Quick music control <b>at 3A's own target size</b>. <b>Tap BACK.</b></p>
+    <p class="flag red">Never a <span class="mono">&lt;&lt; ▶ &gt;&gt;</span> transport bar —
+    three small targets on the one prototype whose whole thesis is that small targets cause
+    mis-taps. <span class="mono">&lt;&lt;</span> is dropped: skipping backwards mid-run is the
+    rarest action here and the least worth a target.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c5"><label for="c5"><span class="no">3A · Sheet 5</span>Resume</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:03<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md g wt">▶ RESUMED</div>
+      <div class="t-md b">♫ MUSIC</div>
+    </div></div></div>
+    <p class="why">Back to the run. <b>Keep going.</b></p>
+  </div>
+</div>
+
+<h3 class="grp">Facilitator card — separate pile</h3>
+<div class="grid">
+  <div class="item fac wide" style="max-width:520px">
+    <div class="hd"><input type="checkbox" id="f1"><label for="f1"><span class="no">F-3A · not one of the 15</span>Tap ignored / hold released</label></div>
+    <div class="stage"><div class="faccard">
+      <h4>Facilitator — never in the participant stack</h4>
+      <div class="twopane">
+        <figure>
+          <div class="mini-phone"><div class="scr mid">
+            <div class="t-sm"><span class="g">●</span> RUNNING <span class="r">🔒</span></div>
+            <div class="t-big">6:02</div>
+            <div class="t-sm">(nothing happens)</div>
+          </div></div>
+          <figcaption>Tap ignored</figcaption>
+        </figure>
+        <figure>
+          <div class="mini-phone"><div class="scr mid">
+            <div class="t-sm"><span class="g">●</span> RUNNING <span class="r">🔒</span></div>
+            <div class="t-big">6:02</div>
+            <div class="t-sm">Hold cancelled</div>
+          </div></div>
+          <figcaption>Released early</figcaption>
+        </figure>
+      </div>
+      <p style="font-size:12px;margin:11px 0 0;line-height:1.5"><b>Say nothing.</b> Let the
+      silence be the feedback. Record: did they work out that a hold was needed, and how long
+      it took.</p>
+    </div></div>
+    <p class="why"><b>Why it exists:</b> an ignored tap is not an error in 3A — it is the
+    feature working. But it is also the moment a participant is most likely to think the
+    prototype is broken. How quickly someone moves from tapping to holding, unprompted, is the
+    clearest measure of whether a locked interface is learnable.</p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s1"><label for="s1"><span class="no">3A · Frame 1 · Context</span>Screen locked</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner with a locked phone on an armband">
+      <path d="M14 130h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="42" r="10"/><path d="M60 52l-3 32"/>
+        <path d="M59 62l15 6M59 62l-14 9"/><path d="M57 84l-14 26M57 84l16 20 2 14"/>
+      </g>
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="112" y="44" width="46" height="62" rx="8"/>
+      </g>
+      <g fill="none" stroke="#c62828" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="126" y="74" width="18" height="14" rx="2"/><path d="M129 74v-5a6 6 0 0112 0v5"/>
+      </g>
+      <text x="135" y="122" font-size="10" fill="#c62828" text-anchor="middle" font-family="sans-serif">LOCKED</text>
+    </svg>
+    <p class="cap"><b>Context</b>Anh runs with the screen locked.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s2"><label for="s2"><span class="no">3A · Frame 2 · Trigger</span>Tap does nothing</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A finger tapping a locked screen with no effect">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="60" y="20" width="62" height="104" rx="9"/>
+      </g>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M136 92c0-10 7-14 7-22s-10-10-10-2v28l-9 5 6 17h22l4-20z"/>
+      </g>
+      <circle cx="98" cy="66" r="9" fill="none" stroke="#c62828" stroke-width="2.2" stroke-dasharray="4 4"/>
+      <g stroke="#c62828" stroke-width="3" stroke-linecap="round"><path d="M78 50l14 14M92 50l-14 14"/></g>
+      <text x="91" y="140" font-size="11" fill="#c62828" text-anchor="middle" font-family="sans-serif">nothing happens</text>
+    </svg>
+    <p class="cap"><b>Trigger</b>He taps to pause. Nothing happens.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s3"><label for="s3"><span class="no">3A · Frame 3 · Response</span>The ring fills</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A held finger with a progress ring filling">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="54" y="18" width="62" height="106" rx="9"/>
+      </g>
+      <circle cx="85" cy="62" r="21" fill="none" stroke="#d5d5d5" stroke-width="6"/>
+      <path d="M85 41a21 21 0 0117 33" fill="none" stroke="#0f7a3d" stroke-width="6" stroke-linecap="round"/>
+      <text x="85" y="98" font-size="12" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">1.2 s</text>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M136 88c0-10 7-14 7-22s-10-10-10-2v28l-9 5 6 17h22l4-20z"/>
+      </g>
+      <text x="90" y="140" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">holding…</text>
+    </svg>
+    <p class="cap"><b>Response</b>He holds instead, and the ring fills.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s4"><label for="s4"><span class="no">3A · Frame 4 · Outcome</span>Paused on purpose</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner stationary with the run paused">
+      <path d="M14 130h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="58" cy="44" r="10"/><path d="M58 54v34"/>
+        <path d="M58 62l12 12M58 62l-12 12"/><path d="M58 88l-8 30M58 88l8 30"/>
+      </g>
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="110" y="42" width="52" height="66" rx="8"/>
+      </g>
+      <text x="136" y="72" font-size="12" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">PAUSED</text>
+      <g stroke="#16181d" stroke-width="4" stroke-linecap="round"><path d="M130 84v14M142 84v14"/></g>
+      <text x="100" y="146" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">only when he means it</text>
+    </svg>
+    <p class="cap"><b>Outcome</b>The run pauses only when he means it.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item wide" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e1"><label for="e1"><span class="no">3A · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>3A — Run Lock Interface</dd>
+    <dt>Problem</dt><dd>Small touchscreens invite mis-taps while running — sweat, motion, and a moving arm.</dd>
+    <dt>Motivation</dt><dd>5/7 PA2 participants reported in-run interaction friction. The cheapest fix is not a better button but no accidental button at all.</dd>
+    <dt>How it works</dt><dd>1. The run screen is locked — taps are ignored · 2. A deliberate hold is the only input, with a filling ring as feedback · 3. Only essential actions appear, at full width</dd>
+    <dt>Differs</dt><dd>Control stays on the phone but is locked behind a hold. 3B moves control to the earbuds; 3C removes the target instead of locking it.</dd>
+    <dt>Strengths</dt><dd>Accidental input is structurally impossible · large targets · hold gives clear feedback</dd>
+    <dt>Weaknesses</dt><dd>Slower than a tap · the hold must be discovered · still requires looking at the phone</dd>
+  </dl></div>
+</div>
+
+<!-- ============================= 3B ============================= -->
+<h2 class="proto">3B — Earbud Controls</h2>
+<p class="proto-note"><b>How it differs:</b> control moves to a <b>different device</b> — the
+earbuds — so the phone never leaves the pocket.</p>
+
+<p class="flag red"><b>"Pause" must say what it pauses.</b> Pausing the music and pausing the
+run have completely different consequences — one is reversible in a second, the other loses
+tracking data. In 3B and 3C a double tap pauses <b>music only; the run keeps recording</b>, and
+the sheets say so. A participant guessing wrong produces a confused reaction that gets logged
+as a usability finding when it is really a wording bug.</p>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c6"><label for="c6"><span class="no">3B · Sheet 1</span>Setup</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Earbud Controls</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="lst">
+        <span>Double tap → <b>Pause music</b></span>
+        <span>Swipe → Next track</span>
+        <span>Long press → Pace cue</span>
+      </div>
+      <div class="blank"></div>
+      <div class="btn">CONFIRM</div>
+    </div></div></div>
+    <p class="why">Teach the gesture mapping. <b>Tap CONFIRM.</b></p>
+    <p class="flag">3B <i>teaches</i> its gestures here, where 2A deliberately teaches nothing.
+    That is intentional and opposite by design — 2A measures whether a cue can be inferred;
+    3B measures whether a taught gesture survives sweat and motion. Say so on the card.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c7"><label for="c7"><span class="no">3B · Sheet 2</span>Running</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-sm">Phone stays pocketed</div>
+    </div></div></div>
+    <p class="why">The phone never comes out.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c8"><label for="c8"><span class="no">3B · Sheet 3</span>Double-Tap Earbud</label></div>
+    <div class="stage"><svg class="gest" viewBox="0 0 200 112" role="img" aria-label="Runner double-tapping an earbud">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="66" cy="34" r="15"/><path d="M66 49v34"/><path d="M66 58l-16 10M66 58l16 10"/>
+        <path d="M84 30a7 7 0 0110 0v10a7 7 0 01-10 0z"/>
+      </g>
+      <g stroke="#c62828" stroke-width="2.6" stroke-linecap="round">
+        <path d="M108 28h16M108 42h16"/></g>
+      <text x="132" y="34" font-size="12" fill="#c62828" font-family="sans-serif" font-weight="700">DOUBLE</text>
+      <text x="132" y="48" font-size="12" fill="#c62828" font-family="sans-serif" font-weight="700">TAP</text>
+      <path d="M140 62v18" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M140 84l-5-7M140 84l5-7" stroke="#16181d" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <text x="140" y="102" font-size="12" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">PAUSE</text>
+    </svg></div>
+    <p class="why">The gesture. <b>Runner double-taps the earbud.</b> In the video, perform the
+    real gesture.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c9"><label for="c9"><span class="no">3B · Sheet 4</span>Music Paused</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="t-md">6:02 /km</div>
+      <div class="blank"></div>
+      <div class="t-md b wt">♫ MUSIC PAUSED</div>
+      <div class="blank"></div>
+      <div class="t-sm g">Run still recording</div>
+      <div class="t-sm">Phone untouched</div>
+    </div></div></div>
+    <p class="why">The result, unambiguously. <b>Header stays ● RUNNING — the run did not
+    stop.</b> Double-tap again to resume music → Sheet 5.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c10"><label for="c10"><span class="no">3B · Sheet 5</span>Swipe to Change Track</label></div>
+    <div class="stage">
+      <svg class="gest" viewBox="0 0 200 112" role="img" aria-label="Runner swiping an earbud">
+        <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="66" cy="36" r="15"/><path d="M66 51v32"/><path d="M66 60l-16 10M66 60l16 10"/>
+          <path d="M84 32a7 7 0 0110 0v10a7 7 0 01-10 0z"/>
+        </g>
+        <path d="M106 38h34" stroke="#c62828" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M140 38l-8-6M140 38l-8 6" stroke="#c62828" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+        <text x="122" y="66" font-size="12" fill="#c62828" text-anchor="middle" font-family="sans-serif" font-weight="700">SWIPE</text>
+        <text x="122" y="94" font-size="12" fill="#1552b8" text-anchor="middle" font-family="sans-serif" font-weight="700">NEXT TRACK</text>
+      </svg>
+      <div class="phone" style="height:170px"><div class="scr mid">
+        <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+        <div class="t-md">6:02 /km</div>
+        <div class="t-md b wt">♫ Next track ▶▶</div>
+        <div class="t-sm">Phone never touched</div>
+      </div></div>
+    </div>
+    <p class="why">Tests a <b>second</b> gesture and ends on the outcome that matters.</p>
+    <p class="flag">This used to be a redundant "Resume" — a second double-tap. 3B taught three
+    gestures and exercised one. Long-press → pace cue stays taught but untested: put that in
+    <b>WEAKNESSES / OPEN QUESTIONS</b>, don't pretend it was covered.</p>
+  </div>
+</div>
+
+<h3 class="grp">Facilitator card — separate pile</h3>
+<div class="grid">
+  <div class="item fac">
+    <div class="hd"><input type="checkbox" id="f2"><label for="f2"><span class="no">F-3B · not one of the 15</span>Gesture not recognised</label></div>
+    <div class="stage"><div class="faccard">
+      <h4>Facilitator — never in the participant stack</h4>
+      <div class="mini-phone" style="width:100%;height:140px"><div class="scr mid">
+        <div class="t-sm"><span class="g">●</span> RUNNING</div>
+        <div class="t-big">6:02</div>
+        <div class="t-sm b">♫ MUSIC</div>
+        <div class="t-sm">(no change)</div>
+      </div></div>
+      <p style="font-size:12px;margin:11px 0 0;line-height:1.5">Deal when the gesture is
+      mistimed, too slow, or ambiguous. <b>Do not say what went wrong.</b> Record what they
+      try next.</p>
+    </div></div>
+    <p class="why"><b>Why it exists:</b> sweat, motion, and a shifting earbud make this the
+    most likely real event in 3B — the exact condition P3 was raised about. If the prototype
+    only ever succeeds, 3B tests nothing P3 asked. What a runner does after a silent failure —
+    retry, retry harder, or give up and reach for the phone — is the finding.</p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s5"><label for="s5"><span class="no">3B · Frame 1 · Context</span>Phone in pocket</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner with the phone visibly in a pocket">
+      <path d="M14 132h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="96" cy="38" r="12"/><path d="M96 50v40"/>
+        <path d="M96 62l16 8M96 62l-16 8"/><path d="M96 90l-13 32M96 90l14 32"/>
+        <rect x="100" y="72" width="15" height="20" rx="3" stroke-dasharray="4 3"/>
+      </g>
+      <g fill="#1552b8"><circle cx="87" cy="34" r="3.4"/><circle cx="105" cy="34" r="3.4"/></g>
+      <text x="146" y="86" font-size="10" fill="#16181d" font-family="sans-serif">pocket</text>
+      <path d="M143 82l-24 2" stroke="#16181d" stroke-width="1.6"/>
+      <text x="100" y="146" font-size="10" fill="#1552b8" text-anchor="middle" font-family="sans-serif">earbuds in</text>
+    </svg>
+    <p class="cap"><b>Context</b>Anh runs with his phone in his pocket.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s6"><label for="s6"><span class="no">3B · Frame 2 · Trigger</span>Double tap</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A hand double-tapping an earbud">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="72" cy="60" r="26"/>
+        <path d="M96 52a9 9 0 0112 0v16a9 9 0 01-12 0z"/>
+        <path d="M56 118c0-14 8-22 16-22s16 8 16 22"/>
+      </g>
+      <g stroke="#c62828" stroke-width="3" stroke-linecap="round"><path d="M124 50h18M124 68h18"/></g>
+      <text x="152" y="56" font-size="11" fill="#c62828" font-family="sans-serif" font-weight="700">×2</text>
+      <text x="100" y="142" font-size="11" fill="#16181d" text-anchor="middle" font-family="sans-serif">double tap</text>
+    </svg>
+    <p class="cap"><b>Trigger</b>He double-taps the earbud.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s7"><label for="s7"><span class="no">3B · Frame 3 · Response</span>Music stops, run does not</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Music notes stopping while the run timer keeps ticking">
+      <g fill="#1552b8" opacity=".35"><text x="26" y="52" font-size="22">♫</text><text x="54" y="46" font-size="22">♪</text></g>
+      <g stroke="#c62828" stroke-width="2.6" stroke-linecap="round"><path d="M20 30l64 34"/></g>
+      <g stroke="#16181d" stroke-width="4" stroke-linecap="round"><path d="M98 34v22M110 34v22"/></g>
+      <text x="104" y="76" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">music paused</text>
+      <g fill="none" stroke="#0f7a3d" stroke-width="2.4"><circle cx="140" cy="108" r="22"/><path d="M140 108V94M140 108l11 7"/></g>
+      <text x="140" y="144" font-size="10" fill="#0f7a3d" text-anchor="middle" font-family="sans-serif">run still recording</text>
+    </svg>
+    <p class="cap"><b>Response</b>The music pauses. The run keeps recording.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s8"><label for="s8"><span class="no">3B · Frame 4 · Outcome</span>Never came out</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A swipe changing the track with the phone still pocketed">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="54" r="22"/><path d="M80 46a8 8 0 0111 0v14a8 8 0 01-11 0z"/>
+      </g>
+      <path d="M104 54h32" stroke="#c62828" stroke-width="3" stroke-linecap="round"/>
+      <path d="M136 54l-9-7M136 54l-9 7" stroke="#c62828" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text x="150" y="88" font-size="20" fill="#1552b8" text-anchor="middle">♫</text>
+      <text x="100" y="120" font-size="11" fill="#16181d" text-anchor="middle" font-family="sans-serif">next track</text>
+      <text x="100" y="138" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">phone never came out</text>
+    </svg>
+    <p class="cap"><b>Outcome</b>A swipe changes the track. The phone never came out.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item wide" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e2"><label for="e2"><span class="no">3B · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>3B — Earbud Controls</dd>
+    <dt>Problem</dt><dd>Touching the phone or watch mid-run is awkward and error-prone.</dd>
+    <dt>Motivation</dt><dd>4/7 PA2 participants prefer a watch-first or hands-free flow. If the phone never comes out, the mis-tap problem cannot occur.</dd>
+    <dt>How it works</dt><dd>1. Three gestures are taught before the run · 2. Double tap pauses music, swipe changes track · 3. The phone stays pocketed for the whole session</dd>
+    <dt>Differs</dt><dd>Moves control to a different device entirely. 3A locks the phone; 3C keeps the phone but removes the target.</dd>
+    <dt>Strengths</dt><dd>Phone never leaves the pocket · no visual attention at all · fast once learned</dd>
+    <dt>Weaknesses</dt><dd>Gestures must be memorised · sweat and motion cause misfires · <b>long-press → pace cue was taught but not tested</b></dd>
+  </dl></div>
+</div>
+
+<!-- ============================= 3C ============================= -->
+<h2 class="proto">3C — Voice-Free Quick Actions</h2>
+<p class="proto-note"><b>How it differs:</b> control stays on the phone but
+<b>the target is removed</b> — the whole screen is the button.</p>
+
+<div class="callout">
+  <p><b>The real idea is "no target", not "no voice".</b> 3A and 3B are equally voice-free, so
+  the name distinguishes nothing. What 3C removes is <b>aiming</b>: nothing to hit, nothing to
+  miss, which is the direct answer to the mis-tap complaint behind P3.</p>
+  <p>The name is kept because it is locked into <span class="mono">PA3-Analysis.pdf</span>,
+  <span class="mono">CLAUDE.md</span>, and the video titles — renaming ripples further than it
+  is worth. <b>The explanation card states the real distinction instead.</b></p>
+</div>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c11"><label for="c11"><span class="no">3C · Sheet 1</span>Setup</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Quick Actions</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-sm wt">Tap anywhere on the<br>screen — no target</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="lst">
+        <span>Double tap → <b>Pause music</b></span>
+        <span>Long press → Pace cue</span>
+      </div>
+      <div class="blank"></div>
+      <div class="btn">START</div>
+    </div></div></div>
+    <p class="why">Teach the mapping <b>and</b> establish the one property that makes 3C
+    different. Those two "no target" lines are the fix — without them the participant has no
+    way to know that aiming is what has been removed.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c12"><label for="c12"><span class="no">3C · Sheet 2</span>Running</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-sm g">Quick actions ON</div>
+    </div></div></div>
+    <p class="why">Active state.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c13"><label for="c13"><span class="no">3C · Sheet 3</span>Long Press for Pace Cue</label></div>
+    <div class="stage">
+      <svg class="gest" viewBox="0 0 200 112" role="img" aria-label="A long press anywhere on the phone screen">
+        <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M74 46c0-12 8-17 8-26s-12-12-12-2v34l-11 6 7 21h26l5-24z"/>
+        </g>
+        <circle cx="128" cy="56" r="19" fill="none" stroke="#c62828" stroke-width="2.4"/>
+        <path d="M128 42a14 14 0 0110 24" fill="none" stroke="#c62828" stroke-width="3" stroke-linecap="round"/>
+        <text x="128" y="98" font-size="12" fill="#c62828" text-anchor="middle" font-family="sans-serif" font-weight="700">LONG PRESS</text>
+      </svg>
+      <div class="phone" style="height:160px"><div class="scr mid">
+        <div class="t-ttl">Pace Cue</div>
+        <div class="t-big">6:02 /km</div>
+        <div class="t-md g wt">✓ IN RANGE</div>
+        <div class="t-sm b">♫ MUSIC</div>
+      </div></div>
+    </div>
+    <p class="why">A fast pace check. <b>Runner long-presses.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c14"><label for="c14"><span class="no">3C · Sheet 4</span>Double Tap to Pause</label></div>
+    <div class="stage">
+      <svg class="gest" viewBox="0 0 200 112" role="img" aria-label="A double tap landing on the corner of the screen">
+        <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+          <rect x="24" y="14" width="70" height="84" rx="8"/>
+        </g>
+        <circle cx="34" cy="24" r="8" fill="none" stroke="#c62828" stroke-width="2.4"/>
+        <circle cx="34" cy="24" r="14" fill="none" stroke="#c62828" stroke-width="1.6" stroke-dasharray="3 3"/>
+        <text x="112" y="38" font-size="12" fill="#c62828" font-family="sans-serif" font-weight="700">DOUBLE TAP</text>
+        <text x="112" y="56" font-size="12" fill="#c62828" font-family="sans-serif" font-weight="700">— ANYWHERE</text>
+        <text x="112" y="82" font-size="10" fill="#16181d" font-family="sans-serif">even the corner</text>
+      </svg>
+      <div class="phone" style="height:180px"><div class="scr mid">
+        <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+        <div class="t-md">6:02 /km</div>
+        <div class="t-md b wt">♫ MUSIC PAUSED</div>
+        <div class="t-sm g">Run still recording</div>
+        <div class="t-sm">Double tap to resume</div>
+      </div></div>
+    </div>
+    <p class="why">Pause without a menu or a target.</p>
+    <p class="flag red"><b>Let them hit a corner or an edge deliberately</b> — "anywhere works"
+    is the claim being tested. The old sheet said <span class="mono">● PAUSED / ♫ Music off</span>,
+    leaving it unclear whether the run had stopped.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c15"><label for="c15"><span class="no">3C · Sheet 5</span>Resume</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md g wt">▶ RESUMED</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-md b">♫ MUSIC</div>
+      <div class="t-huge">6:03<span class="t-md"> /km</span></div>
+    </div></div></div>
+    <p class="why">Back to running.</p>
+  </div>
+</div>
+
+<h3 class="grp">Facilitator card — separate pile</h3>
+<div class="grid">
+  <div class="item fac wide" style="max-width:520px">
+    <div class="hd"><input type="checkbox" id="f3"><label for="f3"><span class="no">F-3C · not one of the 15</span>Gesture missed, or fired by accident</label></div>
+    <div class="stage"><div class="faccard">
+      <h4>Facilitator — never in the participant stack</h4>
+      <div class="twopane">
+        <figure>
+          <div class="mini-phone"><div class="scr mid">
+            <div class="t-sm"><span class="g">●</span> RUNNING</div>
+            <div class="t-big">6:02</div>
+            <div class="t-sm b">♫ MUSIC</div>
+            <div class="t-sm">(no change)</div>
+          </div></div>
+          <figcaption>Not recognised</figcaption>
+        </figure>
+        <figure>
+          <div class="mini-phone"><div class="scr mid">
+            <div class="t-sm"><span class="g">●</span> RUNNING</div>
+            <div class="t-big">6:02</div>
+            <div class="t-sm b">♫ PAUSED</div>
+            <div class="t-sm">(nobody meant this)</div>
+          </div></div>
+          <figcaption>Fired by accident</figcaption>
+        </figure>
+      </div>
+      <p style="font-size:12px;margin:11px 0 0;line-height:1.5"><b>Left:</b> long-press read as
+      a double tap, or the reverse. <b>Right:</b> deal unprompted, mid-run, with no gesture
+      made at all.</p>
+    </div></div>
+    <p class="why"><b>Why it exists:</b> 3C has a hole it should be tested against rather than
+    hidden from. If any double tap anywhere pauses music, a phone jostling in a pocket or an
+    arm brushing a sleeve fires it — the accidental-activation problem 3A solves with a lock
+    and 3B avoids by leaving the phone alone entirely.</p>
+    <p class="flag red">Deal the right-hand card <b>once, unannounced</b>, and record the
+    reaction. It belongs in WEAKNESSES either way — discovering it in the session is far better
+    than a grader discovering it in the report.</p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s9"><label for="s9"><span class="no">3C · Frame 1 · Context</span>Phone in hand</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner holding a phone with eyes on the path">
+      <path d="M14 132h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="72" cy="40" r="11"/><path d="M72 51l-4 34"/>
+        <path d="M70 62l18 6M70 62l-16 10"/><path d="M68 85l-16 26M68 85l18 20 2 16"/>
+        <rect x="86" y="60" width="16" height="22" rx="3"/>
+      </g>
+      <path d="M84 38h44" stroke="#16181d" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+      <path d="M128 38l-7-5M128 38l-7 5" stroke="#16181d" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="136" y="42" font-size="10" fill="#16181d" font-family="sans-serif">eyes on path</text>
+      <text x="110" y="106" font-size="10" fill="#16181d" font-family="sans-serif">phone in hand</text>
+    </svg>
+    <p class="cap"><b>Context</b>Anh runs with the phone in his hand.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s10"><label for="s10"><span class="no">3C · Frame 2 · Trigger</span>Hits the corner</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A double tap landing on the corner of the screen without looking">
+      <g fill="none" stroke="#16181d" stroke-width="2.4" stroke-linejoin="round">
+        <rect x="48" y="20" width="72" height="108" rx="9"/>
+      </g>
+      <circle cx="58" cy="32" r="9" fill="none" stroke="#c62828" stroke-width="2.6"/>
+      <circle cx="58" cy="32" r="17" fill="none" stroke="#c62828" stroke-width="1.6" stroke-dasharray="3 3"/>
+      <text x="140" y="46" font-size="11" fill="#c62828" text-anchor="middle" font-family="sans-serif" font-weight="700">×2</text>
+      <text x="140" y="72" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">without</text>
+      <text x="140" y="86" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">looking</text>
+      <text x="84" y="146" font-size="10" fill="#c62828" text-anchor="middle" font-family="sans-serif">lands on the corner</text>
+    </svg>
+    <p class="cap"><b>Trigger</b>He double-taps without looking — and hits the corner.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s11"><label for="s11"><span class="no">3C · Frame 3 · Response</span>Works anyway</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="The whole screen highlighted as the target with music pausing">
+      <g fill="none" stroke="#0f7a3d" stroke-width="3" stroke-linejoin="round" stroke-dasharray="7 5">
+        <rect x="54" y="18" width="72" height="110" rx="9"/>
+      </g>
+      <text x="90" y="66" font-size="11" fill="#0f7a3d" text-anchor="middle" font-family="sans-serif" font-weight="700">the whole</text>
+      <text x="90" y="82" font-size="11" fill="#0f7a3d" text-anchor="middle" font-family="sans-serif" font-weight="700">screen</text>
+      <g stroke="#16181d" stroke-width="4" stroke-linecap="round"><path d="M148 54v20M160 54v20"/></g>
+      <text x="154" y="96" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">paused</text>
+      <text x="100" y="146" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">nothing to aim at</text>
+    </svg>
+    <p class="cap"><b>Response</b>It works anyway. There was nothing to aim at.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s12"><label for="s12"><span class="no">3C · Frame 4 · Outcome</span>Same way back</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner resuming music the same way with eyes forward">
+      <path d="M14 132h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="62" cy="42" r="11"/><path d="M62 53v32"/>
+        <path d="M62 62l16 8M62 62l-16 8"/><path d="M62 85l-13 28M62 85l14 28"/>
+      </g>
+      <path d="M76 40h30" stroke="#16181d" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+      <text x="128" y="52" font-size="20" fill="#1552b8" text-anchor="middle">♫</text>
+      <text x="128" y="76" font-size="20" fill="#0f7a3d" text-anchor="middle">▶</text>
+      <text x="128" y="112" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">eyes never left</text>
+      <text x="128" y="126" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif">the path</text>
+    </svg>
+    <p class="cap"><b>Outcome</b>He resumes the same way, eyes never leaving the path.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item wide" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e3"><label for="e3"><span class="no">3C · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>3C — Voice-Free Quick Actions</dd>
+    <dt>Problem</dt><dd>Touch menus require aiming at a small target while the body is moving.</dd>
+    <dt>Motivation</dt><dd>If there is no target, there is no mis-tap. Removing aiming attacks the cause rather than enlarging the symptom.</dd>
+    <dt>How it works</dt><dd>1. The whole screen is the button · 2. Double tap anywhere pauses music, long press gives a pace cue · 3. No menu is ever opened</dd>
+    <dt>Differs</dt><dd>Keeps the phone but removes <b>targeting</b>. 3A keeps the target and locks it; 3B removes the phone from the interaction entirely. <i>All three are voice-free — the name is historical.</i></dd>
+    <dt>Strengths</dt><dd>Nothing to aim at · fastest of the three · works with the phone in hand or through a sleeve</dd>
+    <dt>Weaknesses</dt><dd><b>No protection against accidental activation</b> — a jostling pocket fires it · only two gestures fit · gestures can be confused with one another</dd>
+  </dl></div>
+</div>
+
+<footer class="end">
+  <p><strong>Before the paper goes in the folder</strong></p>
+  <ul>
+    <li>15 participant sheets, pen not pencil, unlined paper</li>
+    <li>F-3A, F-3B, F-3C in a <strong>separate pile</strong>, each headed <strong>FACILITATOR</strong> in red</li>
+    <li>3A Sheet 1 has a padlock and <strong>HOLD</strong> buttons — no plain "PAUSE" tap</li>
+    <li>3A Sheet 4 has three full-width buttons, <strong>not</strong> a <span class="mono">&lt;&lt; ▶ &gt;&gt;</span> bar</li>
+    <li>3B and 3C say "<strong>Pause music</strong>", and their paused sheets still read <strong>● RUNNING</strong></li>
+    <li>12 storyboard frames captioned · 3 explanation cards, all seven fields</li>
+    <li>Every sheet labelled on the back with its code</li>
+    <li><strong>Three more videos</strong> if this block ships — recorded, uploaded unlisted, verified in incognito</li>
+  </ul>
+  <p><strong>Nothing on this paper is testing data.</strong> Observation notes and participant
+  quotes stay empty until real sessions fill them.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  var KEY='pa3-hung-s3';
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  function paint(){
+    var n=0;
+    boxes.forEach(function(b){
+      b.closest('.item').classList.toggle('done',b.checked);
+      if(b.checked)n++;
+    });
+    document.getElementById('n').textContent=n;
+    document.getElementById('fill').style.width=(n/boxes.length*100)+'%';
+  }
+  boxes.forEach(function(b){
+    if(saved[b.id])b.checked=true;
+    b.addEventListener('change',function(){
+      saved[b.id]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+      paint();
+    });
+  });
+  document.getElementById('reset').addEventListener('click',function(){
+    boxes.forEach(function(b){b.checked=false});
+    saved={};
+    try{localStorage.removeItem(KEY)}catch(e){}
+    paint();
+  });
+  paint();
+})();
+</script>

@@ -9,12 +9,17 @@ Day 1 · 10/08/2026 · **scope cut to 2 scenarios, 2 members**
 **Scenario 3 (3A / 3B / 3C) is dropped.** Two members available (Duy, Luân) under time
 pressure. R1 requires *at least 2 main scenarios*; Scenarios 1 and 2 clear that bar.
 
-**Residual risk, accepted:** R1 also asks for *at least 3 different paper prototypes for each
-identified problem*. PA2 identified three problems, so P3 now has zero prototypes.
-**Mitigation:** state the descope explicitly in `Group02-PA3-PaperProtype.pdf` — "P3 deferred;
-P1 and P2 carry three alternatives each" — so it reads as a scoping decision rather than a
-missing deliverable. This costs a paragraph and is the difference between a scoped submission
-and an incomplete one.
+**Risk downgraded 10/08 after re-reading the spec.** The PA schedule table on page 1 defines
+PA3 as *"Paper Prototype (**2 scenario \* 3 alternatives**)"* — six prototypes, exactly what
+two scenarios produce. That contradicts R1's prose ("for each identified problem… at least 3
+different paper prototypes"), which against PA2's three problems would demand nine. Two parts
+of the same handout disagree, and the schedule table is the lecturer's own summary of PA3's
+intended scope. The earlier assessment here — that the descope carried meaningful residual
+risk — was based on R1's prose alone and overstated it.
+
+**Still do this:** one line in `Group02-PA3-PaperProtype.pdf` — "P3 deferred; P1 and P2 carry
+three alternatives each, per the PA schedule's 2 × 3." Cheap, and it makes the reading
+deliberate rather than incomplete.
 
 Revised targets: **30 participant sheets · 24 storyboard frames · 6 explanation cards ·
 4 facilitator items.**
@@ -34,6 +39,7 @@ Revised targets: **30 participant sheets · 24 storyboard frames · 6 explanatio
 | --- | --- | --- | --- |
 | Luân · 23127006 | S1 — 1A/1B/1C | `drawing-workspace/luan-scenario-1/` | https://claude.ai/code/artifact/bfe89021-da26-4176-a789-a08d6538c5f6 |
 | Duy · 23127179 | S2 — 2A/2B/2C | `drawing-workspace/duy-scenario-2/` | https://claude.ai/code/artifact/c49553df-3e03-4407-9aee-e31cac74bb03 |
+| Hưng · 23127372 | S3 — 3A/3B/3C · **standby** | `drawing-workspace/hung-scenario-3/` | https://claude.ai/code/artifact/3a69356f-a5dc-4f2b-acf6-a377b84fff75 |
 
 Per-sheet checklists live in each folder's `README.md`; the artifacts carry the same list with
 tick-boxes that persist in the browser. **Tick in one place only** — pick the artifact if you
@@ -41,12 +47,36 @@ are at a screen, the README if you are printing.
 
 ---
 
-## Not being drawn
+## Standby — Scenario 3
 
 **3A Run Lock Interface · 3B Earbud Controls · 3C Voice-Free Quick Actions** — descoped, not
-abandoned. Their specs, pre-flight fixes, and facilitator cards remain complete in
-`PA3-9-Paper-Prototypes-EN.md` and `PA3-Drawing-Specs.md`. If a third member frees up, that
-block is drawable without further design work.
+abandoned. Full workspace built at `drawing-workspace/hung-scenario-3/`: 15 sheets, 12 frames,
+3 explanation cards, 3 facilitator cards, all pre-flight fixes applied.
+
+**If it ships it is not free.** +3 videos (record, upload, verify), +3 tasks per participant
+(~15 min each × 3 participants), slide 6 returns to the deck, and the descope line comes out
+of the report. Draw in prototype order — 3A complete, then 3B, then 3C. A half-finished 3B is
+worth less than a finished 3A, because a prototype with missing states cannot be tested.
+
+---
+
+## Open logistics — surfaced by the 10/08 verification sweep
+
+Ordered by how quietly they fail.
+
+| # | Item | Why it bites | Owner |
+| --- | --- | --- | --- |
+| L1 | **Weekly report template not yet downloaded** — the spec links a specific Google Drive file | R4 is 5% and requires *their* template, not a self-made table | — |
+| L2 | **Presentation date still unverified** against the actual lecture slot | The whole 3-day sequence hangs off 13/08 | — |
+| L3 | **Photographing 30 sheets for the report is not in the plan** | R1's PDF needs images of the paper; ~1–1.5 h, not AI-doable | — |
+| L4 | **No printed data-capture form for sessions** | The Cue Interpretation Accuracy table needs consistent per-participant capture | — |
+| L5 | **Session plan assumes 4 people, 2 parallel pairs** | With 2 people the sessions are strictly sequential — recalculate D2 | — |
+| L6 | **CO-owned tasks unassigned** if Trâm is unavailable — recruitment follow-up, slides, weekly log | Exactly the two 5% requirements that fail silently | — |
+| L7 | **Improved-prototype video is a separate upload on D3** | Easy to miss because the D2 upload ritual is already done | — |
+| L8 | **"Criteria for success" must be in the testing plan** *before* sessions | R2 names it explicitly; thresholds set after seeing data are rationalisation | — |
+
+Detail and reasoning: see the verification sweep in the session transcript, or ask for it to
+be written up as a standalone doc.
 
 ---
 

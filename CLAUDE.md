@@ -88,13 +88,22 @@ the bar with margin, and every problem keeps its three alternatives.
 | Scenario 3 | Control the run without stopping or mis-tapping | 3A · 3B · 3C | UC-05 · Anh |
 
 > **Scenario 3 descoped 10/08/2026.** Two members available (Duy, Luân) under time pressure,
-> so only Scenarios 1 and 2 are being drawn — 30 sheets, 24 frames. R1 requires *at least 2
-> main scenarios*, which this clears. **Residual risk:** R1 also asks for three prototypes per
-> *identified problem*, and P3 now has none — so `Group02-PA3-PaperProtype.pdf` must state the
-> descope explicitly ("P3 deferred; P1 and P2 carry three alternatives each") or it reads as a
-> missing deliverable rather than a scoping decision. 3A/3B/3C specs stay complete and
-> pre-flight-fixed in the guide; the block is drawable without further design work if a third
-> member frees up.
+> so only Scenarios 1 and 2 are being drawn — 30 sheets, 24 frames.
+>
+> **The spec's own PA schedule table endorses this shape.** It defines PA3 as
+> *"Paper Prototype (**2 scenario \* 3 alternatives**)"* — six prototypes, which is exactly
+> what two scenarios produce. That line sits in tension with R1's prose ("for each identified
+> problem… at least 3 different paper prototypes"), since PA2 identified three problems. Two
+> parts of the same handout disagree; the schedule table is Dr. Duy's own summary of PA3's
+> intended scope, so the descope lands on it rather than against it.
+>
+> Still state the scoping decision in one line in `Group02-PA3-PaperProtype.pdf` — "P3
+> deferred; P1 and P2 carry three alternatives each, per the PA schedule's 2 × 3" — so the
+> reading is deliberate rather than incomplete.
+>
+> 3A/3B/3C specs stay complete and pre-flight-fixed, with a ready workspace at
+> `drawing-workspace/hung-scenario-3/`. Drawable without further design work — but it also
+> costs three more videos, three more tasks per test session, and an extra slide.
 
 History, so it is not re-litigated: the original drawing guide labelled the third block
 `PROBLEM 3` rather than `SCENARIO 3`, orphaning 3A/3B/3C. Root cause was Scenario 2's old
