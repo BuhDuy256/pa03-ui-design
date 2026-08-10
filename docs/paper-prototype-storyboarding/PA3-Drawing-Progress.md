@@ -26,10 +26,10 @@ Revised targets: **30 participant sheets · 24 storyboard frames · 6 explanatio
 
 | | Target | Done |
 | --- | --- | --- |
-| Participant sheets | 30 | 0 |
-| Storyboard frames | 24 | 0 |
-| Explanation cards | 6 | 0 |
-| Facilitator items (NOT part of the 30) | 4 | 0 |
+| Participant sheets | 30 | 15 |
+| Storyboard frames | 24 | 12 |
+| Explanation cards | 6 | 3 |
+| Facilitator items (NOT part of the 30) | 4 | 2 |
 
 ---
 
@@ -38,7 +38,7 @@ Revised targets: **30 participant sheets · 24 storyboard frames · 6 explanatio
 | Member | Scenario | Folder | Visual sheets |
 | --- | --- | --- | --- |
 | Luân · 23127006 | S1 — 1A/1B/1C | `drawing-workspace/luan-scenario-1/` | https://claude.ai/code/artifact/bfe89021-da26-4176-a789-a08d6538c5f6 |
-| Duy · 23127179 | S2 — 2A/2B/2C | `drawing-workspace/duy-scenario-2/` | https://claude.ai/code/artifact/c49553df-3e03-4407-9aee-e31cac74bb03 |
+| Nguyễn Bảo Duy · 23127179 | S2 — 2A/2B/2C · **finished** | `drawing-workspace/duy-scenario-2/` | https://claude.ai/code/artifact/c49553df-3e03-4407-9aee-e31cac74bb03 |
 | Hưng · 23127372 | S3 — 3A/3B/3C · **standby** | `drawing-workspace/hung-scenario-3/` | https://claude.ai/code/artifact/3a69356f-a5dc-4f2b-acf6-a377b84fff75 |
 
 Per-sheet checklists live in each folder's `README.md`; the artifacts carry the same list with
