@@ -1,0 +1,11 @@
+# Agent config repos — cloned per project, versioned separately.
+# Git would otherwise record these as gitlinks that do not clone correctly.
+.claude/
+.codex/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+~$*
