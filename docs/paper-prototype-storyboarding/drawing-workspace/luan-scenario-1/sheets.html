@@ -1,0 +1,779 @@
+<title>Luân — Scenario 1 Drawing Sheets</title>
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --edge:#d6dae1; --edge-soft:#e8ebef;
+  --fg:#1b1f26; --fg-dim:#5c6470; --fg-faint:#878f9b;
+  --accent:#1d4ed8; --accent-soft:#e8edfb;
+  --pen-black:#16181d; --pen-green:#0f7a3d; --pen-red:#c62828; --pen-blue:#1552b8;
+  --paper:#ffffff; --paper-edge:#16181d;
+  --ok:#0f7a3d; --warn:#b45309;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14161a; --panel:#1d2026; --edge:#333842; --edge-soft:#272b33;
+    --fg:#e9ecf1; --fg-dim:#a5adba; --fg-faint:#7b838f;
+    --accent:#7ea2ff; --accent-soft:#1e2740;
+    --ok:#4ade80; --warn:#fbbf24;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14161a; --panel:#1d2026; --edge:#333842; --edge-soft:#272b33;
+  --fg:#e9ecf1; --fg-dim:#a5adba; --fg-faint:#7b838f;
+  --accent:#7ea2ff; --accent-soft:#1e2740;
+  --ok:#4ade80; --warn:#fbbf24;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.55; font-size:16px;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:32px 20px 96px}
+header.top{border-bottom:2px solid var(--fg);padding-bottom:20px;margin-bottom:8px}
+.eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--fg-dim);margin:0 0 8px}
+h1{font-size:clamp(26px,4vw,38px);margin:0 0 6px;letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--fg-dim);margin:0;max-width:64ch}
+.bar{position:sticky;top:0;z-index:20;background:var(--panel);border:1px solid var(--edge);
+  border-radius:10px;padding:12px 16px;margin:20px 0 28px;display:flex;gap:16px;
+  align-items:center;flex-wrap:wrap;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.bar strong{font-variant-numeric:tabular-nums}
+.track{flex:1;min-width:160px;height:8px;background:var(--edge-soft);border-radius:99px;overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+button.mini{font:inherit;font-size:13px;padding:5px 12px;border-radius:7px;cursor:pointer;
+  border:1px solid var(--edge);background:transparent;color:var(--fg-dim)}
+button.mini:hover{border-color:var(--accent);color:var(--accent)}
+button.mini:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0 0 34px}
+.legend div{background:var(--panel);border:1px solid var(--edge);border-left-width:5px;
+  border-radius:8px;padding:9px 13px;font-size:14px}
+.lg-k{border-left-color:var(--pen-black)!important}
+.lg-g{border-left-color:var(--pen-green)!important}
+.lg-r{border-left-color:var(--pen-red)!important}
+.lg-b{border-left-color:var(--pen-blue)!important}
+
+h2.proto{font-size:24px;margin:46px 0 4px;padding-top:22px;border-top:1px solid var(--edge);
+  letter-spacing:-.01em}
+h2.proto:first-of-type{border-top:0}
+.proto-note{color:var(--fg-dim);margin:0 0 22px;font-size:15px;max-width:70ch}
+h3.grp{font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--fg-faint);
+  margin:34px 0 14px;font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.grid.sb{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.item{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:14px;
+  display:flex;flex-direction:column;gap:11px}
+.item.done{opacity:.5}
+.item.fac{border-color:var(--pen-red);border-width:2px;background:var(--panel)}
+.hd{display:flex;gap:9px;align-items:flex-start}
+.hd input{width:19px;height:19px;margin:2px 0 0;accent-color:var(--ok);cursor:pointer;flex:none}
+.hd label{font-weight:650;font-size:15px;cursor:pointer;line-height:1.3}
+.hd .no{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+  color:var(--fg-faint);display:block;font-weight:400;letter-spacing:.06em}
+.why{font-size:13.5px;color:var(--fg-dim);margin:0}
+.why b{color:var(--fg)}
+.flag{font-size:13px;border-left:3px solid var(--warn);padding:6px 0 6px 10px;margin:0;color:var(--fg-dim)}
+.flag.red{border-left-color:var(--pen-red)}
+.stage{display:flex;justify-content:center;padding:6px 0}
+
+/* ---- paper devices: always white with dark ink, in every theme ---- */
+.phone,.watch{background:var(--paper);border:2.5px solid var(--paper-edge);
+  color:var(--pen-black);display:flex;flex-direction:column}
+.phone{width:168px;height:298px;border-radius:16px;padding:14px 12px}
+.watch{width:168px;height:168px;border-radius:26px;padding:13px 11px}
+.scr{flex:1;display:flex;flex-direction:column;gap:7px;text-align:center;align-items:center;justify-content:flex-start}
+.scr.mid{justify-content:center}
+.t-ttl{font-size:13.5px;font-weight:700}
+.t-huge{font-size:27px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.t-big{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.t-md{font-size:13px}
+.t-sm{font-size:11.5px}
+.t-xs{font-size:10px;color:#555}
+.g{color:var(--pen-green)} .r{color:var(--pen-red)} .b{color:var(--pen-blue)}
+.wt{font-weight:700}
+.btn{border:2px solid var(--pen-black);border-radius:7px;padding:6px 8px;font-size:11.5px;
+  font-weight:700;width:100%;text-align:center}
+.btn.wide{letter-spacing:.02em}
+.btnrow{display:flex;gap:7px;width:100%}
+.lst{width:100%;text-align:left;font-size:11.5px;display:flex;flex-direction:column;gap:4px}
+.lst span{display:block}
+.rule{border-top:1.5px solid var(--pen-black);width:100%;margin:2px 0}
+.rowline{display:flex;justify-content:space-between;width:100%;font-size:11.5px;
+  font-variant-numeric:tabular-nums}
+.corner{position:absolute;top:11px;right:12px;font-size:11px;font-weight:700}
+.phone.rel,.watch.rel{position:relative}
+.blank{flex:1}
+.fill{width:62px;border-bottom:1.5px solid var(--pen-black);display:inline-block}
+.notes{font-size:15px;letter-spacing:.28em}
+.beat{font-size:13px;letter-spacing:.34em}
+.pulse{font-size:15px;letter-spacing:.22em;font-weight:700}
+
+.faccard{background:var(--paper);border:2.5px dashed var(--pen-red);border-radius:10px;
+  padding:13px;width:100%;color:var(--pen-black)}
+.faccard h4{margin:0 0 9px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--pen-red);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.kv{width:100%;border-collapse:collapse;font-size:12px}
+.kv td{padding:4px 5px;border-bottom:1px solid #d8d8d8;vertical-align:top}
+.kv td:first-child{font-weight:700;white-space:nowrap;width:32%}
+.kv tr:last-child td{border-bottom:0}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+.frame{background:var(--paper);border:2.5px solid var(--paper-edge);border-radius:8px;
+  width:100%;aspect-ratio:4/3;display:block}
+.cap{font-size:13px;color:var(--fg);margin:0;line-height:1.45}
+.cap b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;
+  color:var(--fg-faint);display:block;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+
+.card-tpl{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:18px 20px;margin-top:14px}
+.card-tpl dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:14.5px}
+.card-tpl dt{font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--fg-dim);padding-top:3px}
+.card-tpl dd{margin:0}
+footer.end{margin-top:56px;border-top:2px solid var(--fg);padding-top:22px;font-size:14.5px;color:var(--fg-dim)}
+footer.end ul{padding-left:20px} footer.end li{margin:5px 0}
+footer.end strong{color:var(--fg)}
+
+@media print{
+  body{background:#fff;color:#000}
+  .bar,.legend,button.mini{display:none}
+  .wrap{max-width:none;padding:0}
+  .item{break-inside:avoid;page-break-inside:avoid;border-color:#999}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .phone{width:78mm;height:139mm} .watch{width:78mm;height:78mm}
+  h2.proto{break-before:page;page-break-before:always}
+  h2.proto:first-of-type{break-before:auto;page-break-before:auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">PA3 · Group02 · Drawing Workspace</p>
+  <h1>Luân — Scenario 1</h1>
+  <p class="sub">Start a run without breaking music flow. Persona: Minh · UC-01, UC-02.
+  15 participant sheets, 12 storyboard frames, 3 explanation cards, 2 facilitator cards.
+  Trace what you see — the layouts are already decided.</p>
+</header>
+
+<div class="bar">
+  <strong><span id="n">0</span> / 30</strong>
+  <span class="track"><i id="fill"></i></span>
+  <button class="mini" id="reset">Clear all</button>
+  <button class="mini" onclick="window.print()">Print</button>
+</div>
+
+<div class="legend">
+  <div class="lg-k"><b>Black</b> — frames, labels, body text</div>
+  <div class="lg-g"><b>Green</b> — ● running, ✓ in range, success</div>
+  <div class="lg-r"><b>Red</b> — deviations, alerts, FACILITATOR headers</div>
+  <div class="lg-b"><b>Blue</b> — ♫ music, audio cues</div>
+</div>
+
+<p class="flag"><b>Pen, not pencil. Unlined paper.</b> Phone sheets ≈ 9 × 16 cm.
+Label the back of every sheet with its code (1A-3, 1B-5…) before you move on — an unlabelled
+stack is unsortable, and you will be sorting it at 11 p.m.</p>
+
+<!-- ============================= 1A ============================= -->
+<h2 class="proto">1A — Focus Run Mode</h2>
+<p class="proto-note"><b>How it differs:</b> blocks interruptions <b>before</b> the run, by a
+rule the user sets in advance. 1B changes the music instead; 1C changes what the interruption
+sounds like.</p>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c1"><label for="c1"><span class="no">1A · Sheet 1</span>Home / Ready to Run</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Running Music Coach</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-big">Ready to Run?</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-md">Target Pace: 6:00/km</div>
+      <div class="t-md b">♫ Running Mix</div>
+      <div class="blank"></div>
+      <div class="btn">START RUN</div>
+    </div></div></div>
+    <p class="why">Session start. <b>Tap START RUN → Sheet 2.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c2"><label for="c2"><span class="no">1A · Sheet 2</span>Focus Run Setup</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Focus Run</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="lst">
+        <span class="wt">Block during run:</span>
+        <span>☑ Messages</span><span>☑ Calls</span>
+        <span>☑ Notifications</span><span>☑ Voice Coach</span>
+      </div>
+      <div class="rule"></div>
+      <div class="lst"><span class="wt">Always allow:</span><span>☑ Emergency calls</span></div>
+      <div class="blank"></div>
+      <div class="btn">CONFIRM</div>
+    </div></div></div>
+    <p class="why">The user picks what to block. <b>Tap CONFIRM → Sheet 3.</b></p>
+    <p class="flag"><b>Draw the divider line.</b> The two lists mean opposite things. It used
+    to read <span class="mono">Emergency calls ☐</span> inside the Block list — a double
+    negative where an unticked box meant "gets through".</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c3"><label for="c3"><span class="no">1A · Sheet 3</span>Run Started</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="t-sm">Music uninterrupted</div>
+      <div class="blank"></div>
+      <div class="btnrow"><div class="btn">PAUSE</div><div class="btn">END</div></div>
+    </div></div></div>
+    <p class="why">Focus Run is active. <b>Facilitator triggers a notification → Sheet 4.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c4"><label for="c4"><span class="no">1A · Sheet 4</span>Notification Held</label></div>
+    <div class="stage"><div class="phone rel"><span class="corner r">🔕 2</span><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-huge">6:03<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="blank"></div>
+    </div></div></div>
+    <p class="why">A notification arrived and was held. <b>Draw this to look almost identical
+    to Sheet 3</b> — the badge is the only difference, and that near-identity is the design.</p>
+    <p class="flag red">Swap Sheet 3 for Sheet 4 <b>silently</b>. Say nothing, make no sound.
+    The old version bannered "🚫 Notification muted" across the screen — a visual interruption
+    announcing the absence of an interruption.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c5"><label for="c5"><span class="no">1A · Sheet 5</span>Run Complete</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Run Complete</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="rowline"><span>Distance</span><span class="wt">5.2 km</span></div>
+      <div class="rowline"><span>Time</span><span class="wt">31:20</span></div>
+      <div class="rowline"><span>Avg Pace</span><span class="wt">6:01/km</span></div>
+      <div class="blank"></div>
+      <div class="t-sm r">🔕 3 held during run</div>
+      <div class="btn">SAVE RUN</div>
+    </div></div></div>
+    <p class="why">Ends the session and reports what was held — the only moment it can be
+    shown without interrupting anything. <b>Tap SAVE RUN.</b></p>
+  </div>
+</div>
+
+<h3 class="grp">Facilitator card — separate pile</h3>
+<div class="grid">
+  <div class="item fac">
+    <div class="hd"><input type="checkbox" id="f1"><label for="f1"><span class="no">F-1A · not one of the 15</span>Critical call allowed through</label></div>
+    <div class="stage"><div class="faccard">
+      <h4>Facilitator — never in the participant stack</h4>
+      <div class="phone" style="width:100%;height:210px;border-width:2px"><div class="scr mid">
+        <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+        <div class="blank" style="flex:.4"></div>
+        <div class="t-md wt r">📞 Mum — calling</div>
+        <div class="t-sm">(marked critical)</div>
+        <div class="blank" style="flex:.4"></div>
+        <div class="btnrow"><div class="btn">ANSWER</div><div class="btn">DISMISS</div></div>
+      </div></div>
+    </div></div>
+    <p class="why"><b>Why it exists:</b> UC-02 is <i>Filter</i> Non-Critical Interruptions. A
+    filter that blocks everything is a mute switch — and no sheet ever showed anything passing
+    through, so 1A covered only half its use case.</p>
+    <p class="flag red">Deal after Sheet 4. Ask what they expect for a real emergency,
+    <b>then</b> show it.</p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s1"><label for="s1"><span class="no">1A · Frame 1 · Context</span>Setting out</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner at a doorway holding a phone">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 130h160"/><path d="M34 130V54h40v76" /><path d="M34 54h40"/>
+        <circle cx="120" cy="46" r="10"/><path d="M120 56v38"/>
+        <path d="M120 66l-14 10M120 66l16 8"/><path d="M120 94l-11 30M120 94l12 30"/>
+        <rect x="132" y="70" width="12" height="19" rx="2.5"/>
+      </g>
+      <g fill="#1552b8"><circle cx="112" cy="42" r="3"/><circle cx="128" cy="42" r="3"/></g>
+      <text x="158" y="52" font-size="17" fill="#1552b8">♫</text>
+    </svg>
+    <p class="cap"><b>Context</b>Minh sets out for a solo run with his playlist ready.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s2"><label for="s2"><span class="no">1A · Frame 2 · Action</span>Choosing what to block</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A hand ticking blocking options on a phone">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="52" y="18" width="70" height="116" rx="9"/>
+        <path d="M64 44h34M64 60h40M64 76h30M64 92h38"/>
+        <rect x="104" y="38" width="10" height="10" rx="1.5"/><path d="M106 43l2.5 3 4-5.5"/>
+        <rect x="104" y="54" width="10" height="10" rx="1.5"/><path d="M106 59l2.5 3 4-5.5"/>
+        <rect x="104" y="70" width="10" height="10" rx="1.5"/><path d="M106 75l2.5 3 4-5.5"/>
+        <rect x="104" y="86" width="10" height="10" rx="1.5"/><path d="M106 91l2.5 3 4-5.5"/>
+        <path d="M140 84c0-9 6-13 6-20s-9-9-9-2v26l-8 4 5 16h20l4-18z"/>
+      </g>
+      <text x="60" y="32" font-size="10" fill="#16181d" font-family="sans-serif">Block during run</text>
+    </svg>
+    <p class="cap"><b>Trigger</b>Before starting, he chooses what to block.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s3"><label for="s3"><span class="no">1A · Frame 3 · Response</span>Held silently</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A message icon crossed out while music continues">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="52" cy="40" r="10"/><path d="M52 50v34"/>
+        <path d="M52 60l-14 12M52 60l15 7"/><path d="M52 84l-13 28M52 84l14 22 4 12"/>
+        <rect x="63" y="62" width="11" height="17" rx="2"/>
+      </g>
+      <g fill="none" stroke="#c62828" stroke-width="2.4" stroke-linecap="round">
+        <rect x="118" y="26" width="46" height="32" rx="4"/><path d="M118 30l23 17 23-17"/>
+        <path d="M112 22l58 40"/>
+      </g>
+      <g fill="#1552b8"><text x="112" y="102" font-size="19">♫</text><text x="136" y="114" font-size="15">♪</text><text x="158" y="98" font-size="17">♫</text></g>
+    </svg>
+    <p class="cap"><b>Response</b>A message arrives. It is held silently — the music never breaks.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s4"><label for="s4"><span class="no">1A · Frame 4 · Outcome</span>Finished uninterrupted</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Run complete screen showing three notifications held">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="62" y="16" width="76" height="120" rx="9"/>
+        <path d="M74 52h52M74 68h52M74 84h52"/>
+      </g>
+      <text x="100" y="38" font-size="11" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">Run Complete</text>
+      <text x="100" y="110" font-size="11" fill="#c62828" text-anchor="middle" font-family="sans-serif">🔕 3 held</text>
+      <path d="M84 120h32" stroke="#0f7a3d" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <p class="cap"><b>Outcome</b>He finishes uninterrupted, and sees what was held only at the end.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e1"><label for="e1"><span class="no">1A · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>1A — Focus Run Mode</dd>
+    <dt>Problem</dt><dd>Notifications and the voice coach interrupt music during the run.</dd>
+    <dt>Motivation</dt><dd>6/7 PA2 participants rely on music for motivation; 4/7 called audio interruption disruptive.</dd>
+    <dt>How it works</dt><dd>1. User picks what to block before starting · 2. Blocked items are held silently, music never ducks · 3. Held count is reported after the run</dd>
+    <dt>Differs</dt><dd>Blocks interruptions <b>before</b> the run, by a rule set in advance.</dd>
+    <dt>Strengths</dt><dd>Predictable · user stays in control · nothing to learn mid-run</dd>
+    <dt>Weaknesses</dt><dd>Requires setup before every run · a wrong rule is only discovered afterwards</dd>
+  </dl></div>
+</div>
+
+<!-- ============================= 1B ============================= -->
+<h2 class="proto">1B — Adaptive Music</h2>
+<p class="proto-note"><b>How it differs:</b> nothing is blocked — the music itself
+<b>changes shape</b> to match the run.</p>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c6"><label for="c6"><span class="no">1B · Sheet 1</span>Music Selection</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Choose Music</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♫ Running Mix</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="lst"><span class="wt">Music mode:</span>
+        <span>○ Original playlist</span><span>● Adaptive playlist</span></div>
+      <div class="blank"></div>
+      <div class="btn">CONTINUE</div>
+    </div></div></div>
+    <p class="why">Pick the adaptive playlist. <b>Tap CONTINUE → Sheet 2.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c7"><label for="c7"><span class="no">1B · Sheet 2</span>Adaptive Settings</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl">Adaptive Music</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="lst"><span class="wt">Target cadence</span>
+        <span class="mono" style="font-size:11px">[ USER SETS ]</span></div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="lst"><span class="wt">Music adapts to pace</span>
+        <span>● Gentle adaptation</span><span>○ Strong adaptation</span></div>
+      <div class="blank"></div>
+      <div class="btn">START</div>
+    </div></div></div>
+    <p class="why">Choose adaptation strength. <b>Tap START → Sheet 3.</b></p>
+    <p class="flag"><b>Do not print a cadence number.</b> The participant supplies it.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c8"><label for="c8"><span class="no">1B · Sheet 3</span>Running</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="rowline"><span>Cadence</span><span><span class="fill"></span> spm</span></div>
+      <div class="rowline"><span>Music</span><span><span class="fill"></span> BPM</span></div>
+      <div class="blank"></div>
+      <div class="t-sm">Adaptive: ON</div>
+      <div class="btn">HOLD TEMPO</div>
+    </div></div></div>
+    <p class="why">Baseline. <b>Facilitator simulates a pace change → Sheet 4.</b></p>
+    <p class="flag red"><b>Leave both figures blank</b> and write in the participant's own
+    number. It used to print <span class="mono">168 BPM</span> against Sheet 2's "user sets" —
+    and cadence (spm) is not music tempo (BPM). Two labelled rows, never one line.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c9"><label for="c9"><span class="no">1B · Sheet 4</span>Pace Changes</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge r">5:40<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♫ Music adapting…</div>
+      <div class="t-sm b">↑ tempo lifting</div>
+      <div class="blank"></div>
+      <div class="btn">HOLD TEMPO</div>
+    </div></div></div>
+    <p class="why">Music adapts; no voice cuts in.</p>
+    <p class="flag red"><b>Wizard-of-Oz, required.</b> Clap, tap, or run a metronome and
+    <b>speed it up</b> as this sheet goes down. Silent paper gives the participant nothing to
+    react to.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c10"><label for="c10"><span class="no">1B · Sheet 5</span>Stable Pace</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.5"></div>
+      <div class="t-huge">6:00<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md g wt">✓ Pace stabilized</div>
+      <div class="t-md b">♫ MUSIC</div>
+      <div class="blank"></div>
+      <div class="btn">HOLD TEMPO</div>
+    </div></div></div>
+    <p class="why">Outcome. <b>Keep running.</b></p>
+  </div>
+</div>
+
+<h3 class="grp">Facilitator card — separate pile</h3>
+<div class="grid">
+  <div class="item fac">
+    <div class="hd"><input type="checkbox" id="f2"><label for="f2"><span class="no">F-1B · not one of the 15</span>Tempo held</label></div>
+    <div class="stage"><div class="faccard">
+      <h4>Facilitator — never in the participant stack</h4>
+      <div class="phone" style="width:100%;height:220px;border-width:2px"><div class="scr">
+        <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+        <div class="blank" style="flex:.4"></div>
+        <div class="t-big">5:40 /km</div>
+        <div class="blank" style="flex:.4"></div>
+        <div class="t-md b wt">♫ Tempo HELD</div>
+        <div class="t-sm">Adaptive: PAUSED</div>
+        <div class="blank"></div>
+        <div class="btn">RESUME ADAPT</div>
+      </div></div>
+    </div></div>
+    <p class="why"><b>Why it exists:</b> 1B's stated test is whether the runner "still feels in
+    control", and no sheet gave them any control to exercise.</p>
+    <p class="flag red"><b>Stop clapping the instant they press HOLD TEMPO.</b> That silence is
+    the answer to the control question.</p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s5"><label for="s5"><span class="no">1B · Frame 1 · Context</span>Picking adaptive</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Phone showing adaptive playlist selected">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="60" y="16" width="80" height="120" rx="9"/>
+        <circle cx="76" cy="66" r="5"/><path d="M88 66h44"/>
+        <circle cx="76" cy="90" r="5"/><path d="M88 90h44"/>
+      </g>
+      <circle cx="76" cy="90" r="2.6" fill="#16181d"/>
+      <text x="100" y="42" font-size="11" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">Music mode</text>
+      <text x="112" y="118" font-size="16" fill="#1552b8">♫</text>
+    </svg>
+    <p class="cap"><b>Context</b>Minh picks the adaptive playlist instead of a fixed one.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s6"><label for="s6"><span class="no">1B · Frame 2 · Action</span>Pace lifts</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner speeding up on a downhill slope">
+      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M30 96l70 32" stroke="#16181d" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="112" cy="42" r="10"/><path d="M112 52l-4 32"/>
+        <path d="M110 62l16 4M110 62l-16 12"/><path d="M108 84l-16 24M108 84l18 18 2 16"/>
+      </g>
+      <g stroke="#c62828" stroke-width="2.2" stroke-linecap="round"><path d="M60 44h26M52 58h30M64 72h22"/></g>
+    </svg>
+    <p class="cap"><b>Trigger</b>His pace lifts on a downhill stretch.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s7"><label for="s7"><span class="no">1B · Frame 3 · Response</span>Tempo follows him</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Music notes tighter and larger, a speech bubble crossed out">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="46" cy="44" r="10"/><path d="M46 54l-3 30"/>
+        <path d="M45 64l14 4M45 64l-14 10"/><path d="M43 84l-14 22M43 84l16 16 2 14"/>
+      </g>
+      <g fill="#1552b8"><text x="88" y="52" font-size="24">♫</text><text x="112" y="46" font-size="24">♪</text>
+        <text x="134" y="54" font-size="24">♫</text><text x="156" y="46" font-size="24">♪</text></g>
+      <g fill="none" stroke="#c62828" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M100 92h60v26h-34l-10 10v-10h-16z"/><path d="M96 86l70 42"/>
+      </g>
+    </svg>
+    <p class="cap"><b>Response</b>The music tempo lifts with him. No voice cuts in.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s8"><label for="s8"><span class="no">1B · Frame 4 · Outcome</span>Settled</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner steady with evenly spaced music notes">
+      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="42" r="10"/><path d="M50 52v32"/>
+        <path d="M50 62l14 8M50 62l-14 8"/><path d="M50 84l-12 28M50 84l13 28"/>
+      </g>
+      <g fill="#1552b8"><text x="96" y="56" font-size="19">♫</text><text x="124" y="56" font-size="19">♫</text><text x="152" y="56" font-size="19">♫</text></g>
+      <text x="124" y="106" font-size="22" fill="#0f7a3d" text-anchor="middle">✓</text>
+    </svg>
+    <p class="cap"><b>Outcome</b>Pace settles — and nothing was said to make it happen.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e2"><label for="e2"><span class="no">1B · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>1B — Adaptive Music</dd>
+    <dt>Problem</dt><dd>A fixed playlist may not suit the state of the run.</dd>
+    <dt>Motivation</dt><dd>Music already drives motivation; making it responsive avoids adding a second channel that competes with it.</dd>
+    <dt>How it works</dt><dd>1. User picks the adaptive playlist and adaptation strength · 2. Tempo tracks the runner's cadence · 3. HOLD TEMPO freezes it whenever the runner disagrees</dd>
+    <dt>Differs</dt><dd>Nothing is blocked — the music itself changes shape to match the run.</dd>
+    <dt>Strengths</dt><dd>No interruption at all · zero mid-run interaction · reinforces the channel runners already trust</dd>
+    <dt>Weaknesses</dt><dd>Adaptation may be imperceptible or unwanted · does nothing about notifications</dd>
+  </dl></div>
+</div>
+
+<!-- ============================= 1C ============================= -->
+<h2 class="proto">1C — Ambient Audio Cue</h2>
+<p class="proto-note"><b>How it differs:</b> interruptions still happen, but arrive as a
+<b>short tone instead of a voice</b>. 1C is about what a cue is <i>made of</i> — Duy's 2C is
+the one about <i>when</i> a cue fires. Keep them apart or a grader will read them as duplicates.</p>
+
+<p class="flag red"><b>Agree the exact sound before the first session</b> — two taps on the
+table, a finger click, one chime — and use the identical sound every time. A cue that varies
+between participants cannot be compared across them.</p>
+
+<h3 class="grp">Participant sheets</h3>
+<div class="grid">
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c11"><label for="c11"><span class="no">1C · Sheet 1</span>Running</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:00<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+    </div></div></div>
+    <p class="why">Baseline. <b>Runner runs.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c12"><label for="c12"><span class="no">1C · Sheet 2</span>Too Fast / Ambient Cue</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge r">5:35<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="t-md b">+ ♪ cue</div>
+    </div></div></div>
+    <p class="why">The cue fires.</p>
+    <p class="flag red"><b>WoZ:</b> play the agreed sound. <b>Not spoken. Music does not stop.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c13"><label for="c13"><span class="no">1C · Sheet 3</span>Runner Adjusts</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-sm">No screen check</div>
+    </div></div></div>
+    <p class="why">Correction without looking. <b>Runner changes pace.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c14"><label for="c14"><span class="no">1C · Sheet 4</span>Cue Repeats</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge r">5:38<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♪ cue (2nd)</div>
+      <div class="blank" style="flex:.3"></div>
+      <div class="t-md b wt">♫ MUSIC</div>
+    </div></div></div>
+    <p class="why">The cue fires <b>a second time without escalating</b>. A voice coach
+    repeating itself nags; the claim here is that a light cue does not.</p>
+    <p class="flag red"><b>WoZ:</b> identical sound, identical volume, identical length.
+    Resisting the urge to make it more insistent <i>is</i> the test. This sheet used to be
+    "Sustained Deviation" with a live 20-second counter — that was 2C's idea sitting inside 1C.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c15"><label for="c15"><span class="no">1C · Sheet 5</span>Stable</label></div>
+    <div class="stage"><div class="phone"><div class="scr mid">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:01<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md g wt">✓ Stable</div>
+      <div class="t-md b">♫ MUSIC</div>
+    </div></div></div>
+    <p class="why">Outcome. <b>Keep going.</b></p>
+  </div>
+</div>
+
+<h3 class="grp">Storyboard — 4 frames</h3>
+<div class="grid sb">
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s9"><label for="s9"><span class="no">1C · Frame 1 · Context</span>Steady with music</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner with music notes at steady pace">
+      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="56" cy="42" r="10"/><path d="M56 52l-3 32"/>
+        <path d="M55 62l15 5M55 62l-14 9"/><path d="M53 84l-14 24M53 84l16 18 2 14"/>
+      </g>
+      <g fill="#1552b8"><text x="104" y="52" font-size="20">♫</text><text x="132" y="60" font-size="20">♪</text><text x="158" y="48" font-size="20">♫</text></g>
+      <text x="104" y="112" font-size="12" fill="#16181d" font-family="sans-serif">6:00/km</text>
+    </svg>
+    <p class="cap"><b>Context</b>Minh runs to his playlist at a steady 6:00/km.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s10"><label for="s10"><span class="no">1C · Frame 2 · Trigger</span>Drifting fast</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Pace drifting to 5:35 unnoticed">
+      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="42" r="10"/><path d="M60 52l-4 32"/>
+        <path d="M58 62l16 4M58 62l-15 10"/><path d="M56 84l-16 24M56 84l18 18 2 14"/>
+        <rect x="70" y="60" width="15" height="13" rx="2.5"/>
+      </g>
+      <text x="112" y="56" font-size="15" fill="#c62828" font-family="sans-serif" font-weight="700">5:35/km</text>
+      <g stroke="#c62828" stroke-width="2" stroke-linecap="round"><path d="M112 66h44"/></g>
+      <g fill="#1552b8"><text x="126" y="104" font-size="18">♫</text><text x="152" y="98" font-size="18">♪</text></g>
+    </svg>
+    <p class="cap"><b>Trigger</b>His pace drifts faster without him noticing.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s11"><label for="s11"><span class="no">1C · Frame 3 · Response</span>One short tone</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="A single small cue tone over unbroken music">
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="46" r="10"/><path d="M50 56l-3 30"/>
+        <path d="M49 66l15 4M49 66l-14 9"/><path d="M47 86l-14 22M47 86l16 16 2 14"/>
+      </g>
+      <g fill="#1552b8"><text x="96" y="72" font-size="20">♫</text><text x="122" y="80" font-size="20">♫</text><text x="150" y="70" font-size="20">♫</text></g>
+      <text x="118" y="38" font-size="17" fill="#1552b8" font-weight="700">♪</text>
+      <g fill="none" stroke="#1552b8" stroke-width="1.8" stroke-linecap="round">
+        <path d="M132 30c5 4 5 10 0 14"/><path d="M140 24c9 8 9 20 0 28"/>
+      </g>
+      <text x="96" y="126" font-size="10" fill="#16181d" font-family="sans-serif">music never stops</text>
+    </svg>
+    <p class="cap"><b>Response</b>One short tone plays over the music. No voice, no ducking.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s12"><label for="s12"><span class="no">1C · Frame 4 · Outcome</span>Cue repeats, unchanged</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner easing off as an identical tone repeats">
+      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
+      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="54" cy="44" r="10"/><path d="M54 54v30"/>
+        <path d="M54 64l13 7M54 64l-13 7"/><path d="M54 84l-11 26M54 84l12 26"/>
+      </g>
+      <text x="106" y="46" font-size="17" fill="#1552b8" font-weight="700">♪</text>
+      <text x="126" y="46" font-size="10" fill="#16181d" font-family="sans-serif">(same again)</text>
+      <g fill="#1552b8"><text x="106" y="86" font-size="19">♫</text><text x="136" y="86" font-size="19">♫</text></g>
+      <text x="150" y="118" font-size="20" fill="#0f7a3d">✓</text>
+    </svg>
+    <p class="cap"><b>Outcome</b>He eases off. The cue repeats once — exactly as quiet as before.</p>
+  </div>
+</div>
+
+<h3 class="grp">Explanation card</h3>
+<div class="item" style="max-width:640px">
+  <div class="hd"><input type="checkbox" id="e3"><label for="e3"><span class="no">1C · Card</span>Explanation card — seven fields</label></div>
+  <div class="card-tpl"><dl>
+    <dt>Prototype</dt><dd>1C — Ambient Audio Cue</dd>
+    <dt>Problem</dt><dd>Voice coaching interrupts music and breaks rhythm.</dd>
+    <dt>Motivation</dt><dd>The interruption is the voice, not the information. A tone carries the same signal at a fraction of the cost.</dd>
+    <dt>How it works</dt><dd>1. Pace drifts · 2. One short non-verbal tone plays over unbroken music · 3. It repeats identically rather than escalating</dd>
+    <dt>Differs</dt><dd>Changes what the cue is <b>made of</b> — a tone instead of a voice. 2C changes <b>when</b> a cue fires; the two are not variants of each other.</dd>
+    <dt>Strengths</dt><dd>Music never ducks · far shorter than speech · language-independent</dd>
+    <dt>Weaknesses</dt><dd>Meaning must be learned · may be missed under loud music · carries less detail than speech</dd>
+  </dl></div>
+</div>
+
+<footer class="end">
+  <p><strong>Before the paper goes in the folder</strong></p>
+  <ul>
+    <li>15 participant sheets, pen not pencil, unlined paper</li>
+    <li>F-1A and F-1B in a <strong>separate pile</strong>, each headed <strong>FACILITATOR</strong> in red</li>
+    <li>1B Sheet 3's cadence and BPM fields left <strong>blank</strong></li>
+    <li>1A Sheet 4 drawn to look near-identical to Sheet 3 — badge only, no banner</li>
+    <li>12 storyboard frames captioned · 3 explanation cards, all seven fields</li>
+    <li>Every sheet labelled on the back with its code</li>
+  </ul>
+  <p><strong>Nothing on this paper is testing data.</strong> Observation notes and participant
+  quotes stay empty until real sessions fill them.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  var KEY='pa3-luan-s1';
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  function paint(){
+    var n=0;
+    boxes.forEach(function(b){
+      b.closest('.item').classList.toggle('done',b.checked);
+      if(b.checked)n++;
+    });
+    document.getElementById('n').textContent=n;
+    document.getElementById('fill').style.width=(n/boxes.length*100)+'%';
+  }
+  boxes.forEach(function(b){
+    if(saved[b.id])b.checked=true;
+    b.addEventListener('change',function(){
+      saved[b.id]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+      paint();
+    });
+  });
+  document.getElementById('reset').addEventListener('click',function(){
+    boxes.forEach(function(b){b.checked=false});
+    saved={};
+    try{localStorage.removeItem(KEY)}catch(e){}
+    paint();
+  });
+  paint();
+})();
+</script>

@@ -87,6 +87,15 @@ the bar with margin, and every problem keeps its three alternatives.
 | Scenario 2 | Correct pace without looking at the screen | 2A · 2B · 2C | UC-03, UC-04 · Bình |
 | Scenario 3 | Control the run without stopping or mis-tapping | 3A · 3B · 3C | UC-05 · Anh |
 
+> **Scenario 3 descoped 10/08/2026.** Two members available (Duy, Luân) under time pressure,
+> so only Scenarios 1 and 2 are being drawn — 30 sheets, 24 frames. R1 requires *at least 2
+> main scenarios*, which this clears. **Residual risk:** R1 also asks for three prototypes per
+> *identified problem*, and P3 now has none — so `Group02-PA3-PaperProtype.pdf` must state the
+> descope explicitly ("P3 deferred; P1 and P2 carry three alternatives each") or it reads as a
+> missing deliverable rather than a scoping decision. 3A/3B/3C specs stay complete and
+> pre-flight-fixed in the guide; the block is drawable without further design work if a third
+> member frees up.
+
 History, so it is not re-litigated: the original drawing guide labelled the third block
 `PROBLEM 3` rather than `SCENARIO 3`, orphaning 3A/3B/3C. Root cause was Scenario 2's old
 name, "run and respond without breaking flow" — broad enough to overlap what 3A/3B/3C do.
@@ -129,6 +138,10 @@ docs/
     PA3-9-Paper-Prototypes-EN.md             WORKING SOURCE — all 9 prototypes, 45 sheets,
                                              3 scenarios, storyboard + explanation-card
                                              templates. Edit here.
+    PA3-Drawing-Specs.md                     derived print-ready specs for all 9
+    PA3-Drawing-Progress.md                  live tracker + scope decisions + pre-flight log
+    drawing-workspace/luan-scenario-1/       Luân: README checklist + sheets.html visuals
+    drawing-workspace/duy-scenario-2/        Duy: README checklist + sheets.html visuals
     PA3-9-Paper-Prototypes-VI.md             Vietnamese version — superseded, reference only
     PA3_9_Paper_Prototypes_Tieng_Viet.docx.pdf
                                              original PDF — superseded, reference only
