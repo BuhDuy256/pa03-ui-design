@@ -6,8 +6,13 @@ Prototypes **1A · 1B · 1C**
 **Visual sheets (open this and trace):**
 https://claude.ai/code/artifact/bfe89021-da26-4176-a789-a08d6538c5f6
 
-Local copy: `sheets.html` — open in a browser. Checkboxes there save in the browser;
-this file is the offline/printable version of the same list.
+**Offline copy — double-click this one:** `luan-scenario-1-standalone.html`
+Complete self-contained page, no internet needed. Works from a USB stick or as an email
+attachment. If `sheets.html` shows garbled characters when opened directly, use the
+standalone file instead — `sheets.html` is the Artifact source and has no document shell of
+its own. Regenerate the standalone with `..\make-standalone.ps1` after any edit.
+
+This README is the offline/printable version of the same checklist.
 
 ---
 

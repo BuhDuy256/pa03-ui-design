@@ -72,6 +72,24 @@ marks in the 11/08 testing session.
     Requirement 1 demands three *genuinely different* ideas per problem; a grader will not
     infer the distinction, so each card states it.
 
+### Change 17 — 2A moved from a watch to a phone (10/08/2026)
+
+At the team's request, **all Scenario 2 sheets are now the same phone rectangle**. 2A was the
+only watch-shaped prototype in the set; its five sheets and its storyboard frames are redrawn
+as phones, and the strap stubs are gone.
+
+Two consequences that belong on 2A's explanation card rather than in a grader's notes:
+
+1. **The haptics now come from a phone on an armband or in a pocket.** That is a weaker and
+   less localised sensation than a watch against the wrist, which makes the interpretation
+   task harder — exactly the difficulty Dr. Duy predicted. Name it under **WEAKNESSES /
+   OPEN QUESTIONS**; it strengthens the write-up rather than weakening it.
+2. **No drawn prototype uses the smartwatch any more.** With Scenario 3 descoped and 2A moved,
+   the whole set is phone-and-earbud. `CLAUDE.md` describes the watch as the product's
+   "low-attention feedback and quick-control surface" — which was precisely 2A's job. If the
+   watch stays in the product vision, PA4 has to carry it, because PA3 no longer demonstrates
+   it anywhere.
+
 > **Naming flag, not changed.** "3C — Voice-Free Quick Actions" is a misleading name: 3A and
 > 3B are equally voice-free, so the label names nothing distinctive. Its real property is
 > *target-free* — a gesture anywhere on the surface, no button to hit. The name is left
@@ -607,6 +625,9 @@ Overexertion Signal) · Persona: Bình.
 | **Problem** | Looking at the screen to check pace breaks the runner's flow. |
 | **Goal** | Use distinct vibration patterns for too fast / too slow / in range. |
 
+**Device: phone.** All five sheets are the standard phone rectangle ≈ 9 × 16 cm, matching 2B
+and 2C. (2A was originally watch-shaped — see Change 17.)
+
 One extra **Haptic Cue Card** is needed for the facilitator:
 
 | State | Vibration | Meaning |
@@ -621,15 +642,15 @@ One extra **Haptic Cue Card** is needed for the facilitator:
 ### Sheet 1 — Normal Running
 
 ```
-┌─────────────┐
-│  ● RUNNING  │
-│             │
-│   6:00/km   │
-│             │
-│   ♫ MUSIC   │
-│             │
-│  Keep pace  │
-└─────────────┘
+┌───────────────────────┐
+│      ● RUNNING        │
+│                       │
+│       6:00 / km       │
+│                       │
+│       ♫ MUSIC         │
+│                       │
+│      Keep pace        │
+└───────────────────────┘
 ```
 
 **Purpose:** Baseline.
@@ -640,13 +661,13 @@ One extra **Haptic Cue Card** is needed for the facilitator:
 **Front — participant side:**
 
 ```
-┌─────────────┐
-│   5:30/km   │
-│             │
-│             │
-│             │
-│             │
-└─────────────┘
+┌───────────────────────┐
+│                       │
+│                       │
+│       5:30 / km       │
+│                       │
+│                       │
+└───────────────────────┘
 ```
 
 **Back — facilitator side:**
@@ -673,13 +694,13 @@ before turning the sheet over.**
 ### Sheet 3 — Runner Slows
 
 ```
-┌─────────────┐
-│   6:05/km   │
-│             │
-│      ✓      │
-│             │
-│  IN RANGE   │
-└─────────────┘
+┌───────────────────────┐
+│       6:05 / km       │
+│                       │
+│           ✓           │
+│                       │
+│       IN RANGE        │
+└───────────────────────┘
 ```
 
 **Purpose:** Show the runner has corrected.
@@ -690,13 +711,13 @@ before turning the sheet over.**
 **Front — participant side:**
 
 ```
-┌─────────────┐
-│   6:40/km   │
-│             │
-│             │
-│             │
-│             │
-└─────────────┘
+┌───────────────────────┐
+│                       │
+│                       │
+│       6:40 / km       │
+│                       │
+│                       │
+└───────────────────────┘
 ```
 
 **Back — facilitator side:**
@@ -716,14 +737,13 @@ participant's interpretation *before* turning the sheet over.
 ### Sheet 5 — Back in Range
 
 ```
-┌─────────────┐
-│   6:02/km   │
-│             │
-│      ✓      │
-│  IN RANGE   │
-│             │
-│   ♫ MUSIC   │
-└─────────────┘
+┌───────────────────────┐
+│       6:02 / km       │
+│                       │
+│      ✓ IN RANGE       │
+│                       │
+│       ♫ MUSIC         │
+└───────────────────────┘
 ```
 
 **Purpose:** Outcome.
@@ -734,13 +754,14 @@ participant's interpretation *before* turning the sheet over.
 ```
 FACILITATOR — do not deal into the participant stack
 
-┌─────────────┐
-│   5:25/km   │
-│             │
-│    ▮  ▮     │
-│   (repeat)  │
-│             │
-└─────────────┘
+┌───────────────────────┐
+│      ● RUNNING        │
+│                       │
+│       5:25 / km       │
+│                       │
+│        ▮  ▮           │
+│       (repeat)        │
+└───────────────────────┘
 
 Use when the participant corrects in the WRONG DIRECTION,
 or does not react at all.
@@ -760,10 +781,11 @@ measurement for every remaining trial with that participant.
 screen?
 
 **Fastest way to run this:** have the facilitator simulate the vibration. For something more
-physical, place a vibrating phone behind the paper watch.
+physical, hold a vibrating phone against the participant's upper arm — which is now literally
+what the prototype depicts.
 
 > **Deliver the pulses out of sight.** If the participant can watch a hand tapping, they are
-> reading the hand, not the pattern. Vibrate the phone under the table or behind their wrist.
+> reading the hand, not the pattern. Vibrate the phone under the table or behind their arm.
 
 ---
 

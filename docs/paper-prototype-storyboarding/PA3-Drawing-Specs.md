@@ -26,8 +26,9 @@ video shot on a phone camera:
 | Deviations, alerts, haptic marks, `FACILITATOR` headers | **Red** |
 | `♫` music, audio cues, beat marks | **Blue** |
 
-**Size.** Phone sheets: portrait rectangle ~9 × 16 cm. Watch sheets (**2A only**): rounded
-square ~8 × 8 cm with a strap stub top and bottom. One screen per sheet — never two.
+**Size.** **Every sheet is the same portrait rectangle ~9 × 16 cm.** One screen per sheet —
+never two. (2A was originally watch-shaped; it was changed to a phone on 10/08/2026 so all of
+Scenario 2 matches.)
 
 **The number that matters is the biggest thing on the sheet.** Pace on a running screen,
 distance on a summary. A `6:02/km` drawn the same size as its label disappears on camera.
@@ -390,7 +391,13 @@ more insistent *is* the test.
 
 *Feedback through **vibration patterns** — a channel that needs no attention at all.*
 
-**Watch-shaped sheets.** Rounded square ~8 × 8 cm, strap stubs top and bottom.
+**Phone-shaped sheets**, same as 2B and 2C. The pulses come from a phone on an armband or in
+a pocket — a weaker, less localised sensation than a wrist device, which makes interpretation
+harder. Name that under WEAKNESSES on the explanation card.
+
+> The ASCII frames below are drawn narrow for compactness. **Draw them at full phone width
+> (~9 × 16 cm)** like every other sheet — the authoritative layouts are in
+> `PA3-9-Paper-Prototypes-EN.md` and the workspace artifact.
 
 ### Haptic Cue Card *(facilitator only — the answer key)*
 

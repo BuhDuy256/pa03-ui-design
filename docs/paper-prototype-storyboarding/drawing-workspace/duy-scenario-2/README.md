@@ -6,8 +6,13 @@ Prototypes **2A · 2B · 2C**
 **Visual sheets (open this and trace):**
 https://claude.ai/code/artifact/c49553df-3e03-4407-9aee-e31cac74bb03
 
-Local copy: `sheets.html` — open in a browser. Checkboxes there save in the browser;
-this file is the offline/printable version of the same list.
+**Offline copy — double-click this one:** `duy-scenario-2-standalone.html`
+Complete self-contained page, no internet needed. Works from a USB stick or as an email
+attachment. If `sheets.html` shows garbled characters when opened directly, use the
+standalone file instead — `sheets.html` is the Artifact source and has no document shell of
+its own. Regenerate the standalone with `..\make-standalone.ps1` after any edit.
+
+This README is the offline/printable version of the same checklist.
 
 ---
 
@@ -16,8 +21,8 @@ this file is the offline/printable version of the same list.
 - Coloured pens on clean **unlined** paper. **Not pencil.**
 - Black = frames and text · Green = ● running, ✓ in range · Red = deviations, alerts,
   FACILITATOR headers · Blue = ♫ music and audio cues.
-- **2A is watch-shaped** — rounded square ≈ 8 × 8 cm, strap stubs top and bottom.
-  2B and 2C are phone sheets ≈ 9 × 16 cm.
+- **All 15 sheets are the same phone rectangle** ≈ 9 × 16 cm — 2A included.
+  *(2A was watch-shaped until 10/08/2026; the strap stubs are gone.)*
 - Pace is the biggest thing on any running screen.
 - **Label the back of every sheet with its code** (`2A-3`, `2C-4`…) before moving on.
 - The Haptic Cue Card and F-2A go in a **separate pile**, `FACILITATOR` in red.
@@ -61,7 +66,13 @@ A wrong guess is the *expected* result and the most valuable data 2A produces. W
 card you will improvise, most likely by explaining — which kills the measurement for the rest
 of that session.
 
-### Participant sheets — watch-shaped
+### Participant sheets — phone rectangles
+
+> **2A is a phone now.** The pulses come from a phone on an armband or in a pocket, not a
+> watch on the wrist — a weaker, less localised sensation, which makes the interpretation task
+> harder. Put that in **WEAKNESSES / OPEN QUESTIONS** on the card; it strengthens the write-up
+> rather than weakening it. Deliver the pulses by holding a vibrating phone against their
+> upper arm, out of sight.
 
 - [ ] **2A-1** Normal Running — ● RUNNING, 6:00/km, ♫ MUSIC, "Keep pace"
 - [ ] **2A-2** Too Fast · **TWO-SIDED** — front: `5:30/km` **only**
