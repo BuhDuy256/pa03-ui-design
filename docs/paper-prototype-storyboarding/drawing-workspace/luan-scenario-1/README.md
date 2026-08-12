@@ -121,14 +121,14 @@ the music.
       → *The next track starts. He heard the whole message and never broke stride.*
 
 - [ ] **1B card** — explanation card, all seven fields.
-      The DIFFERS field must say: 1C shrinks the **message** to protect the music (user loses
-      content); 1B moves **when** it lands (user loses time).
+      The DIFFERS field must say: 1C shrinks the **immediate notification delivery** to
+      protect the music (user loses detail); 1B moves **when** it lands (user loses time).
 
 ---
 
 ## 1C — Ambient Audio Cue
 
-*Interruptions still happen, but arrive as a **short tone instead of a voice**.*
+*Interruptions still happen, but immediate delivery is compressed into a **short ambient cue**.*
 
 > **Agree the exact sound before the first session** — two taps on the table, a finger click,
 > one chime — and use the identical sound every time. A cue that varies between participants
@@ -154,7 +154,7 @@ full content, and the full content is deferred.
 - [ ] **1C-F2** Trigger — small non-critical notification/event icon arrives
       → *A lightweight event arrives during the song.*
 - [ ] **1C-F3** Response — one small ♪ above unbroken music notes
-      → *One short tone acknowledges it. No voice, no ducking.*
+      → *One short ambient cue acknowledges it. No full notification, no ducking.*
 - [ ] **1C-F4** Outcome — runner keeps stride, phone shows event held
       → *He keeps running. The details wait until after the run.*
 

@@ -6,7 +6,7 @@
 
 > Xin chào, đây là video minh họa các mẫu thử giấy cho Kịch bản 1 của Running Music Coach: bắt đầu run mà không phá dòng nhạc.
 > Vấn đề người dùng là người chạy dựa vào nhạc để giữ động lực và nhịp chạy, nhưng notification, cuộc gọi hoặc voice coach có thể cắt vào giữa bài và làm mất flow.
-> Nhóm đề xuất ba hướng khác nhau: 1A quyết định interruption nào được đi qua, 1B quyết định interruption rơi vào lúc nào, và 1C quyết định interruption được biểu diễn bằng gì.
+> Nhóm đề xuất ba hướng khác nhau: 1A quyết định interruption nào được đi qua, 1B quyết định interruption rơi vào lúc nào, và 1C quyết định người chạy nhận gì ngay lúc interruption đến.
 > Đây là video minh họa mẫu thử giấy, không phải kết quả kiểm thử người dùng.
 
 ---
@@ -20,7 +20,7 @@
 | Vấn đề người dùng | Notification, cuộc gọi và voice coach có thể chen vào khi runner đang nghe nhạc, làm nhạc bị duck hoặc bị ngắt. |
 | Động cơ thiết kế | Nếu runner chọn rule trước khi chạy, hệ thống có thể bảo vệ flow trong lúc chạy mà không bắt user xử lý từng interruption. |
 | Cách mẫu thử giải quyết | User cấu hình Focus Run trước session. Trong lúc chạy, interruption bị giữ lại và chỉ được tổng hợp sau khi run kết thúc. |
-| Khác với hai mẫu còn lại | 1A khác ở cơ chế lọc: nó quyết định interruption có được đi qua hay không. 1B không block mà dời thời điểm, còn 1C vẫn cho cue xuất hiện nhưng đổi modality. |
+| Khác với hai mẫu còn lại | 1A khác ở cơ chế lọc: nó quyết định interruption có được đi qua hay không. 1B không block mà dời thời điểm, còn 1C chỉ giao awareness bằng cue nhẹ và giữ chi tiết lại sau. |
 
 ### Bảng quay
 
@@ -52,7 +52,7 @@
 | Vấn đề người dùng | Một message hoặc notification có thể đến đúng giữa bài hát, làm nhạc bị hạ volume hoặc bị cắt. |
 | Động cơ thiết kế | Thứ gây hại không chỉ là bản thân thông báo, mà là thời điểm nó rơi vào. Khe giữa hai bài là thời điểm ít phá flow hơn. |
 | Cách mẫu thử giải quyết | Hệ thống giữ message trong hàng đợi, đợi bài hiện tại kết thúc, đọc message nguyên vẹn ở khoảng nghỉ giữa hai bài, rồi phát bài tiếp theo. |
-| Khác với hai mẫu còn lại | 1B không block như 1A và không nén message thành cue ngắn như 1C. Nó bảo vệ nhạc bằng cách dời thời điểm delivery. |
+| Khác với hai mẫu còn lại | 1B không block như 1A và không nén delivery ngay thành cue ngắn như 1C. Nó bảo vệ nhạc bằng cách dời thời điểm delivery. |
 
 ### Chuẩn bị quay
 
@@ -89,7 +89,7 @@
 | --- | --- |
 | Vấn đề người dùng | Một notification không khẩn cấp hoặc sự kiện nhẹ vẫn cần được nhận biết, nhưng nếu giao đầy đủ ngay giữa bài hát thì nhạc bị gián đoạn. |
 | Động cơ thiết kế | Không phải interruption nào cũng cần full content ngay lập tức. Có những sự kiện chỉ cần báo "có gì đó nhẹ vừa xảy ra", còn chi tiết có thể xem sau. |
-| Cách mẫu thử giải quyết | Hệ thống rút gọn interruption thành một ambient audio cue ngắn trên nền nhạc. Người chạy biết có sự kiện nhẹ, nhưng không bị đọc voice, không bị popup đầy đủ, và không phải xử lý ngay. |
+| Cách mẫu thử giải quyết | Hệ thống rút gọn interruption thành một ambient audio cue ngắn trên nền nhạc. Người chạy biết có sự kiện nhẹ, nhưng không nhận full notification giữa bài, không bị hạ nhạc, và không phải xử lý ngay. |
 | Khác với hai mẫu còn lại | 1C khác ở chiến lược xử lý: không block như 1A, không delay full content tới khe bài như 1B, mà giao ngay một cue rút gọn và giữ nội dung chi tiết lại sau. |
 
 ### Bảng quay
@@ -107,7 +107,7 @@
 
 | Phần | Lời thoại |
 | --- | --- |
-| Điểm mạnh | Điểm mạnh của 1C là music không bị duck, cue ngắn hơn speech rất nhiều, và user vẫn có awareness thay vì bị chặn hoàn toàn. |
+| Điểm mạnh | Điểm mạnh của 1C là music không bị duck, cue nhẹ hơn full notification rất nhiều, và user vẫn có awareness thay vì bị chặn hoàn toàn. |
 | Điểm yếu / câu hỏi mở | Điểm yếu là user không biết full content ngay lúc đó. Cue có thể bị bỏ lỡ, bị hiểu nhầm, hoặc nếu phát quá nhiều thì chính nó lại trở thành noise. |
 
 ---

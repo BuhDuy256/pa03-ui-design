@@ -605,7 +605,7 @@ the other way round.</p>
 <h2 class="proto">2C — Just-in-Time Pace Alert</h2>
 <p class="proto-note"><b>How it differs:</b> same feedback, different <b>timing rule</b> —
 fires only after deviation persists. This is the one about <i>when</i>; Luân's 1C is the one
-about <i>what a cue is made of</i>. Both cards must say so.</p>
+about <i>what the runner receives immediately when a notification arrives</i>. Both cards must say so.</p>
 
 <div class="callout">
   <p><b>Haptic-primary.</b> The alert <i>is</i> the vibration. The screen is only what the
@@ -769,7 +769,7 @@ about <i>what a cue is made of</i>. Both cards must say so.</p>
     <dt>Problem</dt><dd>Alerts that fire on every small deviation interrupt more than they help.</dd>
     <dt>Motivation</dt><dd>Pace naturally fluctuates. Treating every fluctuation as an event turns useful feedback into noise.</dd>
     <dt>How it works</dt><dd>1. Deviation begins, system stays silent · 2. Silence holds while the deviation persists · 3. One haptic pulse fires only once it has lasted long enough to matter</dd>
-    <dt>Differs</dt><dd>Changes <b>when</b> a cue fires, not what it is made of. 1C changes the cue's <b>modality</b> — a tone instead of a voice. The two are not variants of each other.</dd>
+    <dt>Differs</dt><dd>Changes <b>when</b> a pace alert fires, not how a notification is delivered. 1C changes what the runner receives immediately from a non-critical notification — awareness only, details later. The two are not variants of each other.</dd>
     <dt>Strengths</dt><dd>Far fewer interruptions · each alert carries real weight · tolerates natural pace variation</dd>
     <dt>Weaknesses</dt><dd>Delay may feel like the system is broken · a correct threshold is unknown · late feedback may arrive after the moment has passed</dd>
   </dl></div>

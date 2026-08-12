@@ -332,8 +332,8 @@ answer across a filter rule and a timing rule.
 ```
 
 **Purpose:** A non-critical event arrives, but it is compressed into a short cue instead of
-being read out or shown in full. **⚠ WoZ:** play the agreed sound. **Not spoken. Music does
-not stop.**
+forcing full notification delivery during the song. **⚠ WoZ:** play the agreed sound. Do not
+show or read the full notification. **Music does not stop or duck.**
 
 ### Sheet 3 — Flow Preserved
 
@@ -1108,7 +1108,7 @@ Stick figures are fine. Draw runner + device + what changed. Caption under each 
 | --- | --- | --- |
 | 1 | Minh running, music notes around him | Minh is in music flow. |
 | 2 | A small non-critical notification icon arriving near the phone; music notes stay unbroken | A lightweight event arrives during the song. |
-| 3 | One small ♪ above the unbroken music notes; no speech bubble | One short tone acknowledges it. No voice, no ducking. |
+| 3 | One small ♪ above the unbroken music notes; no full notification bubble | One short ambient cue acknowledges it. No full notification, no ducking. |
 | 4 | Runner still mid-stride; phone shows "1 event held" for later | He keeps running. The details wait until after the run. |
 
 ## 2A — Haptic Pace Feedback

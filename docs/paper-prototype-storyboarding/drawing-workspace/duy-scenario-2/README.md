@@ -176,8 +176,8 @@ every participant** or their answers about timing cannot be compared.
       → *He corrects once — and was interrupted once.*
 
 - [ ] **2C card** — explanation card, all seven fields.
-      The DIFFERS field must say: 2C changes **when** a cue fires; 1C changes what a cue is
-      **made of**.
+      The DIFFERS field must say: 2C changes **when** a pace alert fires; 1C changes what
+      the runner receives immediately when a non-critical notification arrives.
 
 ---
 
@@ -185,7 +185,7 @@ every participant** or their answers about timing cannot be compared.
 
 **1C and 2C are the pair a grader is most likely to call duplicates.** Luân's 1C-4 was
 rewritten so the delay concept lives only here in 2C. Both explanation cards have to state the
-distinction — modality vs timing policy — not just one.
+distinction — notification awareness vs pace-alert timing — not just one.
 
 ---
 

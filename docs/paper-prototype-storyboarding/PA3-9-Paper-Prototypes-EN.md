@@ -94,7 +94,7 @@ Two consequences that belong on 2A's explanation card rather than in a grader's 
 ### Change 18 — 1B replaced: Adaptive Music → Between-Track Delivery (12/08/2026)
 
 **The old 1B did not attack Scenario 1's problem.** Compare the three Problem lines as they
-stood: 1A — *"Notifications and voice coach can interrupt music"*; 1C — *"Voice coaching can
+stood: 1A — *"Notifications and voice coach can interrupt music"*; 1C — *"Notifications can
 interrupt music"*; 1B — *"A fixed playlist may not suit the state of the run."* The first two
 intervene on the interrupting channel. The third intervenes on the music, and **none of its
 five sheets contained an interruption at all**. The `"without voice interruption"` clause in
@@ -587,7 +587,7 @@ Five screens to draw. Audio only needs to be simulated in the video — nothing 
 ```
 
 **Purpose:** A non-critical event arrives, but it is compressed into a short cue instead of
-being read out or shown as a full notification.
+forcing full notification delivery during the song.
 **Interaction:** Facilitator plays or simulates a short cue.
 
 > **Wizard-of-Oz — required.** The cue must be one short, soft, non-verbal sound — two taps
@@ -983,8 +983,9 @@ handed over.
 > that has to be read would fail the scenario it belongs to. The old Sheet 4 was ambiguous —
 > a `▮` glyph implying haptics next to text implying a banner.
 >
-> **What this is NOT:** 2C is not 1C with a different cue. 1C asks *what a cue should be made
-> of*; 2C holds the cue constant and asks *when firing one is worth the interruption*. Sheets
+> **What this is NOT:** 2C is not 1C with a different cue. 1C asks *what the runner receives
+> immediately when a notification arrives*; 2C holds the alert mechanism constant and asks
+> *when firing one is worth the interruption*. Sheets
 > 2 and 3 exist to show the alert deliberately **not** firing — that restraint is the entire
 > prototype, and it is why 2C's screens look nearly identical to each other.
 
