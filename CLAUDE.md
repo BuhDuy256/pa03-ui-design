@@ -38,6 +38,8 @@ coordinator role was added in the 3-day plan.
 ## 2. The product being designed
 
 **Running Music Coach — Adaptive Music and Eyes-Free Interaction for Runners.**
+*(The "Adaptive Music" here is the PA2 product subtitle, not prototype 1B — 1B was renamed
+Between-Track Delivery on 12/08/2026. Do not conflate them.)*
 
 A hybrid phone + smartwatch + earbuds running companion. Phone holds session logic, music
 adaptation, and notification policy; the watch is a low-attention feedback and quick-control
@@ -68,7 +70,7 @@ variants of one idea.
 
 | Problem | A | B | C |
 | --- | --- | --- | --- |
-| P1 Music flow | 1A Focus Run Mode | 1B Adaptive Music | 1C Ambient Audio Cue |
+| P1 Music flow | 1A Focus Run Mode | 1B Between-Track Delivery | 1C Ambient Audio Cue |
 | P2 Pace awareness | 2A Haptic Pace Feedback | 2B Beat-to-Pace Matching | 2C Just-in-Time Pace Alert |
 | P3 Interaction | 3A Run Lock Interface | 3B Earbud Controls | 3C Voice-Free Quick Actions |
 

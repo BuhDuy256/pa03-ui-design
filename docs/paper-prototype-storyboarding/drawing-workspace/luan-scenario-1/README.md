@@ -62,39 +62,67 @@ showed something passing the filter, so the prototype covered only half its use 
 
 ---
 
-## 1B — Adaptive Music
+## 1B — Between-Track Delivery
 
-*Nothing is blocked — the music itself **changes shape** to match the run.*
+*Nothing is blocked and nothing changes form — the interruption **waits for the seam between
+two tracks**.*
 
-- [ ] **1B-1** Music Selection — ♫ Running Mix, ○ Original / ● Adaptive, `[CONTINUE]`
-- [ ] **1B-2** Adaptive Settings — Target cadence `[USER SETS]`, ● Gentle / ○ Strong, `[START]`
-- [ ] **1B-3** Running — 6:02/km, `Cadence ___ spm`, `Music ___ BPM`, Adaptive: ON, `[HOLD TEMPO]`
-- [ ] **1B-4** Pace Changes — 5:40/km, ♫ Music adapting…, ↑ tempo lifting, `[HOLD TEMPO]`
-- [ ] **1B-5** Stable Pace — 6:00/km, ✓ Pace stabilized, ♫ MUSIC, `[HOLD TEMPO]`
-- [ ] **F-1B** *(facilitator)* Tempo held — ♫ Tempo HELD, Adaptive: PAUSED, `[RESUME ADAPT]`
+> **⚠ 1B was redesigned on 12/08/2026.** The old 1B was *Adaptive Music* (music tempo follows
+> pace). It was cut because none of its five sheets contained an interruption, so it could not
+> be compared with 1A and 1C on the one thing Scenario 1 measures — and it inverted Duy's 2B.
+> **If you already drew sheets with `Cadence ___ spm` or `[HOLD TEMPO]`, those are the old
+> design.** Rationale: Change 18 in `PA3-9-Paper-Prototypes-EN.md`.
 
-**Watch for:** 1B-3's two figures stay **blank** — you write in the participant's own number.
-It used to print `168 BPM` against Sheet 2's "user sets", and it conflated cadence (spm) with
-music tempo (BPM), which is the exact relationship 1B exists to make legible.
+**No setup screen, on purpose.** 1A says the runner picks the policy in advance; 1B says they
+should not have to pick anything. A setup sheet would collapse 1B into 1A. It opens mid-run.
 
-**Wizard-of-Oz, required on 1B-4:** clap, tap, or run a metronome and **speed it up**.
-Silent paper gives the participant nothing to react to.
+- [ ] **1B-1** Running — ● RUNNING, 6:02/km, `♫ Track 3`, bar `▓▓▓░░░░ 1:12 / 3:40`, `[PAUSE] [END]`
+- [ ] **1B-2** Message Waiting — **near-identical to 1B-1**, plus `✉ 1` corner badge,
+      bar `1:48 / 3:40`, `Waiting for gap`
+- [ ] **1B-3** Track Ending — bar nearly full `▓▓▓▓▓▓▓ 3:31 / 3:40`, `Delivering next…`
+- [ ] **1B-4** Delivered in the Gap — `♫ — gap —`, `✉ Mai — message`, "spoken in full"
+- [ ] **1B-5** Back to Music — `♫ Track 4`, bar `▓░░░░░░ 0:14 / 4:05`, `✉ 0`, "Music uninterrupted"
+- [ ] **F-1B** *(facilitator, two panels)* **P1 long track** — `♫ Track 5 ▓▓▓░░░░ 4:20 / 7:10`,
+      `✉ 1 waiting · 4:20 so far` · **P2 critical bypass** — `📞 Mum — calling (critical)`,
+      `♫ music ducked`
 
-**F-1B exists because** 1B's stated test is whether the runner still feels in control, and no
-sheet gave them any control. Stop clapping the instant they press HOLD TEMPO.
+**Watch for:** **the track progress bar is the whole prototype.** Without a visible position
+inside the song, "the gap" means nothing and 1B looks like a generic running screen. It is also
+the only element 1A and 1C do not have — it is what tells a grader the three are different at a
+glance. Draw it large on all five sheets and label both figures.
+
+**Watch for:** `✉ 1` is a small corner badge, same visual weight as 1A's `🔕 2` — but the
+opposite meaning. 1A's says *held until the end of the run*; 1B's says *coming shortly*.
+Whether a participant reads that difference is one of the things the session measures, so do
+not make 1B's badge louder to compensate.
+
+**Wizard-of-Oz, required — and the discipline is negative.** Play real music from a phone or
+speaker from 1B-1 onward. When 1B-2 goes down, **do not lower the volume.** The instinct to
+duck the music while handing over a notification sheet is exactly what this prototype claims
+never happens. On 1B-4: let the track end, **read the message aloud in a normal voice**, then
+start the next track. Same sentence, verbatim, for every participant.
+
+**F-1B exists because** a design whose whole mechanism is *delay* has not been tested until
+someone has been made to wait too long. Panel 1 is the honest weakness — a 7-minute track means
+a 7-minute wait, and 1B has no answer. Panel 2 is the one moment in 1B where you **do** duck
+the music.
 
 ### Storyboard
 
-- [ ] **1B-F1** Context — phone with the adaptive option selected
-      → *Minh picks the adaptive playlist instead of a fixed one.*
-- [ ] **1B-F2** Trigger — runner speeding up on a downhill, motion lines
-      → *His pace lifts on a downhill stretch.*
-- [ ] **1B-F3** Response — music notes larger and tighter; a speech bubble **crossed out**
-      → *The music tempo lifts with him. No voice cuts in.*
-- [ ] **1B-F4** Outcome — runner steady, notes evenly spaced, ✓
-      → *Pace settles — and nothing was said to make it happen.*
+- [ ] **1B-F1** Context — Minh running, music notes, a track progress bar drawn below him
+      → *Minh runs to his playlist, part-way through a song.*
+- [ ] **1B-F2** Trigger — an envelope arriving, caught in a bubble marked "waiting";
+      music notes **unbroken**
+      → *A message arrives. It waits — the music does not stop.*
+- [ ] **1B-F3** Response — two songs meeting: notes ending, a gap, new notes starting; the
+      envelope released **into the gap**
+      → *It is delivered in the seam between two tracks, read out in full.*
+- [ ] **1B-F4** Outcome — runner mid-stride, new notes around him, envelope gone
+      → *The next track starts. He heard the whole message and never broke stride.*
 
-- [ ] **1B card** — explanation card, all seven fields
+- [ ] **1B card** — explanation card, all seven fields.
+      The DIFFERS field must say: 1C shrinks the **message** to protect the music (user loses
+      content); 1B moves **when** it lands (user loses time).
 
 ---
 

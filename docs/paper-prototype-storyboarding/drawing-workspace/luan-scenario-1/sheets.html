@@ -180,8 +180,8 @@ stack is unsortable, and you will be sorting it at 11 p.m.</p>
 <!-- ============================= 1A ============================= -->
 <h2 class="proto">1A — Focus Run Mode</h2>
 <p class="proto-note"><b>How it differs:</b> blocks interruptions <b>before</b> the run, by a
-rule the user sets in advance. 1B changes the music instead; 1C changes what the interruption
-sounds like.</p>
+rule the user sets in advance. 1B changes <i>when</i> the interruption lands; 1C changes what
+the interruption sounds like.</p>
 
 <h3 class="grp">Participant sheets</h3>
 <div class="grid">
@@ -375,195 +375,241 @@ sounds like.</p>
 </div>
 
 <!-- ============================= 1B ============================= -->
-<h2 class="proto">1B — Adaptive Music</h2>
-<p class="proto-note"><b>How it differs:</b> nothing is blocked — the music itself
-<b>changes shape</b> to match the run.</p>
+<h2 class="proto">1B — Between-Track Delivery</h2>
+<p class="proto-note"><b>How it differs:</b> nothing is blocked and nothing changes form — the
+interruption <b>waits for the seam between two tracks</b>. 1C shrinks the <i>message</i> to
+protect the music; 1B moves <i>when</i> it lands.</p>
+
+<p class="flag red"><b>⚠ 1B was redesigned on 12/08/2026.</b> The old 1B was
+<i>Adaptive Music</i> (music tempo follows pace). It was cut because none of its five sheets
+contained an interruption at all, so it could not be compared with 1A and 1C on the one thing
+Scenario 1 measures — and it inverted Duy's 2B. <b>Any sheet with <span class="mono">Cadence
+___ spm</span> or <span class="mono">HOLD TEMPO</span> on it is the old design.</b> Rationale:
+Change 18 in <span class="mono">PA3-9-Paper-Prototypes-EN.md</span>.</p>
+
+<p class="flag"><b>No setup screen, on purpose.</b> 1A says the runner picks the policy in
+advance; 1B says they should not have to pick anything. A setup sheet would collapse 1B into
+1A. It opens mid-run.</p>
 
 <h3 class="grp">Participant sheets</h3>
 <div class="grid">
 
   <div class="item">
-    <div class="hd"><input type="checkbox" id="c6"><label for="c6"><span class="no">1B · Sheet 1</span>Music Selection</label></div>
-    <div class="stage"><div class="phone"><div class="scr">
-      <div class="t-ttl">Choose Music</div>
-      <div class="blank" style="flex:.4"></div>
-      <div class="t-md b">♫ Running Mix</div>
-      <div class="blank" style="flex:.4"></div>
-      <div class="lst"><span class="wt">Music mode:</span>
-        <span>○ Original playlist</span><span>● Adaptive playlist</span></div>
-      <div class="blank"></div>
-      <div class="btn">CONTINUE</div>
-    </div></div></div>
-    <p class="why">Pick the adaptive playlist. <b>Tap CONTINUE → Sheet 2.</b></p>
-  </div>
-
-  <div class="item">
-    <div class="hd"><input type="checkbox" id="c7"><label for="c7"><span class="no">1B · Sheet 2</span>Adaptive Settings</label></div>
-    <div class="stage"><div class="phone"><div class="scr">
-      <div class="t-ttl">Adaptive Music</div>
-      <div class="blank" style="flex:.3"></div>
-      <div class="lst"><span class="wt">Target cadence</span>
-        <span class="mono" style="font-size:11px">[ USER SETS ]</span></div>
-      <div class="blank" style="flex:.3"></div>
-      <div class="lst"><span class="wt">Music adapts to pace</span>
-        <span>● Gentle adaptation</span><span>○ Strong adaptation</span></div>
-      <div class="blank"></div>
-      <div class="btn">START</div>
-    </div></div></div>
-    <p class="why">Choose adaptation strength. <b>Tap START → Sheet 3.</b></p>
-    <p class="flag"><b>Do not print a cadence number.</b> The participant supplies it.</p>
-  </div>
-
-  <div class="item">
-    <div class="hd"><input type="checkbox" id="c8"><label for="c8"><span class="no">1B · Sheet 3</span>Running</label></div>
+    <div class="hd"><input type="checkbox" id="c6b"><label for="c6b"><span class="no">1B · Sheet 1</span>Running</label></div>
     <div class="stage"><div class="phone"><div class="scr">
       <div class="t-ttl"><span class="g">●</span> RUNNING</div>
       <div class="blank" style="flex:.4"></div>
       <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♫ Track 3</div>
+      <div class="t-sm mono b">▓▓▓░░░░ 1:12 / 3:40</div>
+      <div class="blank"></div>
+      <div class="btn">PAUSE</div>
+    </div></div></div>
+    <p class="why">Baseline — and establish that a track has a <i>position</i>.
+    <b>Message arrives → Sheet 2.</b></p>
+    <p class="flag red"><b>The progress bar is the prototype.</b> With no visible position
+    inside the song, "the gap" means nothing and this reads as a generic running screen. It is
+    also the only element 1A and 1C do not have. Draw it large, on all five sheets, and label
+    both figures.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c7b"><label for="c7b"><span class="no">1B · Sheet 2</span>Message Waiting</label></div>
+    <div class="stage"><div class="phone rel"><span class="corner r">✉ 1</span><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♫ Track 3</div>
+      <div class="t-sm mono b">▓▓▓▓░░░ 1:48 / 3:40</div>
+      <div class="t-sm">Waiting for gap</div>
+      <div class="blank"></div>
+    </div></div></div>
+    <p class="why">A message arrived and is being held for the seam. The music continues
+    untouched. <b>Let the track run → Sheet 3.</b></p>
+    <p class="flag red"><b>Wizard-of-Oz — required, and the discipline is negative.</b> Play
+    real music from a phone or speaker from Sheet 1 onward, and when this sheet goes down
+    <b>do not lower the volume</b>. Ducking the music while dealing a notification sheet is
+    exactly what 1B claims never happens.</p>
+    <p class="flag">Draw <span class="mono">✉ 1</span> small, in the corner — same visual
+    weight as 1A's <span class="mono">🔕 2</span>, opposite meaning. 1A's says <i>held until
+    the end</i>; this says <i>coming shortly</i>. Whether a participant reads that difference
+    is one of the things the session measures, so do not make it louder to compensate.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c8b"><label for="c8b"><span class="no">1B · Sheet 3</span>Track Ending</label></div>
+    <div class="stage"><div class="phone rel"><span class="corner r">✉ 1</span><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:03<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b">♫ Track 3</div>
+      <div class="t-sm mono b">▓▓▓▓▓▓▓ 3:31 / 3:40</div>
+      <div class="t-sm">Delivering next…</div>
+      <div class="blank"></div>
+    </div></div></div>
+    <p class="why">The wait is about to end — the bar is nearly full.
+    <b>Track finishes → Sheet 4.</b></p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="c9b"><label for="c9b"><span class="no">1B · Sheet 4</span>Delivered in the Gap</label></div>
+    <div class="stage"><div class="phone"><div class="scr">
+      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-huge">6:02<span class="t-md"> /km</span></div>
+      <div class="blank" style="flex:.4"></div>
+      <div class="t-md b wt">♫ — gap —</div>
       <div class="blank" style="flex:.3"></div>
-      <div class="rowline"><span>Cadence</span><span><span class="fill"></span> spm</span></div>
-      <div class="rowline"><span>Music</span><span><span class="fill"></span> BPM</span></div>
+      <div class="t-md">✉ Mai — message</div>
+      <div class="t-sm">spoken in full</div>
       <div class="blank"></div>
-      <div class="t-sm">Adaptive: ON</div>
-      <div class="btn">HOLD TEMPO</div>
     </div></div></div>
-    <p class="why">Baseline. <b>Facilitator simulates a pace change → Sheet 4.</b></p>
-    <p class="flag red"><b>Leave both figures blank</b> and write in the participant's own
-    number. It used to print <span class="mono">168 BPM</span> against Sheet 2's "user sets" —
-    and cadence (spm) is not music tempo (BPM). Two labelled rows, never one line.</p>
+    <p class="why">The seam. The message is delivered <b>whole</b>, and no music is lost.
+    <b>Next track starts → Sheet 5.</b></p>
+    <p class="flag red"><b>Wizard-of-Oz — required.</b> Let the track end naturally,
+    <b>read the message aloud in a normal voice</b>, then start the next track. Agree the exact
+    sentence before the first session and use it verbatim for every participant.</p>
+    <p class="flag"><b>This is where 1B and 1C part company.</b> 1C protects the music by
+    shrinking the message to a tone — the user keeps their music and loses the content. 1B
+    protects it by moving the message — the user keeps the content and loses time. Both
+    explanation cards must say so.</p>
   </div>
 
   <div class="item">
-    <div class="hd"><input type="checkbox" id="c9"><label for="c9"><span class="no">1B · Sheet 4</span>Pace Changes</label></div>
-    <div class="stage"><div class="phone"><div class="scr">
+    <div class="hd"><input type="checkbox" id="c10b"><label for="c10b"><span class="no">1B · Sheet 5</span>Back to Music</label></div>
+    <div class="stage"><div class="phone rel"><span class="corner">✉ 0</span><div class="scr">
       <div class="t-ttl"><span class="g">●</span> RUNNING</div>
       <div class="blank" style="flex:.4"></div>
-      <div class="t-huge r">5:40<span class="t-md"> /km</span></div>
+      <div class="t-huge">6:01<span class="t-md"> /km</span></div>
       <div class="blank" style="flex:.4"></div>
-      <div class="t-md b">♫ Music adapting…</div>
-      <div class="t-sm b">↑ tempo lifting</div>
+      <div class="t-md b">♫ Track 4</div>
+      <div class="t-sm mono b">▓░░░░░░ 0:14 / 4:05</div>
+      <div class="t-sm g wt">Music uninterrupted</div>
       <div class="blank"></div>
-      <div class="btn">HOLD TEMPO</div>
     </div></div></div>
-    <p class="why">Music adapts; no voice cuts in.</p>
-    <p class="flag red"><b>Wizard-of-Oz, required.</b> Clap, tap, or run a metronome and
-    <b>speed it up</b> as this sheet goes down. Silent paper gives the participant nothing to
-    react to.</p>
-  </div>
-
-  <div class="item">
-    <div class="hd"><input type="checkbox" id="c10"><label for="c10"><span class="no">1B · Sheet 5</span>Stable Pace</label></div>
-    <div class="stage"><div class="phone"><div class="scr">
-      <div class="t-ttl"><span class="g">●</span> RUNNING</div>
-      <div class="blank" style="flex:.5"></div>
-      <div class="t-huge">6:00<span class="t-md"> /km</span></div>
-      <div class="blank" style="flex:.4"></div>
-      <div class="t-md g wt">✓ Pace stabilized</div>
-      <div class="t-md b">♫ MUSIC</div>
-      <div class="blank"></div>
-      <div class="btn">HOLD TEMPO</div>
-    </div></div></div>
-    <p class="why">Outcome. <b>Keep running.</b></p>
+    <p class="why">Queue empty, new track playing, stride never broken. <b>Keep running.</b></p>
   </div>
 </div>
 
 <h3 class="grp">Facilitator card — separate pile</h3>
 <div class="grid">
   <div class="item fac">
-    <div class="hd"><input type="checkbox" id="f2"><label for="f2"><span class="no">F-1B · not one of the 15</span>Tempo held</label></div>
+    <div class="hd"><input type="checkbox" id="f2b"><label for="f2b"><span class="no">F-1B · not one of the 15</span>Long track / critical bypass — two panels</label></div>
     <div class="stage"><div class="faccard">
       <h4>Facilitator — never in the participant stack</h4>
-      <div class="phone" style="width:100%;height:220px;border-width:2px"><div class="scr">
-        <div class="t-ttl"><span class="g">●</span> RUNNING</div>
-        <div class="blank" style="flex:.4"></div>
-        <div class="t-big">5:40 /km</div>
-        <div class="blank" style="flex:.4"></div>
-        <div class="t-md b wt">♫ Tempo HELD</div>
-        <div class="t-sm">Adaptive: PAUSED</div>
-        <div class="blank"></div>
-        <div class="btn">RESUME ADAPT</div>
-      </div></div>
+      <div style="display:flex;gap:10px">
+        <div class="phone" style="width:100%;height:220px;border-width:2px"><div class="scr">
+          <div class="t-sm wt r">PANEL 1 — long track</div>
+          <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+          <div class="blank" style="flex:.3"></div>
+          <div class="t-big">6:02 /km</div>
+          <div class="blank" style="flex:.3"></div>
+          <div class="t-sm b">♫ Track 5</div>
+          <div class="t-sm mono b">▓▓▓░░░░ 4:20 / 7:10</div>
+          <div class="t-sm r wt">✉ 1 waiting · 4:20 so far</div>
+        </div></div>
+        <div class="phone" style="width:100%;height:220px;border-width:2px"><div class="scr">
+          <div class="t-sm wt r">PANEL 2 — critical bypass</div>
+          <div class="t-ttl"><span class="g">●</span> RUNNING</div>
+          <div class="blank" style="flex:.3"></div>
+          <div class="t-big">6:02 /km</div>
+          <div class="blank" style="flex:.3"></div>
+          <div class="t-md">📞 Mum — calling</div>
+          <div class="t-sm">(critical)</div>
+          <div class="t-sm b wt">♫ music ducked</div>
+        </div></div>
+      </div>
     </div></div>
-    <p class="why"><b>Why it exists:</b> 1B's stated test is whether the runner "still feels in
-    control", and no sheet gave them any control to exercise.</p>
-    <p class="flag red"><b>Stop clapping the instant they press HOLD TEMPO.</b> That silence is
-    the answer to the control question.</p>
+    <p class="why"><b>Why it exists:</b> a design whose whole mechanism is <i>delay</i> has not
+    been tested until someone has been made to wait too long. Panel 1 is 1B's honest weakness —
+    a 7-minute track means a 7-minute wait, and the prototype has no answer for it.</p>
+    <p class="flag red"><b>Panel 1: ask for a number.</b> After how many minutes would they
+    rather be interrupted? <b>Panel 2 is the one moment in 1B where you do duck the music.</b>
+    It mirrors F-1A — compare the same participant's answer under a filter rule and under a
+    timing rule.</p>
   </div>
 </div>
 
 <h3 class="grp">Storyboard — 4 frames</h3>
 <div class="grid sb">
   <div class="item">
-    <div class="hd"><input type="checkbox" id="s5"><label for="s5"><span class="no">1B · Frame 1 · Context</span>Picking adaptive</label></div>
-    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Phone showing adaptive playlist selected">
+    <div class="hd"><input type="checkbox" id="s5b"><label for="s5b"><span class="no">1B · Frame 1 · Context</span>Part-way through a song</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner with music notes and a track progress bar">
+      <path d="M14 132h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
       <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="60" y="16" width="80" height="120" rx="9"/>
-        <circle cx="76" cy="66" r="5"/><path d="M88 66h44"/>
-        <circle cx="76" cy="90" r="5"/><path d="M88 90h44"/>
+        <circle cx="44" cy="38" r="10"/><path d="M44 48v30"/>
+        <path d="M44 58l14 8M44 58l-14 8"/><path d="M44 78l-12 28M44 78l13 28"/>
       </g>
-      <circle cx="76" cy="90" r="2.6" fill="#16181d"/>
-      <text x="100" y="42" font-size="11" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">Music mode</text>
-      <text x="112" y="118" font-size="16" fill="#1552b8">♫</text>
+      <g fill="#1552b8"><text x="88" y="46" font-size="19">♫</text><text x="116" y="40" font-size="19">♪</text><text x="144" y="46" font-size="19">♫</text></g>
+      <text x="134" y="94" font-size="9" fill="#16181d" text-anchor="middle" font-family="sans-serif">1:12 / 3:40</text>
+      <path d="M92 108h84" stroke="#16181d" stroke-width="2" stroke-linecap="round"/>
+      <path d="M92 108h26" stroke="#1552b8" stroke-width="6" stroke-linecap="round"/>
     </svg>
-    <p class="cap"><b>Context</b>Minh picks the adaptive playlist instead of a fixed one.</p>
+    <p class="cap"><b>Context</b>Minh runs to his playlist, part-way through a song.</p>
   </div>
 
   <div class="item">
-    <div class="hd"><input type="checkbox" id="s6"><label for="s6"><span class="no">1B · Frame 2 · Action</span>Pace lifts</label></div>
-    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner speeding up on a downhill slope">
-      <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
-      <path d="M30 96l70 32" stroke="#16181d" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
+    <div class="hd"><input type="checkbox" id="s6b"><label for="s6b"><span class="no">1B · Frame 2 · Trigger</span>A message waits</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="An envelope held in a waiting bubble while music notes continue unbroken">
       <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="112" cy="42" r="10"/><path d="M112 52l-4 32"/>
-        <path d="M110 62l16 4M110 62l-16 12"/><path d="M108 84l-16 24M108 84l18 18 2 16"/>
+        <circle cx="38" cy="38" r="10"/><path d="M38 48v30"/>
+        <path d="M38 58l13 8M38 58l-13 8"/><path d="M38 78l-11 28M38 78l12 28"/>
       </g>
-      <g stroke="#c62828" stroke-width="2.2" stroke-linecap="round"><path d="M60 44h26M52 58h30M64 72h22"/></g>
-    </svg>
-    <p class="cap"><b>Trigger</b>His pace lifts on a downhill stretch.</p>
-  </div>
-
-  <div class="item">
-    <div class="hd"><input type="checkbox" id="s7"><label for="s7"><span class="no">1B · Frame 3 · Response</span>Tempo follows him</label></div>
-    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Music notes tighter and larger, a speech bubble crossed out">
-      <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="46" cy="44" r="10"/><path d="M46 54l-3 30"/>
-        <path d="M45 64l14 4M45 64l-14 10"/><path d="M43 84l-14 22M43 84l16 16 2 14"/>
-      </g>
-      <g fill="#1552b8"><text x="88" y="52" font-size="24">♫</text><text x="112" y="46" font-size="24">♪</text>
-        <text x="134" y="54" font-size="24">♫</text><text x="156" y="46" font-size="24">♪</text></g>
+      <g fill="#1552b8"><text x="78" y="42" font-size="18">♫</text><text x="104" y="36" font-size="18">♪</text><text x="130" y="42" font-size="18">♫</text><text x="156" y="36" font-size="18">♪</text></g>
       <g fill="none" stroke="#c62828" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M100 92h60v26h-34l-10 10v-10h-16z"/><path d="M96 86l70 42"/>
+        <rect x="80" y="78" width="82" height="46" rx="11"/>
+        <rect x="92" y="90" width="32" height="23" rx="2"/><path d="M92 90l16 12 16-12"/>
       </g>
+      <text x="142" y="108" font-size="10" fill="#c62828" text-anchor="middle" font-family="sans-serif" font-weight="700">wait</text>
     </svg>
-    <p class="cap"><b>Response</b>The music tempo lifts with him. No voice cuts in.</p>
+    <p class="cap"><b>Trigger</b>A message arrives. It waits — the music does not stop.</p>
   </div>
 
   <div class="item">
-    <div class="hd"><input type="checkbox" id="s8"><label for="s8"><span class="no">1B · Frame 4 · Outcome</span>Settled</label></div>
-    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="Runner steady with evenly spaced music notes">
+    <div class="hd"><input type="checkbox" id="s7b"><label for="s7b"><span class="no">1B · Frame 3 · Response</span>Delivered in the seam</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="The message is delivered in the gap between two tracks">
+      <g fill="#1552b8"><text x="12" y="58" font-size="19">♫</text><text x="36" y="50" font-size="19">♪</text><text x="60" y="58" font-size="19">♫</text></g>
+      <g fill="#1552b8"><text x="130" y="58" font-size="19">♫</text><text x="154" y="50" font-size="19">♪</text><text x="176" y="58" font-size="19">♫</text></g>
+      <g stroke="#16181d" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round">
+        <path d="M100 16v34"/><path d="M100 100v20"/>
+      </g>
+      <g fill="none" stroke="#c62828" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="79" y="58" width="42" height="30" rx="2"/><path d="M79 58l21 15 21-15"/>
+      </g>
+      <text x="100" y="140" font-size="10" fill="#16181d" text-anchor="middle" font-family="sans-serif" font-weight="700">gap between tracks</text>
+    </svg>
+    <p class="cap"><b>Response</b>It is delivered in the seam between two tracks, read out in full.</p>
+  </div>
+
+  <div class="item">
+    <div class="hd"><input type="checkbox" id="s8b"><label for="s8b"><span class="no">1B · Frame 4 · Outcome</span>Next track, unbroken stride</label></div>
+    <svg class="frame" viewBox="0 0 200 150" role="img" aria-label="The next track starts and the runner never broke stride">
       <path d="M14 128h172" stroke="#16181d" stroke-width="2.2" stroke-linecap="round"/>
       <g fill="none" stroke="#16181d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="50" cy="42" r="10"/><path d="M50 52v32"/>
         <path d="M50 62l14 8M50 62l-14 8"/><path d="M50 84l-12 28M50 84l13 28"/>
       </g>
-      <g fill="#1552b8"><text x="96" y="56" font-size="19">♫</text><text x="124" y="56" font-size="19">♫</text><text x="152" y="56" font-size="19">♫</text></g>
-      <text x="124" y="106" font-size="22" fill="#0f7a3d" text-anchor="middle">✓</text>
+      <g fill="#1552b8"><text x="96" y="52" font-size="19">♫</text><text x="122" y="46" font-size="19">♪</text><text x="148" y="52" font-size="19">♫</text></g>
+      <text x="124" y="104" font-size="22" fill="#0f7a3d" text-anchor="middle">✓</text>
     </svg>
-    <p class="cap"><b>Outcome</b>Pace settles — and nothing was said to make it happen.</p>
+    <p class="cap"><b>Outcome</b>The next track starts. He heard the whole message and never broke stride.</p>
   </div>
 </div>
 
 <h3 class="grp">Explanation card</h3>
 <div class="item" style="max-width:640px">
-  <div class="hd"><input type="checkbox" id="e2"><label for="e2"><span class="no">1B · Card</span>Explanation card — seven fields</label></div>
+  <div class="hd"><input type="checkbox" id="e2b"><label for="e2b"><span class="no">1B · Card</span>Explanation card — seven fields</label></div>
   <div class="card-tpl"><dl>
-    <dt>Prototype</dt><dd>1B — Adaptive Music</dd>
-    <dt>Problem</dt><dd>A fixed playlist may not suit the state of the run.</dd>
-    <dt>Motivation</dt><dd>Music already drives motivation; making it responsive avoids adding a second channel that competes with it.</dd>
-    <dt>How it works</dt><dd>1. User picks the adaptive playlist and adaptation strength · 2. Tempo tracks the runner's cadence · 3. HOLD TEMPO freezes it whenever the runner disagrees</dd>
-    <dt>Differs</dt><dd>Nothing is blocked — the music itself changes shape to match the run.</dd>
-    <dt>Strengths</dt><dd>No interruption at all · zero mid-run interaction · reinforces the channel runners already trust</dd>
-    <dt>Weaknesses</dt><dd>Adaptation may be imperceptible or unwanted · does nothing about notifications</dd>
+    <dt>Prototype</dt><dd>1B — Between-Track Delivery</dd>
+    <dt>Problem</dt><dd>A notification arriving mid-song cuts into the music the runner is using to hold rhythm.</dd>
+    <dt>Motivation</dt><dd>The damage is done by <i>when</i> the message lands, not by the message itself. Move it to a moment where no music is lost and nothing has to be blocked or shortened.</dd>
+    <dt>How it works</dt><dd>1. A non-critical notification arrives mid-track and is queued, music untouched · 2. It is released in the seam between two tracks and delivered in full · 3. A critical call bypasses the rule and arrives immediately</dd>
+    <dt>Differs</dt><dd>Nothing is blocked and nothing changes form — the interruption waits for the seam between two tracks. 1A changes <i>whether</i> it gets through; 1C changes <i>what it is made of</i>; 1B changes <i>when it lands</i>. Not 2C: 2C delays on how long the runner's pace has been off (body data); 1B delays on where the music is (content structure).</dd>
+    <dt>Strengths</dt><dd>Music is never cut · the message arrives whole, unlike a tone · nothing to configure before the run · completes UC-02 by showing a delivery that does no damage</dd>
+    <dt>Weaknesses</dt><dd>A long track means a long wait, and time-sensitive messages arrive late · needs music with clear track boundaries — fails on podcasts or continuous mixes · the "waiting" badge may be read as blocked or lost</dd>
   </dl></div>
 </div>
 
@@ -737,7 +783,7 @@ between participants cannot be compared across them.</p>
   <ul>
     <li>15 participant sheets, pen not pencil, unlined paper</li>
     <li>F-1A and F-1B in a <strong>separate pile</strong>, each headed <strong>FACILITATOR</strong> in red</li>
-    <li>1B Sheet 3's cadence and BPM fields left <strong>blank</strong></li>
+    <li>1B's track progress bar drawn on <strong>all five sheets</strong>, large enough to read</li>
     <li>1A Sheet 4 drawn to look near-identical to Sheet 3 — badge only, no banner</li>
     <li>12 storyboard frames captioned · 3 explanation cards, all seven fields</li>
     <li>Every sheet labelled on the back with its code</li>

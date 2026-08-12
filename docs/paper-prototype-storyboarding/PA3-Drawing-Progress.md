@@ -60,6 +60,37 @@ worth less than a finished 3A, because a prototype with missing states cannot be
 
 ---
 
+## Design change — 1B replaced, 12/08/2026
+
+**1B — Adaptive Music → 1B — Between-Track Delivery.** Full rationale is Change 18 in
+`PA3-9-Paper-Prototypes-EN.md`; the short version:
+
+The old 1B did not attack Scenario 1's problem. Its own Problem line read *"A fixed playlist
+may not suit the state of the run"* while 1A's and 1C's both named interruption — and **none
+of its five sheets contained an interruption at all**. Scenario 1's success condition, *"music
+is never cut unintentionally"*, was therefore satisfied vacuously: 1B won the comparison by not
+competing in it. It also inverted 2B (old 1B: beat follows runner; 2B: runner follows beat).
+
+The replacement takes the one axis no prototype in the set had claimed — **when** the
+interruption lands. A non-critical message is queued and released in the seam between two
+tracks, delivered in full; a critical call bypasses the rule. Not a duplicate of 2C: 2C delays
+on how long the runner's pace has been off (body data), 1B on where the music is (content
+structure). It also completes UC-02, which 1A only ever showed the blocking half of.
+
+**Cost:** the tracker below recorded 15/30 sheets drawn, all of them Duy's Scenario 2, so on
+this evidence no Scenario 1 paper was lost — **confirm with Luân**. Still to draw: 5 sheets,
+4 frames, 1 two-panel facilitator card, 1 video.
+
+**Propagated to:** `PA3-9-Paper-Prototypes-EN.md` · `PA3-Drawing-Specs.md` ·
+`drawing-workspace/luan-scenario-1/{README.md, sheets.html, standalone, VIDEO_SCRIPT_VI.md}` ·
+`docs/formative-testing/kich-ban-scenario-1.md` · `CLAUDE.md` + `AGENTS.md`.
+
+**Not propagated:** `PA3-Analysis.pdf` and `PA3-9-Paper-Prototypes-VI.md` are frozen references
+and still name Adaptive Music. `Group02-PA3-PaperProtype.pdf` does not exist yet, so it will be
+written against the new 1B.
+
+---
+
 ## Open logistics — surfaced by the 10/08 verification sweep
 
 Ordered by how quietly they fail.
@@ -69,7 +100,7 @@ Ordered by how quietly they fail.
 | L1 | **Weekly report template not yet downloaded** — the spec links a specific Google Drive file | R4 is 5% and requires *their* template, not a self-made table | — |
 | L2 | **Presentation date still unverified** against the actual lecture slot | The whole 3-day sequence hangs off 13/08 | — |
 | L3 | **Photographing 30 sheets for the report is not in the plan** | R1's PDF needs images of the paper; ~1–1.5 h, not AI-doable | — |
-| L4 | **No printed data-capture form for sessions** | The Cue Interpretation Accuracy table needs consistent per-participant capture | — |
+| L4 | ~~No printed data-capture form for sessions~~ **closed 12/08** | Session scripts + blank capture forms now live in `docs/formative-testing/` — one per scenario, plus the shared facilitator guide. Cue Interpretation Accuracy has its own table in the Scenario 2 file | — |
 | L5 | **Session plan assumes 4 people, 2 parallel pairs** | With 2 people the sessions are strictly sequential — recalculate D2 | — |
 | L6 | **CO-owned tasks unassigned** if Trâm is unavailable — recruitment follow-up, slides, weekly log | Exactly the two 5% requirements that fail silently | — |
 | L7 | **Improved-prototype video is a separate upload on D3** | Easy to miss because the D2 upload ritual is already done | — |
@@ -96,8 +127,8 @@ section), `PA3-Drawing-Specs.md`, and both workspace artifacts.
 | 5 | 1C / 2C | Near-duplicate on paper | separated structurally — 1C is modality only, 2C is timing only; 1C Sheet 4 rewritten |
 | 6 | 1A | Sheet 4 bannered "Notification muted" — a visual interruption proving the absence of interruption | silent corner badge, count moved to Sheet 5 |
 | 7 | 1A | Emergency row was a double negative; no sheet showed anything passing the filter (half of UC-02) | "Always allow" section + card F-1A |
-| 8 | 1B | Sheet 3 hard-coded `168 BPM` against Sheet 2's "user sets"; BPM and cadence conflated | blanks, two labelled units |
-| 9 | 1B | Tests "feels in control" but offered no control | `[ HOLD TEMPO ]` on Sheets 3–5 + card F-1B |
+| 8 | ~~1B~~ | ~~Sheet 3 hard-coded `168 BPM` against Sheet 2's "user sets"; BPM and cadence conflated~~ | **moot** — sheets replaced 12/08, see Design change below |
+| 9 | ~~1B~~ | ~~Tests "feels in control" but offered no control~~ | **moot** — sheets replaced 12/08, see Design change below |
 | 10 | all | Explanation card had no field for "genuinely different", which R1 requires | seventh field + a ready-to-copy line per prototype |
 
 ### Scenario 3 — fixed, then descoped

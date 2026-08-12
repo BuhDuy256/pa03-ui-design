@@ -168,122 +168,131 @@ Deal after Sheet 4. Ask what they expect for a real emergency, *then* show it.
 
 ---
 
-## 1B — Adaptive Music
+## 1B — Between-Track Delivery
 
-*Nothing is blocked — the music itself **changes shape** to match the run.*
+*Nothing is blocked and nothing changes form — the interruption **waits for the seam between
+two tracks**.*
 
-### Sheet 1 — Music Selection
+> **Replaced "1B — Adaptive Music" on 12/08/2026 (Change 18).** If you are holding a sheet
+> with `Cadence ___ spm` or `[ HOLD TEMPO ]` on it, that is the old design — discard it.
+>
+> **No setup screen, on purpose.** 1A's thesis is that the runner sets the policy in advance;
+> 1B's is that they should not have to set anything. A setup sheet would collapse 1B into 1A.
 
-```
-┌───────────────────────┐
-│     Choose Music      │
-│                       │
-│   ♫ Running Mix       │
-│                       │
-│  Music mode:          │
-│  ○ Original playlist  │
-│  ● Adaptive playlist  │
-│                       │
-│     [ CONTINUE ]      │
-└───────────────────────┘
-```
-
-**Purpose:** Pick the adaptive playlist. **Interaction:** Tap CONTINUE → Sheet 2.
-
-### Sheet 2 — Adaptive Settings
+### Sheet 1 — Running
 
 ```
 ┌───────────────────────┐
-│    Adaptive Music     │
-│                       │
-│  Target cadence       │
-│        [ USER SETS ]  │
-│                       │
-│  Music adapts to pace │
-│  ● Gentle adaptation  │
-│  ○ Strong adaptation  │
-│                       │
-│      [ START ]        │
-└───────────────────────┘
-```
-
-**Purpose:** Choose adaptation strength. **Do not print a cadence number** — the participant
-supplies it. **Interaction:** Tap START → Sheet 3.
-
-### Sheet 3 — Running
-
-```
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
+│  ● RUNNING            │
 │       6:02 / km       │
-│   Cadence  ___ spm    │
-│   Music    ___ BPM    │
 │                       │
-│   Adaptive: ON        │
-│   [ HOLD TEMPO ]      │
+│  ♫ Track 3            │
+│  ▓▓▓░░░░  1:12 / 3:40 │
+│                       │
+│  [ PAUSE ]   [ END ]  │
 └───────────────────────┘
 ```
 
-**Purpose:** Baseline. **Leave both figures blank** and write in the participant's own number
-during setup. Cadence (spm) and music tempo (BPM) are different units — two labelled rows,
-never one line. **Interaction:** Facilitator simulates a pace change → Sheet 4.
+**Purpose:** Baseline, and establish that a track has a *position*.
+**⚠ The progress bar is the prototype.** No visible position inside the song → "the gap" means
+nothing and 1B reads as a generic running screen. It is also the only element 1A and 1C do not
+have. Draw it large, label both figures. **Interaction:** Message arrives → Sheet 2.
 
-### Sheet 4 — Pace Changes
+### Sheet 2 — Message waiting
 
 ```
 ┌───────────────────────┐
-│      ● RUNNING        │
+│  ● RUNNING      ✉ 1   │
+│       6:02 / km       │
 │                       │
-│       5:40 / km       │
-│                       │
-│  ♫ Music adapting…    │
-│    ↑ tempo lifting    │
-│                       │
-│   [ HOLD TEMPO ]      │
+│  ♫ Track 3            │
+│  ▓▓▓▓░░░  1:48 / 3:40 │
+│  Waiting for gap      │
+│  [ PAUSE ]   [ END ]  │
 └───────────────────────┘
 ```
 
-**Purpose:** Music adapts, no voice cuts in.
-**⚠ Wizard-of-Oz — required.** Clap, tap, or run a metronome and **speed it up** as this
-sheet goes down. Silent paper gives the participant nothing to react to.
+**Purpose:** Message held for the seam; music untouched. `✉ 1` small, in the corner — same
+weight as 1A's `🔕 2` badge, opposite meaning (*coming shortly*, not *held until the end*).
+**⚠ Wizard-of-Oz — required, and negative.** Real music playing from Sheet 1 onward, and when
+this sheet goes down **do not lower it**. Ducking the music while dealing a notification sheet
+is exactly what 1B claims never happens. **Interaction:** Let the track run → Sheet 3.
 
-### Sheet 5 — Stable Pace
+### Sheet 3 — Track ending
 
 ```
 ┌───────────────────────┐
-│      ● RUNNING        │
+│  ● RUNNING      ✉ 1   │
+│       6:03 / km       │
 │                       │
-│       6:00 / km       │
-│                       │
-│  ✓ Pace stabilized    │
-│       ♫ MUSIC         │
-│                       │
-│   [ HOLD TEMPO ]      │
+│  ♫ Track 3            │
+│  ▓▓▓▓▓▓▓  3:31 / 3:40 │
+│  Delivering next…     │
+│  [ PAUSE ]   [ END ]  │
 └───────────────────────┘
 ```
 
-**Purpose:** Outcome. **Interaction:** Keep running.
+**Purpose:** The wait is about to end — bar nearly full. **Interaction:** Track finishes → Sheet 4.
 
-### F-1B — Tempo held *(facilitator card)*
+### Sheet 4 — Delivered in the gap
+
+```
+┌───────────────────────┐
+│  ● RUNNING            │
+│       6:02 / km       │
+│                       │
+│  ♫  — gap —           │
+│                       │
+│  ✉ Mai — message      │
+│    spoken in full     │
+└───────────────────────┘
+```
+
+**Purpose:** The seam. Message delivered **whole**, no music lost.
+**⚠ Wizard-of-Oz — required.** Let the track end naturally → **read the message aloud in a
+normal voice** → start the next track. Same sentence, verbatim, for every participant.
+**Interaction:** Next track starts → Sheet 5.
+
+### Sheet 5 — Back to music
+
+```
+┌───────────────────────┐
+│  ● RUNNING      ✉ 0   │
+│       6:01 / km       │
+│                       │
+│  ♫ Track 4            │
+│  ▓░░░░░░  0:14 / 4:05 │
+│  Music uninterrupted  │
+│  [ PAUSE ]   [ END ]  │
+└───────────────────────┘
+```
+
+**Purpose:** Queue empty, new track playing, stride never broken. **Interaction:** Keep running.
+
+### F-1B — Long track / critical bypass *(facilitator card, two panels)*
 
 ```
 FACILITATOR — do not deal into the participant stack
 
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
-│       5:40 / km       │
-│                       │
-│  ♫ Tempo HELD         │
-│    Adaptive: PAUSED   │
-│                       │
-│   [ RESUME ADAPT ]    │
-└───────────────────────┘
+PANEL 1 — long track          PANEL 2 — critical bypass
+┌───────────────────────┐     ┌───────────────────────┐
+│  ● RUNNING      ✉ 1   │     │  ● RUNNING            │
+│       6:02 / km       │     │       6:02 / km       │
+│                       │     │                       │
+│  ♫ Track 5            │     │  📞 Mum — calling      │
+│  ▓▓▓░░░░  4:20 / 7:10 │     │   (critical)          │
+│  ✉ 1 waiting          │     │                       │
+│    4:20 so far        │     │  ♫ music ducked       │
+└───────────────────────┘     └───────────────────────┘
 ```
 
-**Stop clapping the instant they press HOLD TEMPO.** That silence is the answer to whether
-they feel in control.
+**Panel 1 is 1B's honest weakness** — a 7-minute track means a 7-minute wait. Deal it after
+Sheet 5 and **ask for a number**: after how many minutes would they rather be interrupted? A
+prototype whose mechanism *is* delay has not been tested until someone waited too long.
+
+**Panel 2 breaks the rule on purpose** — critical call mid-track, and this is the one moment in
+1B where **you do duck the music**. Deal it last. Mirrors F-1A: compare the same participant's
+answer across a filter rule and a timing rule.
 
 ---
 
@@ -1081,14 +1090,14 @@ Stick figures are fine. Draw runner + device + what changed. Caption under each 
 | 3 | Runner mid-stride; a message icon arrives crossed out; music notes unbroken | A message arrives. It is held silently — the music never breaks. |
 | 4 | Run Complete screen showing "3 held" | He finishes uninterrupted, and sees what was held only at the end. |
 
-## 1B — Adaptive Music
+## 1B — Between-Track Delivery
 
 | # | Draw | Caption |
 | --- | --- | --- |
-| 1 | Minh choosing the adaptive playlist | Minh picks the adaptive playlist instead of a fixed one. |
-| 2 | Runner speeding up, legs blurred, downhill | His pace lifts on a downhill stretch. |
-| 3 | Music notes drawn larger and closer together; **no speech bubble** | The music tempo lifts with him. No voice cuts in. |
-| 4 | Runner steady, notes evenly spaced | Pace settles — and nothing was said to make it happen. |
+| 1 | Minh running, music notes around him, a track progress bar drawn below | Minh runs to his playlist, part-way through a song. |
+| 2 | An envelope arriving, caught inside a bubble marked "waiting"; music notes **unbroken** | A message arrives. It waits — the music does not stop. |
+| 3 | Two songs meeting: notes ending, a gap, new notes starting; the envelope released **into the gap** | It is delivered in the seam between two tracks, read out in full. |
+| 4 | Runner mid-stride, new notes around him, envelope gone | The next track starts. He heard the whole message and never broke stride. |
 
 ## 1C — Ambient Audio Cue
 
@@ -1196,7 +1205,7 @@ Nothing here needs inventing.
 | Prototype | How it differs |
 | --- | --- |
 | 1A | Blocks interruptions **before** the run, by a rule the user sets in advance |
-| 1B | Nothing is blocked — the music itself **changes shape** to match the run |
+| 1B | Nothing is blocked and nothing changes form — the interruption **waits for the seam between two tracks** |
 | 1C | Interruptions still happen, but arrive as a **short tone instead of a voice** |
 | 2A | Feedback through **vibration patterns** — a channel needing no attention at all |
 | 2B | Feedback through **music rhythm** — the runner matches an unchanging beat |
@@ -1220,7 +1229,7 @@ Before the paper goes in the folder:
       `FACILITATOR` in red
 - [ ] 2A Sheets 2 and 4 have blank fronts — no `TOO FAST` / `TOO SLOW` visible to a participant
 - [ ] The Haptic Cue Card is not loose in the 2A stack
-- [ ] 1B Sheet 3's cadence and BPM fields are **blank**
+- [ ] 1B's track progress bar is drawn on **all five sheets** and is large enough to read
 - [ ] 3A Sheet 4 has three full-width buttons, not a `<< ▶ >>` bar
 - [ ] 3B and 3C say "**Pause music**", and their paused sheets still read `● RUNNING`
 - [ ] 36 storyboard frames captioned
