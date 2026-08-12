@@ -1,229 +1,115 @@
-# Kịch Bản Video - Scenario 2
+# Kịch bản video - Kịch bản 2
 
-## Scenario 2 - Correct pace without looking at the screen
+## Sửa pace mà không cần nhìn màn hình
 
-### Mở đầu
+### Mở đầu chung
 
-**Lời thoại**
-
-> Xin chào, đây là video demo paper prototype cho Scenario 2 của Running Music Coach: Correct pace without looking at the screen.
-> Scenario này tập trung vào eyes-free pace awareness. Vấn đề là runner cần biết pace đang lệch, nhưng việc nhìn màn hình làm mất flow và ảnh hưởng nhịp thở.
-> Ba alternatives là: 2A dùng haptic pattern, 2B dùng beat của nhạc làm reference, và 2C chỉ alert khi deviation kéo dài đủ lâu.
-> Đây là video demo prototype, không phải kết quả user testing.
+> Xin chào, đây là video minh họa các mẫu thử giấy cho Kịch bản 2 của Running Music Coach: sửa pace mà không cần nhìn màn hình.
+> Vấn đề người dùng là người chạy cần biết pace đang lệch, nhưng việc nhìn màn hình trong lúc chạy làm mất nhịp thở, mất tập trung và phá dòng chạy.
+> Nhóm đề xuất ba hướng khác nhau: 2A dùng mẫu rung, 2B dùng nhịp nhạc làm mốc, và 2C chỉ cảnh báo khi pace lệch đủ lâu.
+> Đây là video minh họa mẫu thử giấy, không phải kết quả kiểm thử người dùng.
 
 ---
 
 ## 2A - Haptic Pace Feedback
 
-### Tóm tắt
+### Ý tưởng theo Yêu cầu 1
 
-**Lời thoại**
+| Mục | Nội dung cần nói |
+| --- | --- |
+| Vấn đề người dùng | Runner cần biết mình đang quá nhanh hoặc quá chậm mà không phải nhìn màn hình. |
+| Động cơ thiết kế | Haptic là kênh feedback rất ít chiếm sự chú ý, không chen vào nhạc và không cần đọc thông tin trên màn hình. |
+| Cách mẫu thử giải quyết | Hệ thống dùng các mẫu rung khác nhau để báo trạng thái pace: đang đúng, quá nhanh, hoặc quá chậm. |
+| Khác với hai mẫu còn lại | 2A khác ở kênh feedback: dùng rung. 2B dùng nhịp nhạc, còn 2C dùng luật thời điểm cảnh báo. |
 
-> Prototype 2A dùng vibration pattern để báo pace. Có ba pattern: in range, too fast, và too slow.
-> Trong video demo, chúng ta có thể giải thích mapping cho người xem. Nhưng khi user testing thật, answer key này không được đưa cho participant trước.
+### Bảng quay
 
-### Demo Flow
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| --- | --- | --- | --- | --- |
+| 0 | Haptic Cue Card của người điều phối | Đưa nhanh thẻ vào khung hình rồi bỏ ra khỏi bộ giấy của người tham gia. | Đây là thẻ cue haptic chỉ dành cho người điều phối. Trong video minh họa, nhóm có thể giải thích mapping: một pulse ngắn là đúng vùng, hai pulse ngắn là quá nhanh, một pulse dài là quá chậm. Khi kiểm thử thật, người tham gia không được thấy thẻ này trước, vì thẻ là đáp án của phần cần kiểm tra. | Làm rõ cách mẫu thử hoạt động nhưng không biến video thành dữ liệu kiểm thử giả. |
+| 1 | Sheet 1: Normal Running | Đặt sheet vào giữa khung hình, chỉ vào pace 6:00/km và trạng thái nhạc. | Người chạy đang chạy ở target pace 6:00/km. Nhạc vẫn phát bình thường, và chưa cần phản hồi sửa pace. | Bảng phân cảnh bắt đầu từ context bình thường của người dùng. |
+| 2 | Sheet 2: Too Fast / Haptic Event | Giả lập hai pulse ngắn ở ngoài khung hình hoặc dưới bàn. Không lộ đáp án trên mặt trước sheet. | Khi người chạy chạy quá nhanh, ví dụ 5:30/km, điện thoại trên armband hoặc trong túi rung hai nhịp ngắn. Trong video minh họa này, hai nhịp ngắn có nghĩa là cần chậm lại. | Đây là phản hồi của hệ thống: báo lỗi pace bằng haptic, không yêu cầu nhìn màn hình. |
+| 3 | Sheet 3: Runner Slows | Chỉ từ pace nhanh về vùng target. | Người chạy hiểu cue và điều chỉnh chậm lại. Điểm chính là hành động sửa pace xảy ra mà không cần kiểm tra màn hình. | Cho thấy mẫu thử giải quyết vấn đề như thế nào. |
+| 4 | Sheet 4: Too Slow / Haptic Event | Giả lập một pulse dài. | Nếu runner trở nên quá chậm, hệ thống gửi một pulse dài. Trong demo này, pulse dài có nghĩa là cần tăng tốc. | Chứng minh hệ thống không chỉ phát hiện một chiều, mà phân biệt được quá nhanh và quá chậm. |
+| 5 | Sheet 5: Back in Range | Chỉ vào trạng thái quay lại gần target. | Kết quả là người chạy quay lại pace gần target trong khi nhạc vẫn tiếp tục và mắt vẫn không cần rời khỏi đường chạy. | Kết thúc bảng phân cảnh bằng kết quả đúng với mục tiêu của Kịch bản 2. |
 
-**Hành động**
+### Kết luận
 
-- Quay nhanh Haptic Cue Card nếu cần.
-- Nói rõ card này chỉ dành cho facilitator.
-
-**Lời thoại**
-
-> Đây là haptic cue card cho facilitator. In range là một pulse ngắn, too fast là hai pulse ngắn, và too slow là một pulse dài.
-> Card này không nằm trong participant stack, vì nếu participant thấy answer key thì test interpretation sẽ mất giá trị.
-
-**Hành động**
-
-- Đưa Sheet 1: Normal Running.
-
-**Lời thoại**
-
-> Runner đang chạy bình thường ở 6:00/km, music đang phát, và hệ thống báo keep pace.
-
-**Hành động**
-
-- Đưa Sheet 2: Too Fast / Haptic Event, mặt trước chỉ có pace 5:30/km.
-- Giả lập hai pulse ngắn ở ngoài khung hình hoặc dưới bàn.
-
-**Lời thoại**
-
-> Khi runner chạy quá nhanh, phone trên armband hoặc trong pocket rung hai nhịp ngắn. Mặt participant chỉ thấy pace, không có label too fast và không có đáp án cue.
-> Trong demo này, hai pulse ngắn có nghĩa là slow down.
-
-**Hành động**
-
-- Đưa Sheet 3: Runner Slows.
-
-**Lời thoại**
-
-> Runner điều chỉnh chậm lại và quay về in range.
-
-**Hành động**
-
-- Đưa Sheet 4: Too Slow / Haptic Event.
-- Giả lập một pulse dài.
-
-**Lời thoại**
-
-> Nếu runner quá chậm, hệ thống gửi một pulse dài. Trong demo này, một pulse dài có nghĩa là speed up.
-
-**Hành động**
-
-- Đưa Sheet 5: Back in Range.
-
-**Lời thoại**
-
-> Outcome là runner quay lại pace gần target mà không phải nhìn màn hình.
-
-### Kết
-
-**Lời thoại**
-
-> Strength của 2A là fully eyes-free, vẫn dùng được khi music đang phát, và không chen thêm audio interruption.
-> Weakness là pattern cần được học. Ngoài ra phone vibration trên armband hoặc trong pocket yếu hơn watch vibration trên cổ tay, nên khả năng phân biệt pattern là một open question.
+| Phần | Lời thoại |
+| --- | --- |
+| Điểm mạnh | Điểm mạnh của 2A là gần như hoàn toàn không cần nhìn màn hình, không chen thêm audio interruption vào nhạc, và có thể dùng trong lúc người chạy vẫn tiếp tục chạy. |
+| Điểm yếu / câu hỏi mở | Điểm yếu là người dùng phải học mapping của các mẫu rung. Ngoài ra, rung từ điện thoại trên armband hoặc trong túi yếu hơn rung từ watch trên cổ tay, nên khả năng phân biệt cue cần được kiểm tra với người tham gia thật. |
 
 ---
 
 ## 2B - Beat-to-Pace Matching
 
-### Tóm tắt
+### Ý tưởng theo Yêu cầu 1
 
-**Lời thoại**
+| Mục | Nội dung cần nói |
+| --- | --- |
+| Vấn đề người dùng | Runner khó biết pace đang lệch nếu không nhìn số trên màn hình. |
+| Động cơ thiết kế | Runner vốn đã nghe nhạc khi chạy, nên mẫu thử dùng chính nhịp nhạc làm mốc thay vì thêm một alert riêng. |
+| Cách mẫu thử giải quyết | Beat giữ cố định theo cadence mục tiêu. Khi bước chân lệch khỏi beat, runner cảm nhận mismatch và tự điều chỉnh. |
+| Khác với hai mẫu còn lại | 2B khác ở cơ chế feedback liên tục qua rhythm. 2A là cue rung rời rạc, còn 2C là alert theo ngưỡng thời gian. |
 
-> Prototype 2B không dùng alert riêng. Feedback nằm trong rhythm của nhạc.
-> Beat là reference cố định; khi bước chân của runner lệch khỏi beat, chính khoảng lệch đó là feedback.
+### Bảng quay
 
-### Demo Flow
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| --- | --- | --- | --- | --- |
+| 1 | Sheet 1: Target Setup | Chỉ vào target pace và target cadence, sau đó tap `START`. | Người dùng đặt target pace là 6:00/km và target cadence. Khi bắt đầu run, hệ thống tạo một beat làm mốc cho nhịp chạy. | Bắt đầu từ setup của mẫu thử và động cơ dùng rhythm làm reference. |
+| 2 | Sheet 2: Running to the Beat | Clap, tap hoặc bật metronome với tempo đều. Giữ tempo này xuyên suốt demo. | Ở trạng thái bình thường, runner chạy khớp với beat. Beat đại diện cho cadence target, nên runner có một mốc nghe được thay vì phải nhìn màn hình. | Cho thấy trạng thái context: runner đang chạy đúng nhịp. |
+| 3 | Sheet 3: Pace Too Fast | Vẫn clap đúng tempo cũ, không tăng tốc theo runner. | Khi runner chạy nhanh hơn, pace thành 5:35/km. Beat không đổi, nên bước chân đi trước beat. Khoảng lệch giữa footfall và beat chính là feedback. | Đây là trigger và system response: hệ thống không phát alert, nhưng mismatch tự trở thành tín hiệu. |
+| 4 | Sheet 4: Match Rhythm | Chỉ vào shoe icons và music notes đã align lại. | Runner điều chỉnh footfall để match lại rhythm. Khi bước chân và beat aligned, runner biết mình đang quay về target. | Thể hiện cách mẫu thử giúp sửa pace mà không cần screen check. |
+| 5 | Sheet 5: Stable Pace | Chỉ vào pace ổn định và trạng thái tiếp tục chạy. | Kết quả là pace quay lại gần target. Người chạy sửa pace bằng tai, không cần nhìn màn hình và không cần một alert riêng chen vào. | Kết thúc bằng outcome: eyes-free pace correction. |
 
-**Hành động**
+### Kết luận
 
-- Đưa Sheet 1: Target Setup.
-- Chỉ vào target pace và target cadence.
-- Tap `START`.
-
-**Lời thoại**
-
-> User đặt target pace là 6:00/km và target cadence. Khi bắt đầu, hệ thống tạo một beat làm mốc tham chiếu cho nhịp chạy.
-
-**Hành động**
-
-- Đưa Sheet 2: Running to the Beat.
-- Bắt đầu clap, tap, hoặc metronome với beat đều và giữ nguyên.
-
-**Lời thoại**
-
-> Ở trạng thái bình thường, runner chạy khớp với beat. Beat đại diện cho cadence target.
-
-**Hành động**
-
-- Đưa Sheet 3: Pace Too Fast.
-- Vẫn clap cùng tempo cũ, không tăng tốc.
-
-**Lời thoại**
-
-> Khi runner chạy nhanh hơn, pace thành 5:35/km. Beat không thay đổi.
-> Lúc này bước chân của runner đi trước beat. Khoảng lệch giữa footfall và beat chính là feedback.
-
-**Hành động**
-
-- Đưa Sheet 4: Match Rhythm.
-
-**Lời thoại**
-
-> Runner điều chỉnh footfall để match lại rhythm. Shoe icons và music notes được căn đều để cho thấy bước chân và beat đã aligned.
-
-**Hành động**
-
-- Đưa Sheet 5: Stable Pace.
-
-**Lời thoại**
-
-> Kết quả là pace quay lại gần target. Runner sửa pace bằng tai, không cần nhìn màn hình và không cần một alert riêng.
-
-### Kết
-
-**Lời thoại**
-
-> Strength của 2B là không có alert nào fire, feedback liên tục, và tận dụng khả năng cảm rhythm mà runner đã có.
-> Weakness là chỉ hiệu quả với nhạc có beat rõ. Mismatch có thể quá nhẹ để nhận ra, và cadence không hoàn toàn giống pace.
+| Phần | Lời thoại |
+| --- | --- |
+| Điểm mạnh | Điểm mạnh của 2B là feedback liên tục, không có alert riêng làm gián đoạn, và tận dụng cảm giác rhythm mà nhiều runner đã có khi nghe nhạc. |
+| Điểm yếu / câu hỏi mở | Điểm yếu là chỉ hiệu quả với nhạc có beat rõ. Mismatch có thể quá nhẹ để nhận ra, và cadence không hoàn toàn giống pace nên cần test xem runner có hiểu đúng cue hay không. |
 
 ---
 
 ## 2C - Just-in-Time Pace Alert
 
-### Tóm tắt
+### Ý tưởng theo Yêu cầu 1
 
-**Lời thoại**
+| Mục | Nội dung cần nói |
+| --- | --- |
+| Vấn đề người dùng | Runner cần được báo khi pace lệch, nhưng nếu alert quá thường xuyên thì feedback trở thành noise. |
+| Động cơ thiết kế | Pace khi chạy luôn dao động tự nhiên. Mẫu thử này chỉ cảnh báo khi deviation kéo dài đủ lâu để đáng chú ý. |
+| Cách mẫu thử giải quyết | Hệ thống im lặng lúc pace mới lệch nhẹ, tiếp tục theo dõi, rồi mới gửi haptic alert khi lệch kéo dài. |
+| Khác với hai mẫu còn lại | 2C khác ở timing policy. Nó không đổi kênh feedback như 2A và không dùng rhythm liên tục như 2B. |
 
-> Prototype 2C dùng haptic alert, nhưng khác 2A ở timing rule.
-> Hệ thống không alert ngay khi pace chỉ hơi lệch. Nó chờ deviation kéo dài đủ lâu rồi mới rung một lần.
+### Bảng quay
 
-### Demo Flow
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| --- | --- | --- | --- | --- |
+| 1 | Sheet 1: In Range | Chỉ vào target pace 6:00/km. | Runner đang ở target pace. Không có alert nào, và đây là trạng thái đúng của hệ thống. | Context bình thường trước khi có vấn đề. |
+| 2 | Sheet 2: Slightly Too Fast | Nếu cần, facilitator bắt đầu đếm thời gian nhưng không để camera tập trung quá lâu vào stopwatch. | Pace bắt đầu lệch nhẹ, ví dụ 5:50/km. Hệ thống vẫn im lặng, vì pace khi chạy luôn dao động tự nhiên. Nếu lệch nhẹ cũng alert ngay thì feedback sẽ thành noise. | Làm rõ motivation của mẫu thử: giảm alert thừa. |
+| 3 | Sheet 3: Still Too Fast | Chờ 2-3 giây trong video hoặc nói "sau một khoảng thời gian". | Deviation tiếp tục kéo dài. Silence ở đây không phải hệ thống bị lỗi; silence là một phần của thiết kế. | Cho thấy trigger chưa đủ mạnh cho đến khi lệch kéo dài. |
+| 4 | Sheet 4: Just-in-Time Alert | Giả lập rung trước, sau đó mới đưa sheet alert vào khung hình. | Chỉ khi deviation kéo dài đủ lâu, hệ thống mới gửi haptic alert. Alert này báo người chạy chậm lại. Screen chỉ minh họa điều người chạy có thể thấy nếu nhìn; interaction chính vẫn là haptic. | Đây là system response chính của prototype. |
+| 5 | Sheet 5: Back in Range | Chỉ vào pace đã quay lại gần target. | Kết quả là người chạy chỉnh pace lại với một interruption duy nhất, thay vì bị nhắc liên tục bởi mọi dao động nhỏ. | Kết thúc bằng outcome và cách giải quyết vấn đề. |
 
-**Hành động**
+### Kết luận
 
-- Đưa Sheet 1: In Range.
-
-**Lời thoại**
-
-> Runner đang ở target pace 6:00/km. Không có alert nào, và đây là đúng thiết kế.
-
-**Hành động**
-
-- Đưa Sheet 2: Slightly Too Fast.
-- Nếu muốn, bắt đầu đếm giờ ở phía facilitator, không cho camera tập trung vào stopwatch quá lâu.
-
-**Lời thoại**
-
-> Pace bắt đầu lệch nhẹ, 5:50/km. Hệ thống vẫn im lặng.
-> Lý do là pace khi chạy luôn dao động tự nhiên, nếu mọi deviation nhỏ đều alert thì feedback sẽ thành noise.
-
-**Hành động**
-
-- Đưa Sheet 3: Still Too Fast.
-- Chờ 2-3 giây trong video, hoặc nói "sau một khoảng thời gian".
-
-**Lời thoại**
-
-> Deviation tiếp tục kéo dài. Hệ thống vẫn đang chờ, vì silence ở đây là một phần của prototype.
-
-**Hành động**
-
-- Giả lập vibration trước.
-- Sau đó đưa Sheet 4: Just-in-Time Alert.
-
-**Lời thoại**
-
-> Chỉ khi deviation kéo dài đủ lâu, hệ thống mới gửi haptic alert. Alert này báo runner slow down.
-> Screen chỉ là minh họa điều runner sẽ thấy nếu nhìn; interaction chính vẫn là haptic.
-
-**Hành động**
-
-- Đưa Sheet 5: Back in Range.
-
-**Lời thoại**
-
-> Outcome là runner chỉnh pace lại với một interruption duy nhất.
-
-### Kết
-
-**Lời thoại**
-
-> Strength của 2C là giảm alert thừa, mỗi alert có trọng lượng hơn, và tolerate natural pace variation.
-> Weakness là delay có thể làm user tưởng hệ thống không hoạt động. Threshold bao lâu mới alert vẫn cần được test tiếp.
+| Phần | Lời thoại |
+| --- | --- |
+| Điểm mạnh | Điểm mạnh của 2C là giảm alert thừa, mỗi alert có trọng lượng hơn, và hệ thống chịu được natural pace variation tốt hơn. |
+| Điểm yếu / câu hỏi mở | Điểm yếu là delay có thể làm user tưởng hệ thống không hoạt động. Threshold bao lâu mới alert vẫn là câu hỏi cần test tiếp. |
 
 ---
 
 ## Checklist quay
 
 - Quay theo thứ tự: 2A, 2B, 2C.
-- 2A: không để Haptic Cue Card lộ vào participant stack khi quay cảnh test-like.
+- 2A: không để Haptic Cue Card lộ vào bộ giấy của người tham gia khi quay theo kiểu giống kiểm thử.
 - 2A: mặt trước Sheet 2 và Sheet 4 không được có label `TOO FAST` / `TOO SLOW`.
-- 2B: phải có clap, tap, hoặc metronome. Beat là heard reference, không phải visual label.
+- 2B: phải có clap, tap hoặc metronome. Beat là reference nghe được, không phải chỉ là label trên giấy.
 - 2C: nhấn mạnh silence là thiết kế; không alert ngay khi lệch nhẹ.
 - 2C: deliver vibration trước, rồi mới đưa alert sheet.
-- Không nói đây là testing result nếu chưa test user thật.
+- Không nói đây là kết quả kiểm thử nếu chưa test user thật.
 - Upload YouTube dạng unlisted, không private.
 - Verify link bằng incognito trước khi đưa vào report.
