@@ -210,11 +210,13 @@ rule is not permission; this is unresolved with Dr. Duy.
 is the team's own plan, not a requirement source — where they disagree, the spec wins.
 Group04's submission is a formatting reference only; never a source for content or approach.
 
-**Standing lecturer critique.** In PA2 peer review Dr. Duy singled out haptic and ambient
-cue perceptibility as the hardest part of this design, and the team committed in writing to
-testing 2–3 distinct patterns per feedback type early. The **Cue Interpretation Accuracy**
-table (too fast / too slow / in range, per participant) for 2A and 1C is the direct answer
-to that critique. If testing time is cut, 2A/2B/2C are the last thing to drop.
+**Standing lecturer critique.** In PA2 peer review Dr. Duy singled out haptic and
+low-attention cue perceptibility as the hardest part of this design, and the team committed
+in writing to testing distinct feedback patterns early. The **Cue Interpretation Accuracy**
+table (too fast / too slow / in range, per participant) for 2A is the direct answer to that
+critique. 1C now measures acceptance of a compressed ambient cue for non-critical
+interruptions, not pace-cue interpretation. If testing time is cut, 2A/2B/2C are the last
+thing to drop.
 
 **Known failure mode.** PA2's retrospective named participant scheduling as the root cause
 of its slippage and prescribed early scheduling. P01–P07 were interviewed about the problem

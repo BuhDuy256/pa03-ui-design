@@ -48,10 +48,11 @@ marks in the 11/08 testing session.
    but no sheet offered any control over the adaptation. `[ HOLD TEMPO ]` now persists on
    Sheets 3–5.
 10. **1C and 2C separated structurally, not just verbally.** Both were "wait for sustained
-    deviation, then fire one light cue". 1C's delay concept is removed entirely: it is now
-    about **cue modality** (a short tone that never ducks music, repeatable without
-    nagging), and 2C is the only one about **timing policy** (when an alert is worth
-    firing). Sheet 1C-4 changed from "sustained deviation" to "cue repeats".
+    deviation, then fire one light cue". 1C's delay and pace-correction concepts are removed
+    entirely: it is now about **interruption compression** (full delivery becomes one short
+    ambient cue, with details deferred), and 2C is the only one about **pace-alert timing**
+    (when an alert is worth firing). Sheet 1C-4 changed from "sustained deviation" to
+    "details deferred".
 11. **2C declared haptic-primary.** Its alert was ambiguous between a screen banner and a
     pulse. A visual alert would contradict Scenario 2's own success condition. The pulse is
     the alert; the screen is only what a runner would see *if* they looked.
@@ -116,7 +117,7 @@ design can attack, and three prototypes should attack three of them:
 | --- | --- |
 | Whether it gets through | 1A — a rule the user sets in advance |
 | **When it lands** | **1B — the seam between two tracks** |
-| What it is made of | 1C — a short tone instead of a voice |
+| What the runner receives now | 1C — awareness only, compressed into one short cue |
 | How the music itself behaves | old 1B — leaves the event untouched |
 
 New 1B also completes UC-02. 1A only ever showed interruptions being **blocked**; 1B shows one
@@ -488,9 +489,10 @@ Five screens to draw:
 > normal voice**, then start the next track. Agree the exact sentence before the first session
 > and use it verbatim for every participant.
 
-> **This is where 1B and 1C part company.** 1C protects the music by shrinking the message to
-> a tone — the user keeps their music and loses the content. 1B protects the music by moving
-> the message — the user keeps the content and loses time. Both explanation cards must say so.
+> **This is where 1B and 1C part company.** 1C protects the music by shrinking immediate
+> delivery to a tone — the user gets awareness now and full content later. 1B protects the
+> music by moving the whole message — the user keeps the content and loses time. Both
+> explanation cards must say so.
 
 ### Sheet 5 — Back to music
 
@@ -551,8 +553,8 @@ is the wait a price they accept?
 
 | | |
 | --- | --- |
-| **Problem** | Voice coaching can interrupt music. |
-| **Goal** | Use one short, light audio cue instead of a long spoken message. |
+| **Problem** | A non-critical notification or lightweight system event still needs to be noticed, but full delivery would interrupt the runner's music. |
+| **Goal** | Compress the interruption into one short ambient cue, so the runner notices the event without receiving the full content mid-run. |
 
 Five screens to draw. Audio only needs to be simulated in the video — nothing to implement.
 
@@ -568,23 +570,24 @@ Five screens to draw. Audio only needs to be simulated in the video — nothing 
 └───────────────────────┘
 ```
 
-**Purpose:** Baseline.
+**Purpose:** Baseline: Minh is in music flow.
 **Interaction:** Runner keeps running.
 
-### Sheet 2 — Too Fast / Ambient Cue
+### Sheet 2 — Non-Critical Event / Ambient Cue
 
 ```
 ┌───────────────────────┐
 │      ● RUNNING        │
 │                       │
-│       5:35 / km       │
+│       6:00 / km       │
 │                       │
 │       ♫ MUSIC         │
-│        + ♪ cue        │
+│      soft ♪ cue       │
 └───────────────────────┘
 ```
 
-**Purpose:** Mark the moment the audio cue appears.
+**Purpose:** A non-critical event arrives, but it is compressed into a short cue instead of
+being read out or shown as a full notification.
 **Interaction:** Facilitator plays or simulates a short cue.
 
 > **Wizard-of-Oz — required.** The cue must be one short, soft, non-verbal sound — two taps
@@ -592,50 +595,7 @@ Five screens to draw. Audio only needs to be simulated in the video — nothing 
 > not stop. Agree the exact sound before the first session and use the identical sound every
 > time; a cue that varies between participants cannot be compared across them.
 
-### Sheet 3 — Runner Adjusts
-
-```
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
-│       6:02 / km       │
-│                       │
-│       ♫ MUSIC         │
-│                       │
-│    No screen check    │
-└───────────────────────┘
-```
-
-**Purpose:** Runner adjusts without looking at the screen.
-**Interaction:** Runner changes pace.
-
-### Sheet 4 — Cue Repeats
-
-```
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
-│       5:38 / km       │
-│                       │
-│      ♪ cue (2nd)      │
-│                       │
-│       ♫ MUSIC         │
-└───────────────────────┘
-```
-
-**Purpose:** Show the cue can fire a **second time without escalating** — no voice, no
-ducking, no louder alarm. A voice coach repeating itself is nagging; this is the claim that
-a light cue is not.
-**Interaction:** Facilitator plays the *identical* sound again — same volume, same length.
-Resisting the urge to make it more insistent is the point.
-
-> **This sheet used to be `Sustained Deviation`**, showing `Pace deviation: 20 sec` and a cue
-> that fires only after a delay. That is 2C's idea — timing policy — sitting inside 1C, which
-> made the two prototypes near-duplicates on paper and put a live diagnostic counter on the
-> participant's screen. 1C is now purely about **modality**: what the cue is made of. 2C is
-> the only one about **when** it fires. Two genuinely different ideas, as Requirement 1 asks.
-
-### Sheet 5 — Stable
+### Sheet 3 — Flow Preserved
 
 ```
 ┌───────────────────────┐
@@ -643,18 +603,62 @@ Resisting the urge to make it more insistent is the point.
 │                       │
 │       6:01 / km       │
 │                       │
-│      ✓ Stable         │
+│       ♫ MUSIC         │
+│                       │
+│   No action needed    │
+└───────────────────────┘
+```
+
+**Purpose:** The runner notices something lightweight happened, but does not stop, check the
+screen, or lose the song.
+**Interaction:** Runner keeps running.
+
+### Sheet 4 — Details Deferred
+
+```
+┌───────────────────────┐
+│      ● RUNNING        │
+│                       │
+│       6:02 / km       │
+│                       │
+│      1 event held     │
+│                       │
 │       ♫ MUSIC         │
 └───────────────────────┘
 ```
 
+**Purpose:** Make the tradeoff explicit: the runner got awareness, not the full content.
+The content is held for later instead of being pushed into the music.
+**Interaction:** Keep the music playing; do not read the notification.
+
+> **This sheet used to be `Sustained Deviation`**, showing `Pace deviation: 20 sec` and a cue
+> that fires only after a delay. That is 2C's idea — timing policy — sitting inside 1C, which
+> made the two prototypes near-duplicates on paper and put a live diagnostic counter on the
+> participant's screen. 1C is now about **interruption compression**: the event still lands
+> during the run, but only as a low-cost cue. 2C is about **when** a pace alert is worth
+> firing. Two genuinely different ideas, as Requirement 1 asks.
+
+### Sheet 5 — After-Run Details
+
+```
+┌───────────────────────┐
+│    RUN COMPLETE       │
+│                       │
+│   1 quiet cue during  │
+│        your run       │
+│                       │
+│   [VIEW DETAILS]      │
+└───────────────────────┘
+```
+
 **Purpose:** Outcome.
-**Interaction:** Keep going.
+**Interaction:** Runner can inspect the full content after the music-critical part of the run.
 
-**Storyboard:** Pace drifts too fast → a short cue plays over unbroken music → runner adjusts
-without looking → cue repeats once, unchanged → pace stabilizes.
+**Storyboard:** Runner is in music flow → a non-critical event arrives → one short cue plays
+over unbroken music → runner keeps running → details are available after the run.
 
-**Test:** Is the cue noticeable enough while still less disruptive than voice coaching?
+**Test:** Does the user prefer a compressed cue over being blocked completely, delayed until a
+track gap, or interrupted with full content? Is the cue noticeable without becoming annoying?
 
 ---
 
@@ -676,10 +680,10 @@ losing breathing rhythm, and without the facilitator explaining what the cue mea
 Overexertion Signal) · Persona: Bình.
 
 > **Testing priority.** This is the scenario Dr. Duy raised in the PA2 peer review: haptic
-> and ambient cues are hard for users to distinguish correctly, and the team committed in
-> writing to testing them early. If time runs short, 2A/2B/2C are the part that **must not
+> and low-attention cues are hard for users to distinguish correctly, and the team committed
+> in writing to testing them early. If time runs short, 2A/2B/2C are the part that **must not
 > be cut**, and the Cue Interpretation Accuracy table (too fast / too slow / in range) must
-> be captured for every participant.
+> be captured for every participant for 2A.
 
 ---
 
@@ -1616,7 +1620,7 @@ infer the difference — it has to be stated. Use these:
 | --- | --- |
 | 1A | Blocks interruptions **before** the run, by a rule the user sets in advance |
 | 1B | Nothing is blocked and nothing changes form — the interruption **waits for the seam between two tracks** |
-| 1C | Interruptions still happen, but arrive as a **short tone instead of a voice** |
+| 1C | Interruptions still happen, but immediate delivery is **compressed into a short cue** |
 | 2A | Feedback through **vibration patterns** — a channel that needs no attention at all |
 | 2B | Feedback through **music rhythm** — the runner matches an unchanging beat |
 | 2C | Same feedback, different **timing rule** — fires only after deviation persists |
@@ -1624,8 +1628,8 @@ infer the difference — it has to be stated. Use these:
 | 3B | Control moved to a **different device** — the earbuds — so the phone stays pocketed |
 | 3C | Control stays on the phone but **the target is removed** — the whole screen is the button |
 
-The two pairs a grader is most likely to call duplicates are **1C vs 2C** (modality vs timing
-policy) and **3B vs 3C** (different device vs no target). Both cards in each pair must carry
+The two pairs a grader is most likely to call duplicates are **1C vs 2C** (interruption
+compression vs pace-alert timing) and **3B vs 3C** (different device vs no target). Both cards in each pair must carry
 the distinction, not just one.
 
 ---

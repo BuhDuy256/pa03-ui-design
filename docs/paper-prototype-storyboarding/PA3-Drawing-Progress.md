@@ -124,7 +124,7 @@ section), `PA3-Drawing-Specs.md`, and both workspace artifacts.
 | 2 | 2A | No failure path for a wrong-direction correction | card F-2A |
 | 3 | 2C | Alert modality undeclared; a visual alert contradicts Scenario 2's success condition | declared haptic-primary, screen secondary |
 | 4 | 2B | Sheet 3 "Target beat shown" gave the facilitator no action | explicit WoZ; beat is the fixed reference |
-| 5 | 1C / 2C | Near-duplicate on paper | separated structurally — 1C is modality only, 2C is timing only; 1C Sheet 4 rewritten |
+| 5 | 1C / 2C | Near-duplicate on paper | separated structurally — 1C compresses interruption delivery, 2C controls pace-alert timing; 1C Sheet 4 rewritten |
 | 6 | 1A | Sheet 4 bannered "Notification muted" — a visual interruption proving the absence of interruption | silent corner badge, count moved to Sheet 5 |
 | 7 | 1A | Emergency row was a double negative; no sheet showed anything passing the filter (half of UC-02) | "Always allow" section + card F-1A |
 | 8 | ~~1B~~ | ~~Sheet 3 hard-coded `168 BPM` against Sheet 2's "user sets"; BPM and cadence conflated~~ | **moot** — sheets replaced 12/08, see Design change below |

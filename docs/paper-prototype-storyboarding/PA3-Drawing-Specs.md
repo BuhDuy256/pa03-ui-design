@@ -298,7 +298,7 @@ answer across a filter rule and a timing rule.
 
 ## 1C — Ambient Audio Cue
 
-*Interruptions still happen, but arrive as a **short tone instead of a voice**.*
+*Interruptions still happen, but arrive as a **short ambient cue instead of full delivery**.*
 
 > **Agree the exact sound before the first session** — two taps on the table, a finger click,
 > one chime — and use the identical sound every time. A cue that varies between participants
@@ -316,60 +316,26 @@ answer across a filter rule and a timing rule.
 └───────────────────────┘
 ```
 
-**Purpose:** Baseline. **Interaction:** Runner runs.
+**Purpose:** Baseline: Minh is in music flow. **Interaction:** Runner runs.
 
-### Sheet 2 — Too Fast / Ambient Cue
-
-```
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
-│       5:35 / km       │
-│                       │
-│       ♫ MUSIC         │
-│        + ♪ cue        │
-└───────────────────────┘
-```
-
-**Purpose:** The cue fires. **⚠ WoZ:** play the agreed sound. **Not spoken. Music does not
-stop.**
-
-### Sheet 3 — Runner Adjusts
+### Sheet 2 — Non-Critical Event / Ambient Cue
 
 ```
 ┌───────────────────────┐
 │      ● RUNNING        │
 │                       │
-│       6:02 / km       │
+│       6:00 / km       │
 │                       │
 │       ♫ MUSIC         │
-│                       │
-│    No screen check    │
+│      soft ♪ cue       │
 └───────────────────────┘
 ```
 
-**Purpose:** Correction without looking. **Interaction:** Runner changes pace.
+**Purpose:** A non-critical event arrives, but it is compressed into a short cue instead of
+being read out or shown in full. **⚠ WoZ:** play the agreed sound. **Not spoken. Music does
+not stop.**
 
-### Sheet 4 — Cue Repeats
-
-```
-┌───────────────────────┐
-│      ● RUNNING        │
-│                       │
-│       5:38 / km       │
-│                       │
-│      ♪ cue (2nd)      │
-│                       │
-│       ♫ MUSIC         │
-└───────────────────────┘
-```
-
-**Purpose:** The cue fires **a second time without escalating**. A voice coach repeating
-itself nags; the claim here is that a light cue does not.
-**⚠ WoZ:** identical sound, identical volume, identical length. Resisting the urge to make it
-more insistent *is* the test.
-
-### Sheet 5 — Stable
+### Sheet 3 — Flow Preserved
 
 ```
 ┌───────────────────────┐
@@ -377,12 +343,48 @@ more insistent *is* the test.
 │                       │
 │       6:01 / km       │
 │                       │
-│      ✓ Stable         │
+│       ♫ MUSIC         │
+│                       │
+│   No action needed    │
+└───────────────────────┘
+```
+
+**Purpose:** Runner notices something lightweight happened, but keeps running without
+checking the phone. **Interaction:** Runner keeps running.
+
+### Sheet 4 — Details Deferred
+
+```
+┌───────────────────────┐
+│      ● RUNNING        │
+│                       │
+│       6:02 / km       │
+│                       │
+│      1 event held     │
+│                       │
 │       ♫ MUSIC         │
 └───────────────────────┘
 ```
 
-**Purpose:** Outcome. **Interaction:** Keep going.
+**Purpose:** The runner got awareness, not the full content. The content is held for later
+instead of being pushed into the song. **Interaction:** Keep the music playing; do not read
+the notification.
+
+### Sheet 5 — After-Run Details
+
+```
+┌───────────────────────┐
+│    RUN COMPLETE       │
+│                       │
+│   1 quiet cue during  │
+│        your run       │
+│                       │
+│   [VIEW DETAILS]      │
+└───────────────────────┘
+```
+
+**Purpose:** Outcome. **Interaction:** Runner can inspect the full content after the
+music-critical part of the run.
 
 ---
 
@@ -390,9 +392,10 @@ more insistent *is* the test.
 
 **Correct pace without looking at the screen** · Persona: Bình · UC-03, UC-04
 
-> **Do not cut this scenario.** Dr. Duy raised haptic and ambient cue perceptibility in the
-> PA2 peer review and the team committed in writing to testing it early. The Cue
-> Interpretation Accuracy table is the answer.
+> **Do not cut this scenario.** Dr. Duy raised haptic cue perceptibility in the PA2 peer
+> review and the team committed in writing to testing it early. The Cue Interpretation
+> Accuracy table for 2A is the direct answer; 1C now tests perceived disruption of a
+> compressed ambient cue in Scenario 1.
 
 ---
 
@@ -1103,10 +1106,10 @@ Stick figures are fine. Draw runner + device + what changed. Caption under each 
 
 | # | Draw | Caption |
 | --- | --- | --- |
-| 1 | Minh running, music notes around him | Minh runs to his playlist at a steady 6:00/km. |
-| 2 | Same runner, small "5:35" floating near the watch | His pace drifts faster without him noticing. |
-| 3 | One small ♪ above the unbroken music notes | One short tone plays over the music. No voice, no ducking. |
-| 4 | Runner easing off; an identical small ♪ | He eases off. The cue repeats once — exactly as quiet as before. |
+| 1 | Minh running, music notes around him | Minh is in music flow. |
+| 2 | A small non-critical notification icon arriving near the phone; music notes stay unbroken | A lightweight event arrives during the song. |
+| 3 | One small ♪ above the unbroken music notes; no speech bubble | One short tone acknowledges it. No voice, no ducking. |
+| 4 | Runner still mid-stride; phone shows "1 event held" for later | He keeps running. The details wait until after the run. |
 
 ## 2A — Haptic Pace Feedback
 
@@ -1206,7 +1209,7 @@ Nothing here needs inventing.
 | --- | --- |
 | 1A | Blocks interruptions **before** the run, by a rule the user sets in advance |
 | 1B | Nothing is blocked and nothing changes form — the interruption **waits for the seam between two tracks** |
-| 1C | Interruptions still happen, but arrive as a **short tone instead of a voice** |
+| 1C | Interruptions still happen, but immediate delivery is **compressed into a short cue** |
 | 2A | Feedback through **vibration patterns** — a channel needing no attention at all |
 | 2B | Feedback through **music rhythm** — the runner matches an unchanging beat |
 | 2C | Same feedback, different **timing rule** — fires only after deviation persists |
@@ -1214,8 +1217,8 @@ Nothing here needs inventing.
 | 3B | Control moved to a **different device** — earbuds — so the phone stays pocketed |
 | 3C | Control stays on the phone but **the target is removed** — the screen is the button |
 
-The two pairs most likely to be called duplicates are **1C vs 2C** (modality vs timing
-policy) and **3B vs 3C** (different device vs no target). **Both** cards in each pair must
+The two pairs most likely to be called duplicates are **1C vs 2C** (interruption compression
+vs pace-alert timing) and **3B vs 3C** (different device vs no target). **Both** cards in each pair must
 carry the distinction, not just one.
 
 ---

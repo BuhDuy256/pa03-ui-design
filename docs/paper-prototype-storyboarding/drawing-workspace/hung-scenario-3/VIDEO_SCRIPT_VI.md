@@ -6,10 +6,10 @@
 
 ### Mở đầu chung
 
-> Xin chào, đây là video demo các mẫu thử giấy cho Kịch bản 3 của Running Music Coach: điều khiển run mà không dừng lại hoặc bấm nhầm.
-> Vấn đề người dùng là khi đang chạy, tay có mồ hôi, cơ thể đang chuyển động và màn hình nhỏ làm runner dễ bấm sai hoặc phải dừng lại để thao tác.
+> Xin chào, đây là video minh họa các mẫu thử giấy cho Kịch bản 3 của Running Music Coach: điều khiển run mà không dừng lại hoặc bấm nhầm.
+> Vấn đề người dùng là khi đang chạy, tay có mồ hôi, cơ thể đang chuyển động và màn hình nhỏ làm người chạy dễ bấm sai hoặc phải dừng lại để thao tác.
 > Nhóm đề xuất ba hướng khác nhau: 3A dùng màn hình khóa và hold để xác nhận, 3B chuyển control sang earbud, và 3C bỏ target nhỏ bằng cách biến toàn bộ màn hình thành vùng gesture.
-> Đây là video demo mẫu thử giấy, không phải kết quả user testing.
+> Đây là video minh họa mẫu thử giấy, không phải kết quả kiểm thử người dùng.
 
 ---
 
@@ -26,21 +26,21 @@
 
 ### Bảng quay
 
-| Cảnh | Khung hình cần show | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
 | --- | --- | --- | --- | --- |
-| 1 | Sheet 1: Run Screen Locked | Chỉ vào lock icon và hai nút lớn `HOLD TO PAUSE`, `HOLD FOR MUSIC`. | Đây là running screen đang lock. Các target được làm lớn, nhưng điểm quan trọng không chỉ là bigger buttons. Điểm quan trọng là tap thường không được chấp nhận. | Context: runner cần control nhưng dễ bấm nhầm. |
+| 1 | Sheet 1: Run Screen Locked | Chỉ vào lock icon và hai nút lớn `HOLD TO PAUSE`, `HOLD FOR MUSIC`. | Đây là running screen đang lock. Các target được làm lớn, nhưng điểm quan trọng không chỉ là nút lớn hơn. Điểm quan trọng là tap thường không được chấp nhận. | Context: người chạy cần control nhưng dễ bấm nhầm. |
 | 2 | Sheet 1 hoặc facilitator card F-3A | Tap thử một lần và không đổi sheet. Có thể show card tap ignored. | Nếu user chỉ tap, không có gì xảy ra. Đây không phải bug; đây là lock đang hoạt động để chặn mis-tap. | Cho thấy system response khi input có nguy cơ accidental. |
-| 3 | Sheet 2: Holding | Hold khoảng 1.5 giây, facilitator đếm nhẹ hoặc chỉ progress ring. | Khi user hold, hệ thống hiện progress ring. Vòng này cho runner biết input đã được nhận và cần tiếp tục giữ. | Cách mẫu thử giải quyết: confirmation bằng hold có feedback. |
+| 3 | Sheet 2: Holding | Hold khoảng 1.5 giây, người điều phối đếm nhẹ hoặc chỉ progress ring. | Khi người dùng hold, hệ thống hiện progress ring. Vòng này cho người chạy biết input đã được nhận và cần tiếp tục giữ. | Cách mẫu thử giải quyết: confirmation bằng hold có feedback. |
 | 4 | Sheet 3: Paused | Đưa sheet paused vào khung hình. | Sau khi hold đủ lâu, run mới pause. Màn hình chỉ giữ các action cần thiết: resume hoặc end run. | Outcome của action pause: thành công nhưng không phải do tap ngắn. |
 | 5 | Sheet 4: Music Controls | Từ paused hoặc running, mở music controls và chỉ vào target lớn. | Nếu user cần music controls, hệ thống hiện các target lớn như skip track, play/pause và back. Prototype này tránh transport bar nhỏ vì đang giải quyết vấn đề small target. | Mở rộng mechanism cho workflow điều khiển nhạc. |
-| 6 | Sheet 5: Resume | Tap `BACK` hoặc `RESUME`, rồi chỉ vào trạng thái running. | User quay lại run và tiếp tục chạy. | Kết thúc storyboard bằng outcome: control được thực hiện mà không dừng workflow. |
+| 6 | Sheet 5: Resume | Tap `BACK` hoặc `RESUME`, rồi chỉ vào trạng thái running. | Người dùng quay lại run và tiếp tục chạy. | Kết thúc storyboard bằng kết quả: control được thực hiện mà không dừng workflow. |
 
 ### Kết luận
 
 | Phần | Lời thoại |
 | --- | --- |
 | Điểm mạnh | Điểm mạnh của 3A là accidental input gần như bị loại bỏ về mặt cấu trúc, target lớn hơn, và hold có feedback rõ ràng. |
-| Điểm yếu / câu hỏi mở | Điểm yếu là hold chậm hơn tap, user phải discover hoặc học được interaction hold, và mẫu này vẫn cần user nhìn vào phone. |
+| Điểm yếu / câu hỏi mở | Điểm yếu là hold chậm hơn tap, người dùng phải discover hoặc học được interaction hold, và mẫu này vẫn cần người dùng nhìn vào phone. |
 
 ---
 
@@ -57,20 +57,20 @@
 
 ### Bảng quay
 
-| Cảnh | Khung hình cần show | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
 | --- | --- | --- | --- | --- |
 | 1 | Sheet 1: Setup | Chỉ vào gesture mapping, rồi tap `CONFIRM`. | Trước khi chạy, user được dạy gesture mapping. Double tap là pause hoặc resume music, swipe là next track, và long press là pace cue. Ở đây pause là pause music only; run vẫn tiếp tục recording. | Motivation: học trước để giảm thao tác khó trong lúc chạy. |
 | 2 | Sheet 2: Running | Đưa sheet running vào khung hình, có thể đặt phone lệch khỏi tay để thể hiện phone ở pocket. | Khi run bắt đầu, phone ở trong pocket. User không cần lấy phone ra để điều khiển nhạc. | Context: chạy thật, không nhìn phone. |
 | 3 | Sheet 3: Double-Tap Earbud | Diễn gesture double tap vào earbud. | User double-taps earbud để pause music. Thao tác nằm trên earbud, không phải trên màn hình nhỏ của phone. | Trigger/action của runner. |
 | 4 | Sheet 4: Music Paused | Đưa sheet paused vào khung hình, chỉ vào header vẫn running. | Music paused, nhưng run vẫn recording. Header vẫn là RUNNING để tránh nhầm với pause run. | System response và clarification của workflow. |
-| 5 | Sheet 5: Swipe to Change Track | Diễn gesture swipe trên earbud. | User swipe trên earbud để chuyển sang next track. Phone vẫn không cần chạm vào. | Cho thấy prototype không chỉ có một gesture, mà hỗ trợ control trong run. |
-| 6 | Có thể quay lại Sheet 2 hoặc giữ Sheet 5 | Chỉ vào trạng thái tiếp tục chạy. | Outcome là runner điều khiển music mà không lấy phone ra, không nhìn xuống screen và không cần dừng lại. | Kết thúc bằng mục tiêu của Kịch bản 3. |
+| 5 | Sheet 5: Swipe to Change Track | Diễn gesture swipe trên earbud. | Người dùng swipe trên earbud để chuyển sang next track. Phone vẫn không cần chạm vào. | Cho thấy prototype không chỉ có một gesture, mà hỗ trợ control trong run. |
+| 6 | Có thể quay lại Sheet 2 hoặc giữ Sheet 5 | Chỉ vào trạng thái tiếp tục chạy. | Kết quả là người chạy điều khiển music mà không lấy phone ra, không nhìn xuống screen và không cần dừng lại. | Kết thúc bằng mục tiêu của Kịch bản 3. |
 
 ### Kết luận
 
 | Phần | Lời thoại |
 | --- | --- |
-| Điểm mạnh | Điểm mạnh của 3B là phone không rời pocket, gần như không cần visual attention, và gesture rất nhanh sau khi user đã học. |
+| Điểm mạnh | Điểm mạnh của 3B là phone không rời pocket, gần như không cần visual attention, và gesture rất nhanh sau khi người dùng đã học. |
 | Điểm yếu / câu hỏi mở | Điểm yếu là gesture phải ghi nhớ, sweat và motion có thể làm gesture fail, và long press pace cue được dạy nhưng chưa được demo đầy đủ trong flow này. |
 
 ---
@@ -88,13 +88,13 @@
 
 ### Bảng quay
 
-| Cảnh | Khung hình cần show | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
+| Cảnh | Khung hình cần đưa vào | Hành động trong khung hình | Lời thoại cần nói | Ý nghĩa theo Yêu cầu 1 |
 | --- | --- | --- | --- | --- |
-| 1 | Sheet 1: Setup | Chỉ vào `Tap anywhere on the screen - no target`, rồi tap `START`. | User được dạy rằng toàn bộ màn hình là interaction area. Double tap anywhere để pause hoặc resume music, và long press anywhere để lấy pace cue. | Motivation: bỏ yêu cầu aiming vào button nhỏ. |
-| 2 | Sheet 2: Running | Đưa sheet running vào khung hình. | Trong lúc running, quick actions đang on. User có thể giữ mắt trên đường và không cần nhắm vào một button cụ thể. | Context: runner đang di chuyển. |
-| 3 | Sheet 3: Long Press for Pace Cue | Diễn long press ở bất kỳ điểm nào trên màn hình. | User long-press anywhere để lấy pace cue nhanh. Hệ thống hiện pace 6:02/km và trạng thái in range. | Action và system response đầu tiên: lấy feedback mà không nhắm target. |
-| 4 | Sheet 4: Double Tap to Pause | Diễn double tap vào góc hoặc edge của màn hình. | User double-taps vào góc màn hình. Vì toàn bộ màn hình là target, interaction vẫn thành công. Music paused, nhưng run vẫn recording. | Chứng minh điểm khác biệt của 3C: no target. |
-| 5 | Sheet 5: Resume | Double tap lại hoặc chỉ vào trạng thái resume. | User double tap lại để resume music và tiếp tục run. | Outcome: control nhanh mà không cần mở menu hoặc bấm đúng button nhỏ. |
+| 1 | Sheet 1: Setup | Chỉ vào `Tap anywhere on the screen - no target`, rồi tap `START`. | Người dùng được dạy rằng toàn bộ màn hình là interaction area. Double tap anywhere để pause hoặc resume music, và long press anywhere để lấy pace cue. | Motivation: bỏ yêu cầu aiming vào button nhỏ. |
+| 2 | Sheet 2: Running | Đưa sheet running vào khung hình. | Trong lúc running, quick actions đang on. Người dùng có thể giữ mắt trên đường và không cần nhắm vào một button cụ thể. | Context: người chạy đang di chuyển. |
+| 3 | Sheet 3: Long Press for Pace Cue | Diễn long press ở bất kỳ điểm nào trên màn hình. | Người dùng long-press anywhere để lấy pace cue nhanh. Hệ thống hiện pace 6:02/km và trạng thái in range. | Action và system response đầu tiên: lấy feedback mà không nhắm target. |
+| 4 | Sheet 4: Double Tap to Pause | Diễn double tap vào góc hoặc edge của màn hình. | Người dùng double-taps vào góc màn hình. Vì toàn bộ màn hình là target, interaction vẫn thành công. Music paused, nhưng run vẫn recording. | Chứng minh điểm khác biệt của 3C: no target. |
+| 5 | Sheet 5: Resume | Double tap lại hoặc chỉ vào trạng thái resume. | Người dùng double tap lại để resume music và tiếp tục run. | Kết quả: control nhanh mà không cần mở menu hoặc bấm đúng button nhỏ. |
 
 ### Kết luận
 
@@ -113,6 +113,6 @@
 - 3B: nói rõ pause là pause music only, run vẫn recording.
 - 3B: diễn gesture earbud thật nếu có thể.
 - 3C: double tap vào góc hoặc edge để chứng minh no target.
-- Không nói đây là testing result nếu chưa test user thật.
+- Không nói đây là kết quả kiểm thử nếu chưa test user thật.
 - Upload YouTube dạng unlisted, không private.
 - Verify link bằng incognito trước khi đưa vào report.

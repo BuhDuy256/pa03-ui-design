@@ -135,29 +135,28 @@ the music.
 > cannot be compared across them.
 
 - [ ] **1C-1** Running — 6:00/km, ♫ MUSIC
-- [ ] **1C-2** Too Fast / Ambient Cue — 5:35/km, ♫ MUSIC, `+ ♪ cue`
-- [ ] **1C-3** Runner Adjusts — 6:02/km, ♫ MUSIC, "No screen check"
-- [ ] **1C-4** Cue Repeats — 5:38/km, `♪ cue (2nd)`, ♫ MUSIC
-- [ ] **1C-5** Stable — 6:01/km, ✓ Stable, ♫ MUSIC
+- [ ] **1C-2** Non-Critical Event / Ambient Cue — 6:00/km, ♫ MUSIC, `soft ♪ cue`
+- [ ] **1C-3** Flow Preserved — 6:01/km, ♫ MUSIC, "No action needed"
+- [ ] **1C-4** Details Deferred — 6:02/km, `1 event held`, ♫ MUSIC
+- [ ] **1C-5** After-Run Details — `RUN COMPLETE`, `1 quiet cue during your run`, `[VIEW DETAILS]`
 
-**Watch for:** 1C-4 is **not** "sustained deviation" any more and carries **no timer**. It
-used to show a live `Pace deviation: 20 sec` counter — that is 2C's idea (timing policy)
-sitting inside 1C, which made the two prototypes near-duplicates and put a diagnostic on the
-participant's screen. 1C is now purely about **what a cue is made of**.
+**Watch for:** 1C is **not pace correction**. It tests whether a non-critical interruption
+can be compressed into one short ambient cue without breaking music flow. The user notices
+that something lightweight happened, but full content waits until after the run.
 
-**On 1C-4 play the identical sound again** — same volume, same length. Resisting the urge to
-make it more insistent *is* the test.
+**On 1C-4 do not read the notification.** The point is that the runner got awareness, not
+full content, and the full content is deferred.
 
 ### Storyboard
 
-- [ ] **1C-F1** Context — runner + music notes, 6:00/km
-      → *Minh runs to his playlist at a steady 6:00/km.*
-- [ ] **1C-F2** Trigger — pace drifting to 5:35, runner unaware
-      → *His pace drifts faster without him noticing.*
+- [ ] **1C-F1** Context — runner + music notes
+      → *Minh is in music flow.*
+- [ ] **1C-F2** Trigger — small non-critical notification/event icon arrives
+      → *A lightweight event arrives during the song.*
 - [ ] **1C-F3** Response — one small ♪ above unbroken music notes
-      → *One short tone plays over the music. No voice, no ducking.*
-- [ ] **1C-F4** Outcome — runner easing off, an identical ♪ repeating
-      → *He eases off. The cue repeats once — exactly as quiet as before.*
+      → *One short tone acknowledges it. No voice, no ducking.*
+- [ ] **1C-F4** Outcome — runner keeps stride, phone shows event held
+      → *He keeps running. The details wait until after the run.*
 
 - [ ] **1C card** — explanation card, all seven fields
 
@@ -165,9 +164,9 @@ make it more insistent *is* the test.
 
 ## Coordination note
 
-**1C-4 changed meaning** during the pre-flight. It used to be the delay/timing sheet; that
-idea now lives only in Duy's 2C. If you drew an older version, redraw this one — otherwise a
-grader reads 1C and 2C as the same prototype twice.
+**1C changed meaning** after review. It used to look like pace correction, which made it
+compete with Scenario 2. If you drew the older version, redraw it — 1C now validates the
+compressed-cue interruption strategy for Scenario 1.
 
 ---
 
