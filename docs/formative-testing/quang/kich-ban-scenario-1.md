@@ -401,17 +401,17 @@ Bày lại **một sheet đại diện** của mỗi prototype trước mặt pa
 
 | Task | Nội dung | Kết quả (TC / TC-G / TB) | Số lần can thiệp | SEQ (1–7) |
 | --- | --- | --- | --- | --- |
-| 1A-T1 | Thiết lập Focus Run và bắt đầu chạy | TC | Không ghi nhận | 7 (toàn 1A) |
-| 1A-T2 | Nhận ra thông báo bị giữ lại | TC | Không ghi nhận | 7 (toàn 1A) |
-| 1A-T3 | Hiểu bản tổng kết cuối buổi | TC | Không ghi nhận | 7 (toàn 1A) |
-| 1A-F | Phản ứng với cuộc gọi quan trọng | TC | Không ghi nhận | 7 (toàn 1A) |
-| 1B-T1 | Đọc màn hình chạy, nhận ra thanh tiến trình bài hát | TC-G | Không ghi nhận | 5 (toàn 1B) |
-| 1B-T2 | Hiểu tin nhắn đang **đợi**, không phải bị chặn / bị mất | TB — hiểu là chặn tới cuối run | Không ghi nhận | 5 (toàn 1B) |
-| 1B-T3 | Đánh giá thời điểm tin nhắn được giao | TC | Không ghi nhận | 5 (toàn 1B) |
-| 1B-F1 | Phản ứng khi phải chờ hết một bài dài | TC | Không ghi nhận | 5 (toàn 1B) |
-| 1B-F2 | Phản ứng khi cuộc gọi quan trọng phá luật | TC | Không ghi nhận | 5 (toàn 1B) |
-| 1C-T1 | Diễn giải cue lần đầu | TB — không hiểu cue | Không ghi nhận | 4 (toàn 1C) |
-| 1C-T2 | Phản ứng với cue lặp lại | TC-G | Không ghi nhận | 4 (toàn 1C) |
+| 1A-T1 | Thiết lập Focus Run và bắt đầu chạy | TC | 0 | 7 (toàn 1A) |
+| 1A-T2 | Nhận ra thông báo bị giữ lại | TC | 0 | 7 (toàn 1A) |
+| 1A-T3 | Hiểu bản tổng kết cuối buổi | TC | 0 | 7 (toàn 1A) |
+| 1A-F | Phản ứng với cuộc gọi quan trọng | TC | 0 | 7 (toàn 1A) |
+| 1B-T1 | Đọc màn hình chạy, nhận ra thanh tiến trình bài hát | TC-G | 1 | 5 (toàn 1B) |
+| 1B-T2 | Hiểu tin nhắn đang **đợi**, không phải bị chặn / bị mất | TB — hiểu là chặn tới cuối run | 1 | 5 (toàn 1B) |
+| 1B-T3 | Đánh giá thời điểm tin nhắn được giao | TC | 0 | 5 (toàn 1B) |
+| 1B-F1 | Phản ứng khi phải chờ hết một bài dài | TC | 0 | 5 (toàn 1B) |
+| 1B-F2 | Phản ứng khi cuộc gọi quan trọng phá luật | TC | 0 | 5 (toàn 1B) |
+| 1C-T1 | Diễn giải cue lần đầu | TB — không hiểu cue | 1 | 4 (toàn 1C) |
+| 1C-T2 | Phản ứng với cue lặp lại | TC-G | 1 | 4 (toàn 1C) |
 
 ### Mô hình tinh thần của 1B — tin nhắn đang ở đâu?
 

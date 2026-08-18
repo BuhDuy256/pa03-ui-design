@@ -362,13 +362,13 @@ không theo cách họ diễn đạt._
 
 | Task  | Nội dung                                 | Kết quả (TC / TC-G / TB)  | Số lần can thiệp | SEQ (1–7)   |
 | ----- | ---------------------------------------- | ------------------------- | ---------------- | ----------- |
-| 2A-T2 | Diễn giải cue too fast                   | TB                        | Không ghi nhận   | 3 (toàn 2A) |
-| 2A-T3 | Diễn giải cue too slow                   | TB                        | Không ghi nhận   | 3 (toàn 2A) |
-| 2A-T4 | Diễn giải cue in range                   | TB                        | Không ghi nhận   | 3 (toàn 2A) |
-| 2B-T1 | Thiết lập target cadence                 | TC-G — không hiểu cadence | Không ghi nhận   | 4 (toàn 2B) |
-| 2B-T2 | Nhận ra bước chân lệch beat và chỉnh lại | TC                        | Không ghi nhận   | 4 (toàn 2B) |
-| 2C-T2 | Chịu được khoảng im lặng trước alert     | TC                        | Không ghi nhận   | 5 (toàn 2C) |
-| 2C-T3 | Diễn giải alert và đánh giá thời điểm    | TC                        | Không ghi nhận   | 5 (toàn 2C) |
+| 2A-T2 | Diễn giải cue too fast                   | TB                        | 1                | 3 (toàn 2A) |
+| 2A-T3 | Diễn giải cue too slow                   | TB                        | 1                | 3 (toàn 2A) |
+| 2A-T4 | Diễn giải cue in range                   | TB                        | 1                | 3 (toàn 2A) |
+| 2B-T1 | Thiết lập target cadence                 | TC-G — không hiểu cadence | 1                | 4 (toàn 2B) |
+| 2B-T2 | Nhận ra bước chân lệch beat và chỉnh lại | TC                        | 0                | 4 (toàn 2B) |
+| 2C-T2 | Chịu được khoảng im lặng trước alert     | TC                        | 0                | 5 (toàn 2C) |
+| 2C-T3 | Diễn giải alert và đánh giá thời điểm    | TC                        | 0                | 5 (toàn 2C) |
 
 ### Đánh giá thời điểm alert của 2C
 

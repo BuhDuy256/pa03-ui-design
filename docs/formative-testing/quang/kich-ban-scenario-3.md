@@ -1,4 +1,4 @@
-# Kịch bản validate — Scenario 3  ·  STANDBY
+# Kịch bản validate — Scenario 3 · STANDBY
 
 **Control the run without stopping or mis-tapping** · Persona: **Anh** (phone-first runner)
 Prototype: **3A · 3B · 3C** · Traceability: **UC-05** · Owner: **Hưng**
@@ -23,7 +23,7 @@ không cần facilitator trợ giúp, và **không có hành động nào bị k
 
 ---
 
-## 0. Lời dẫn ngữ cảnh *(đọc một lần, trước prototype đầu tiên của scenario này)*
+## 0. Lời dẫn ngữ cảnh _(đọc một lần, trước prototype đầu tiên của scenario này)_
 
 > Phần này đặt trong tình huống: bạn đang chạy giữa buổi. Tay bạn có mồ hôi, cơ thể đang chuyển
 > động, và bạn cần làm một việc gì đó — tạm dừng, chuyển bài, hoặc xem pace.
@@ -39,7 +39,7 @@ không cần facilitator trợ giúp, và **không có hành động nào bị k
 
 ## 3A — Run Lock Interface
 
-*Điều khiển vẫn nằm trên điện thoại nhưng **bị khoá sau một thao tác giữ**, nên không thể bấm nhầm.*
+_Điều khiển vẫn nằm trên điện thoại nhưng **bị khoá sau một thao tác giữ**, nên không thể bấm nhầm._
 
 > **Ý tưởng cốt lõi là cái khoá, không phải "nút to hơn".** Chạm thì không có gì xảy ra. Giữ
 > là con đường duy nhất. Giữ **chính là** hành động xác nhận — không có bước xác nhận thứ hai.
@@ -57,6 +57,7 @@ không cần facilitator trợ giúp, và **không có hành động nào bị k
 > hình này.
 
 Quan sát:
+
 - Họ có đọc chữ `HOLD` trên nút không, hay chạm luôn theo phản xạ?
 - Họ có nhận ra biểu tượng 🔒 không?
 
@@ -100,8 +101,8 @@ Quan sát:
 
 9. Bạn thấy gì ở đây? Bạn sẽ làm gì để sang bài tiếp theo?
 10. Có chức năng nào bạn muốn có ở màn hình này mà không thấy không?
-    *(Ghi lại nếu họ nhắc tới nút "quay lại bài trước" — đây là quyết định thiết kế có chủ đích:
-    nút `<<` bị bỏ vì đó là hành động hiếm nhất và ít đáng chiếm một target nhất khi đang chạy.)*
+    _(Ghi lại nếu họ nhắc tới nút "quay lại bài trước" — đây là quyết định thiết kế có chủ đích:
+    nút `<<` bị bỏ vì đó là hành động hiếm nhất và ít đáng chiếm một target nhất khi đang chạy.)_
 11. Ở đây các nút **không cần giữ**, chỉ chạm là được. Bạn thấy như vậy có nhất quán không?
 
 **Đưa `3A-5`** (● RUNNING, 6:03/km, ▶ RESUMED, ♫ MUSIC).
@@ -113,11 +114,11 @@ Quan sát:
 
 ## 3B — Earbud Controls
 
-*Điều khiển chuyển sang **một thiết bị khác** — tai nghe — nên điện thoại không cần rời túi.*
+_Điều khiển chuyển sang **một thiết bị khác** — tai nghe — nên điện thoại không cần rời túi._
 
 > **Bất đối xứng có chủ đích:** 3B **dạy** thao tác ngay ở Sheet 1, trong khi 2A cố ý **không
-> dạy gì cả**. Hai cái đo hai thứ khác nhau: 2A đo *người dùng có tự suy ra được cue không*;
-> 3B đo *một thao tác đã được dạy có sống sót qua mồ hôi và chuyển động không*. Nếu không nói
+> dạy gì cả**. Hai cái đo hai thứ khác nhau: 2A đo _người dùng có tự suy ra được cue không_;
+> 3B đo _một thao tác đã được dạy có sống sót qua mồ hôi và chuyển động không_. Nếu không nói
 > rõ điểm này trên explanation card thì nó bị đọc thành mâu thuẫn.
 
 > **"Pause" phải nói rõ là pause cái gì.** Tạm dừng nhạc và tạm dừng buổi chạy có hậu quả hoàn
@@ -171,8 +172,8 @@ Ghi lại **họ thử gì tiếp theo**: gõ lại, gõ mạnh hơn, gõ chậm
 
 7. Cái gì vừa được tạm dừng?
 8. Buổi chạy của bạn có còn được ghi không? Sao bạn biết?
-9. Nếu bạn muốn tạm dừng **cả buổi chạy** thì bạn làm thế nào? *(3B **không** có thao tác cho
-   việc này — ghi lại phản ứng của họ; đây là một weakness thật.)*
+9. Nếu bạn muốn tạm dừng **cả buổi chạy** thì bạn làm thế nào? _(3B **không** có thao tác cho
+   việc này — ghi lại phản ứng của họ; đây là một weakness thật.)_
 
 ### Task 3B-T3 — Chuyển bài
 
@@ -187,11 +188,11 @@ Ghi lại **họ thử gì tiếp theo**: gõ lại, gõ mạnh hơn, gõ chậm
 
 12. Thao tác thứ ba — **giữ lâu để nghe pace cue** — hôm nay mình chưa cho bạn thử. Bạn nghĩ
     bạn có nhớ nó không? Bạn có dùng không?
-    > *Thao tác này được **dạy nhưng không được test**. Ghi rõ điều đó vào WEAKNESSES trên
-    > explanation card — đừng viết như thể đã kiểm chứng.*
+    > _Thao tác này được **dạy nhưng không được test**. Ghi rõ điều đó vào WEAKNESSES trên
+    > explanation card — đừng viết như thể đã kiểm chứng._
 13. Việc điện thoại không bao giờ phải rời túi — với bạn nó có giá trị đến mức nào?
-14. Bạn có tai nghe hỗ trợ thao tác chạm không? Bạn có dùng thật không? *(Nếu họ không dùng
-    trong đời thật, ghi lại — nó ảnh hưởng tới cách diễn giải câu trả lời của người đó.)*
+14. Bạn có tai nghe hỗ trợ thao tác chạm không? Bạn có dùng thật không? _(Nếu họ không dùng
+    trong đời thật, ghi lại — nó ảnh hưởng tới cách diễn giải câu trả lời của người đó.)_
 
 **SEQ** cho 3B.
 
@@ -199,13 +200,13 @@ Ghi lại **họ thử gì tiếp theo**: gõ lại, gõ mạnh hơn, gõ chậm
 
 ## 3C — Voice-Free Quick Actions
 
-*Điều khiển vẫn trên điện thoại nhưng **cái đích bị bỏ đi** — cả màn hình là nút.*
+_Điều khiển vẫn trên điện thoại nhưng **cái đích bị bỏ đi** — cả màn hình là nút._
 
 > **Ý tưởng thật là "không có đích", không phải "không dùng giọng nói".** 3A và 3B cũng đều
 > không dùng giọng nói, nên cái tên không phân biệt được gì. Thứ 3C loại bỏ là **việc phải
 > nhắm**: không có gì để trúng thì không có gì để trượt — trả lời trực tiếp cho vấn đề bấm
-> nhầm đằng sau P3. *(Tên được giữ vì đã khoá trong `PA3-Analysis.pdf` và tiêu đề video;
-> explanation card phải nêu đúng sự khác biệt thật.)*
+> nhầm đằng sau P3. _(Tên được giữ vì đã khoá trong `PA3-Analysis.pdf` và tiêu đề video;
+> explanation card phải nêu đúng sự khác biệt thật.)_
 
 ### Task 3C-T1 — Đọc hiểu quy tắc "không có đích"
 
@@ -234,8 +235,8 @@ Long press → Pace cue, `[START]`).
 > Bây giờ bạn muốn tạm dừng nhạc. Nhưng bạn đang chạy và **không nhìn màn hình** — mình nhờ
 > bạn chạm hai lần vào bất kỳ đâu trên tờ giấy, kể cả góc, mà không nhìn.
 
-*(Để họ trúng góc hoặc mép giấy một cách có chủ ý — "chỗ nào cũng được" chính là tuyên bố đang
-được kiểm chứng.)*
+_(Để họ trúng góc hoặc mép giấy một cách có chủ ý — "chỗ nào cũng được" chính là tuyên bố đang
+được kiểm chứng.)_
 
 **Đưa `3C-4`** (gesture sketch trúng **góc** + ● RUNNING, ♫ MUSIC PAUSED, "Run still recording",
 "Double tap to resume").
@@ -248,7 +249,7 @@ Long press → Pace cue, `[START]`).
 
 **Đưa `3C-5`** (▶ RESUMED, ♫ MUSIC, 6:03/km).
 
-### Failure path — F-3C: kích hoạt nhầm *(bắt buộc chạy, một lần, không báo trước)*
+### Failure path — F-3C: kích hoạt nhầm _(bắt buộc chạy, một lần, không báo trước)_
 
 > **F-3C là card trung thực nhất của cả bộ.** Nếu chạm hai lần **ở bất cứ đâu** đều pause nhạc,
 > thì một cái túi quần xóc nảy cũng làm được điều đó — chính là vấn đề kích hoạt nhầm mà 3A
@@ -261,10 +262,10 @@ panel F-3C "Fired by accident".
 8. Chuyện gì vừa xảy ra?
 9. Bạn nghĩ vì sao?
 10. Nếu điều này xảy ra vài lần trong một buổi chạy, bạn còn dùng tính năng này không?
-11. Bạn có muốn có một cách khoá lại như *(3A)* không, kể cả khi phải thao tác chậm hơn?
+11. Bạn có muốn có một cách khoá lại như _(3A)_ không, kể cả khi phải thao tác chậm hơn?
 
-*(Nếu còn thời gian: chạy thêm panel "Not recognised" — giữ lâu bị đọc thành chạm hai lần, hoặc
-ngược lại — và ghi lại họ thử gì tiếp theo.)*
+_(Nếu còn thời gian: chạy thêm panel "Not recognised" — giữ lâu bị đọc thành chạm hai lần, hoặc
+ngược lại — và ghi lại họ thử gì tiếp theo.)_
 
 **SEQ** cho 3C.
 
@@ -278,11 +279,11 @@ nghe) · `3C-4` (chạm hai lần vào góc màn hình).
 1. Ba cách này khác nhau ở chỗ nào, theo lời của bạn?
 2. Xếp hạng theo tiêu chí **làm đúng việc mình muốn ngay lần đầu, khi đang chạy**:
 
-   | Hạng | Prototype | Lý do (nguyên văn) |
-   | --- | --- | --- |
-   | 1 | 3C | Dễ dùng, không cần nhìn màn hình; cần rung cho long press. |
-   | 2 | 3B | Nhanh và tiện nhưng lo tai nghe không hỗ trợ. |
-   | 3 | 3A | Dễ nhấn nhầm và phải nhìn màn hình. |
+   | Hạng | Prototype | Lý do (nguyên văn)                                         |
+   | ---- | --------- | ---------------------------------------------------------- |
+   | 1    | 3C        | Dễ dùng, không cần nhìn màn hình; cần rung cho long press. |
+   | 2    | 3B        | Nhanh và tiện nhưng lo tai nghe không hỗ trợ.              |
+   | 3    | 3A        | Dễ nhấn nhầm và phải nhìn màn hình.                        |
 
 3. Cách nào bạn thấy **dễ bấm nhầm** nhất? Cách nào **an toàn** nhất?
 4. Cách nào **nhanh** nhất khi đang chạy? Nhanh và an toàn có phải cùng một cái không?
@@ -295,54 +296,54 @@ nghe) · `3C-4` (chạm hai lần vào góc màn hình).
 
 > Hoàn thành từ transcript và follow-up của P02.
 
-**Participant:** P02  **Ngày:** 15/08/2026  **Facilitator:** Luân  **Note-taker:** Luân
+**Participant:** P02 **Ngày:** 15/08/2026 **Facilitator:** Luân **Note-taker:** Luân
 **Thứ tự alternative đã dùng:** 3A → 3B → 3C
 
 ### Task success & SEQ
 
-| Task | Nội dung | Kết quả (TC / TC-G / TB) | Số lần can thiệp | SEQ (1–7) |
-| --- | --- | --- | --- | --- |
-| 3A-T1 | Tạm dừng buổi chạy trên màn hình khoá | TC | Không ghi nhận | 4 (toàn 3A) |
-| 3A-T2 | Chuyển bài hát | TC | Không ghi nhận | 4 (toàn 3A) |
-| 3B-T1 | Hiểu và nhớ 3 thao tác tai nghe | TC-G | Không ghi nhận | 6 (toàn 3B) |
-| 3B-T2 | Tạm dừng nhạc bằng tai nghe (có F-3B) | TC | Không ghi nhận | 6 (toàn 3B) |
-| 3B-T3 | Chuyển bài bằng thao tác vuốt | TC | Không ghi nhận | 6 (toàn 3B) |
-| 3C-T1 | Hiểu quy tắc "không có đích" | TC | Không ghi nhận | 7 (toàn 3C) |
-| 3C-T2 | Nghe pace cue bằng thao tác giữ lâu | TC | Không ghi nhận | 7 (toàn 3C) |
-| 3C-T3 | Chạm hai lần vào góc, không nhìn | TC | Không ghi nhận | 7 (toàn 3C) |
+| Task  | Nội dung                              | Kết quả (TC / TC-G / TB) | Số lần can thiệp | SEQ (1–7)   |
+| ----- | ------------------------------------- | ------------------------ | ---------------- | ----------- |
+| 3A-T1 | Tạm dừng buổi chạy trên màn hình khoá | TC                       | 0                | 4 (toàn 3A) |
+| 3A-T2 | Chuyển bài hát                        | TC                       | 0                | 4 (toàn 3A) |
+| 3B-T1 | Hiểu và nhớ 3 thao tác tai nghe       | TC-G                     | 1                | 6 (toàn 3B) |
+| 3B-T2 | Tạm dừng nhạc bằng tai nghe (có F-3B) | TC                       | 0                | 6 (toàn 3B) |
+| 3B-T3 | Chuyển bài bằng thao tác vuốt         | TC                       | 0                | 6 (toàn 3B) |
+| 3C-T1 | Hiểu quy tắc "không có đích"          | TC                       | 0                | 7 (toàn 3C) |
+| 3C-T2 | Nghe pace cue bằng thao tác giữ lâu   | TC                       | 0                | 7 (toàn 3C) |
+| 3C-T3 | Chạm hai lần vào góc, không nhìn      | TC                       | 0                | 7 (toàn 3C) |
 
 ### Hành vi ở failure path
 
-| Card | Có dùng không | Participant thử gì tiếp theo | Sau bao lâu |
-| --- | --- | --- | --- |
-| F-3A tap bị bỏ qua | ☒ | Muốn progress ring và rung | Ngay khi không thấy feedback |
-| F-3A thả tay sớm | ☒ | Hold lại | Không ghi nhận |
-| F-3B thao tác không nhận | ☒ | Double tap lại rồi lấy phone | Sau 1–2 lần |
-| F-3C kích hoạt nhầm | ☒ | Bỏ tính năng nếu tiếp diễn | Ngay sau khi nhận ra |
-| F-3C thao tác không nhận | ☐ | Không chạy | Không áp dụng |
+| Card                     | Có dùng không | Participant thử gì tiếp theo | Sau bao lâu                  |
+| ------------------------ | ------------- | ---------------------------- | ---------------------------- |
+| F-3A tap bị bỏ qua       | ☒             | Muốn progress ring và rung   | Ngay khi không thấy feedback |
+| F-3A thả tay sớm         | ☒             | Hold lại                     | Khoảng 1-2 giây              |
+| F-3B thao tác không nhận | ☒             | Double tap lại rồi lấy phone | Sau 1–2 lần                  |
+| F-3C kích hoạt nhầm      | ☒             | Bỏ tính năng nếu tiếp diễn   | Ngay sau khi nhận ra         |
+| F-3C thao tác không nhận | ☐             | Không chạy                   | Không áp dụng                |
 
 ### Hiểu đúng "pause nhạc" và "pause buổi chạy"
 
 | Prototype | Participant hiểu là gì (trước khi thấy sheet kết quả) | Đúng / Sai |
-| --- | --- | --- |
-| 3B | Chỉ pause nhạc; run tiếp tục | Đúng |
-| 3C | Chỉ pause nhạc; dừng run bằng cách khác | Đúng |
+| --------- | ----------------------------------------------------- | ---------- |
+| 3B        | Chỉ pause nhạc; run tiếp tục                          | Đúng       |
+| 3C        | Chỉ pause nhạc; dừng run bằng cách khác               | Đúng       |
 
 ### Quan sát
 
-| Mã | Quan sát (participant **làm gì / nói gì**) | Diễn giải của nhóm (ghi riêng) |
-| --- | --- | --- |
-| P02-S3-O1 | Hai hold button và thiếu feedback gây không chắc chắn. | 3A cần rung/progress rõ. |
-| P02-S3-O2 | Earbud nhanh nhưng phụ thuộc thiết bị. | Compatibility là rủi ro của 3B. |
-| P02-S3-O3 | 3C dễ dùng nhưng có accidental activation. | Cần guard và rung xác nhận. |
+| Mã        | Quan sát (participant **làm gì / nói gì**)             | Diễn giải của nhóm (ghi riêng)  |
+| --------- | ------------------------------------------------------ | ------------------------------- |
+| P02-S3-O1 | Hai hold button và thiếu feedback gây không chắc chắn. | 3A cần rung/progress rõ.        |
+| P02-S3-O2 | Earbud nhanh nhưng phụ thuộc thiết bị.                 | Compatibility là rủi ro của 3B. |
+| P02-S3-O3 | 3C dễ dùng nhưng có accidental activation.             | Cần guard và rung xác nhận.     |
 
 ### Trích dẫn nguyên văn
 
-| # | Câu nói | Bối cảnh |
-| --- | --- | --- |
-| 1 | “không dùng sẽ đỡ bị gián đoạn việc chạy hơn” | 3B |
-| 2 | “chạm trên màn hình dễ lỗi nhất, rồi tới tai nghe, cuối cùng là nhấn nút” | So sánh lỗi |
-| 3 | “cái tap anywhere nghe cũng hay, không cần phải nhìn điện thoại” | 3C |
+| #   | Câu nói                                                                   | Bối cảnh    |
+| --- | ------------------------------------------------------------------------- | ----------- |
+| 1   | “không dùng sẽ đỡ bị gián đoạn việc chạy hơn”                             | 3B          |
+| 2   | “chạm trên màn hình dễ lỗi nhất, rồi tới tai nghe, cuối cùng là nhấn nút” | So sánh lỗi |
+| 3   | “cái tap anywhere nghe cũng hay, không cần phải nhìn điện thoại”          | 3C          |
 
 ---
 
@@ -350,35 +351,35 @@ nghe) · `3C-4` (chạm hai lần vào góc màn hình).
 
 Nguồn: quang/transcript_quang.md. **Metadata và thứ tự:** P02-FU-META.
 
-| Task | Kết quả có bằng chứng | Dữ liệu còn thiếu |
-| --- | --- | --- |
-| 3A-T1 | TC: tự mô tả Hold → Holding → Pause → End Run; 1.2 giây chấp nhận được, 3 giây là lâu. | SEQ |
-| 3A-T2 | TC: chọn Skip Track; muốn tap tức thời, swipe và previous-track. | SEQ |
-| 3B-T1 | TC-G: ban đầu chưa hiểu gesture mapping/pace cue; sau đó nhớ long press. | SEQ |
-| 3B-T2 | TC: double tap pause nhạc; nếu fail sẽ thử lại 1–2 lần. | SEQ |
-| 3B-T3 | Hiểu swipe; cho rằng swipe dễ trượt khi tay có mồ hôi. | SEQ |
-| 3C-T1 | TC: hiểu whole-screen/no-target và chạm tùy ý. | SEQ |
-| 3C-T2 | TC: dùng long press và muốn nghe pace. | SEQ |
-| 3C-T3 | TC: double tap anywhere, hiểu chỉ pause nhạc. | SEQ |
+| Task  | Kết quả có bằng chứng                                                                  | Dữ liệu còn thiếu |
+| ----- | -------------------------------------------------------------------------------------- | ----------------- |
+| 3A-T1 | TC: tự mô tả Hold → Holding → Pause → End Run; 1.2 giây chấp nhận được, 3 giây là lâu. | SEQ               |
+| 3A-T2 | TC: chọn Skip Track; muốn tap tức thời, swipe và previous-track.                       | SEQ               |
+| 3B-T1 | TC-G: ban đầu chưa hiểu gesture mapping/pace cue; sau đó nhớ long press.               | SEQ               |
+| 3B-T2 | TC: double tap pause nhạc; nếu fail sẽ thử lại 1–2 lần.                                | SEQ               |
+| 3B-T3 | Hiểu swipe; cho rằng swipe dễ trượt khi tay có mồ hôi.                                 | SEQ               |
+| 3C-T1 | TC: hiểu whole-screen/no-target và chạm tùy ý.                                         | SEQ               |
+| 3C-T2 | TC: dùng long press và muốn nghe pace.                                                 | SEQ               |
+| 3C-T3 | TC: double tap anywhere, hiểu chỉ pause nhạc.                                          | SEQ               |
 
 ### Failure paths và pause semantics
 
-| Mục | Dữ liệu |
-| --- | --- |
-| F-3A | Tap thiếu feedback làm participant không chắc; muốn progress ring và rung. |
-| F-3B | Sẽ double tap lại; bỏ cuộc sau 1–2 lần fail. |
-| F-3C accidental | “chắc chắn là không xài nữa vì nó khá là phiền”. |
-| 3B pause | “tất nhiên là chỉ tắt nhạc thôi” — đúng. |
-| 3C pause | “dừng nhạc, dừng chạy là nhấn cách khác” — đúng. |
+| Mục             | Dữ liệu                                                                    |
+| --------------- | -------------------------------------------------------------------------- |
+| F-3A            | Tap thiếu feedback làm participant không chắc; muốn progress ring và rung. |
+| F-3B            | Sẽ double tap lại; bỏ cuộc sau 1–2 lần fail.                               |
+| F-3C accidental | “chắc chắn là không xài nữa vì nó khá là phiền”.                           |
+| 3B pause        | “tất nhiên là chỉ tắt nhạc thôi” — đúng.                                   |
+| 3C pause        | “dừng nhạc, dừng chạy là nhấn cách khác” — đúng.                           |
 
 ### Quan sát và diễn giải
 
-| Mã | Quan sát | Diễn giải |
-| --- | --- | --- |
-| P02-S3-O1 | Không chắc hold hoạt động nếu không nhìn; hai hold buttons dễ nhầm. | Cần multimodal feedback và target rõ hơn. |
-| P02-S3-O2 | Gesture tai nghe phụ thuộc model và vùng cảm ứng. | Learnability/compatibility là rủi ro của 3B. |
-| P02-S3-O3 | Xếp khả năng lỗi: whole-screen → earbud → button; earbud nhanh nhất. | Trade-off giữa speed và error prevention. |
-| P02-S3-O4 | Accidental activation khiến participant bỏ 3C. | 3C cần khóa/pocket detection. |
+| Mã        | Quan sát                                                             | Diễn giải                                    |
+| --------- | -------------------------------------------------------------------- | -------------------------------------------- |
+| P02-S3-O1 | Không chắc hold hoạt động nếu không nhìn; hai hold buttons dễ nhầm.  | Cần multimodal feedback và target rõ hơn.    |
+| P02-S3-O2 | Gesture tai nghe phụ thuộc model và vùng cảm ứng.                    | Learnability/compatibility là rủi ro của 3B. |
+| P02-S3-O3 | Xếp khả năng lỗi: whole-screen → earbud → button; earbud nhanh nhất. | Trade-off giữa speed và error prevention.    |
+| P02-S3-O4 | Accidental activation khiến participant bỏ 3C.                       | 3C cần khóa/pocket detection.                |
 
 ### Trích dẫn nguyên văn
 
@@ -392,15 +393,16 @@ Nguồn: quang/transcript_quang.md. **Metadata và thứ tự:** P02-FU-META.
 
 **Ngày:** 15/08/2026 · **Thứ tự:** 3A → 3B → 3C
 
-| Prototype | Kết quả chính | SEQ |
-| --- | --- | --- |
-| 3A | Hiểu Hold to Pause; 1.2 giây chấp nhận được; thiếu feedback và hai hold button dễ nhầm. | 4/7 |
-| 3B | Hiểu gesture sau khi học; earbud nhanh nhất nhưng lo thiết bị không hỗ trợ và gesture fail khi có mồ hôi. | 6/7 |
-| 3C | Dễ dùng, không cần nhìn; hiểu chỉ pause nhạc nhưng accidental activation là rủi ro lớn. | 7/7 |
+| Prototype | Kết quả chính                                                                                             | SEQ |
+| --------- | --------------------------------------------------------------------------------------------------------- | --- |
+| 3A        | Hiểu Hold to Pause; 1.2 giây chấp nhận được; thiếu feedback và hai hold button dễ nhầm.                   | 4/7 |
+| 3B        | Hiểu gesture sau khi học; earbud nhanh nhất nhưng lo thiết bị không hỗ trợ và gesture fail khi có mồ hôi. | 6/7 |
+| 3C        | Dễ dùng, không cần nhìn; hiểu chỉ pause nhạc nhưng accidental activation là rủi ro lớn.                   | 7/7 |
 
 **Pause semantics:** 3B và 3C chỉ pause nhạc, run tiếp tục recording.  
 **Failure findings:** F-3B sẽ thử lại 1–2 lần; F-3C có thể khiến participant bỏ tính năng;
-hold/long press cần rung xác nhận.  
+hold/long press cần rung xác nhận.
+
 > **Lưu ý diễn giải:** ease retrospective được tách khỏi độ tin cậy và lỗi quan sát được trong live session.
 
 **Ranking retrospective theo khả năng làm đúng việc mong muốn ngay lần đầu:** 3C → 3B → 3A.  
@@ -416,8 +418,8 @@ hold/long press cần rung xác nhận.
 
 ### Preference
 
-| Hạng | Prototype | Lý do |
-| --- | --- | --- |
-| 1 | 3C | Dễ dùng và không cần nhìn màn hình khi chủ động thao tác; dù vậy participant đánh giá screen tapping dễ lỗi nhất và không chấp nhận kích hoạt nhầm trong túi. |
-| 2 | 3B | Nhanh và tiện nhưng lo tai nghe không hỗ trợ. |
-| 3 | 3A | Dễ nhấn nhầm và phải nhìn màn hình. |
+| Hạng | Prototype | Lý do                                                                                                                                                         |
+| ---- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | 3C        | Dễ dùng và không cần nhìn màn hình khi chủ động thao tác; dù vậy participant đánh giá screen tapping dễ lỗi nhất và không chấp nhận kích hoạt nhầm trong túi. |
+| 2    | 3B        | Nhanh và tiện nhưng lo tai nghe không hỗ trợ.                                                                                                                 |
+| 3    | 3A        | Dễ nhấn nhầm và phải nhìn màn hình.                                                                                                                           |
