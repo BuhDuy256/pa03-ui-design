@@ -321,11 +321,11 @@ Bày lại một sheet đại diện: `2A-2` (5:30/km, mặt trước trống) �
 1. Ba cách này khác nhau ở chỗ nào, theo lời của bạn?
 2. Xếp hạng theo tiêu chí **giúp bạn chỉnh pace mà không phải nhìn màn hình**:
 
-   | Hạng | Prototype | Lý do (nguyên văn) |
-   | ---- | --------- | ------------------ |
-   | 1    | 2B        | Dễ điều chỉnh nhịp độ dựa vào phản xạ; beat nên nhẹ hơn. |
-   | 2    | 2A        | Đơn giản nhưng haptic pattern khó phân biệt và dễ bỏ sót. |
-   | 3    | 2C        | Participant chưa thấy rõ mức hữu ích lâu dài. |
+   > **Giới hạn dữ liệu:** ranking không hợp lệ vì prompt follow-up đã viết sẵn thứ hạng và lý do, đồng thời dẫn một ranking trước đó không tồn tại trong transcript.
+
+   | Hạng | Prototype | Lý do |
+   | ---- | --------- | ----- |
+   | Không ghi nhận | Không ghi nhận | Không thu được ranking độc lập từ participant. |
 
 3. Cách nào bạn **hiểu được nhanh nhất mà không cần ai giải thích**?
 4. Cách nào bạn nghĩ sẽ **sống sót được** trong điều kiện chạy thật — mồ hôi, gió, xe cộ, thở gấp?
@@ -419,7 +419,7 @@ Participant cho rằng chuyển động cơ thể khiến cả ba pattern khó c
 | 2B        | Không hiểu “cadence”; hiểu beat chậm yêu cầu giảm pace; beat liên tục gây khó chịu khi muốn đi bộ.        | 4/7 |
 | 2C        | Chấp nhận delay 25 giây, muốn chỉ báo khi lệch kéo dài và bỏ qua dao động nhỏ.                            | 6/7 |
 
-**Ranking:** 2B → 2A → 2C.  
+> **Ranking:** Không ghi nhận hợp lệ. Follow-up đã đưa sẵn thứ hạng/lý do và nhắc đến một ranking trước đó không tồn tại trong transcript, nên không sử dụng phần này làm bằng chứng preference.  
 **Dễ hiểu nhất:** 2B · **Dễ bỏ sót nhất:** 2A · **Ổn định nhất:** participant chọn 2A.  
 **Cải tiến 2B:** beat nhẹ nhàng hơn để tránh đau đầu.
 
@@ -433,6 +433,4 @@ Participant cho rằng chuyển động cơ thể khiến cả ba pattern khó c
 
 | Hạng | Prototype | Lý do                                              |
 | ---- | --------- | -------------------------------------------------- |
-| 1    | 2B        | Dễ điều chỉnh nhịp theo phản xạ; beat nên nhẹ hơn. |
-| 2    | 2A        | Đơn giản nhưng pattern khó phân biệt và dễ bỏ sót. |
-| 3    | 2C        | Participant chưa thấy rõ mức hữu ích lâu dài.      |
+| Không ghi nhận | Không ghi nhận | Câu hỏi follow-up có sẵn thứ hạng và lý do, vì vậy ranking bị dẫn và không được dùng trong phân tích. |

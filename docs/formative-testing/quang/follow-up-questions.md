@@ -54,7 +54,7 @@ Xem 1B-1 rồi 1B-2 nhưng chưa xem các sheet sau:
 2. Tin nhắn hiện đang ở đâu: bị mất, bị chặn tới cuối run, hay đang đợi một thời điểm khác?  
    **Trả lời:** t nghĩ là đang bị chặn, maybe là cuối run nó hiện ra
 3. Bạn nghĩ khi nào mình sẽ được nghe/nhận tin nhắn đó?  
-   **Trả lời:** chắc là khi chạy xong
+   **Trả lời:** chắc là khi bài hát hiện tại kết thúc, trước khi bài tiếp theo bắt đầu
 
 ### P02-FU-S1-3 — 1B delivery
 
@@ -110,6 +110,8 @@ Xếp hạng khả năng giữ music flow:
 - **Hạng 1:** 1A **Lý do:** nhìn vô là hiểu cần làm gì
 - **Hạng 2:** 1C **Lý do:** không ngắt nhạc nhưng t thấy tính năng này cũng hơi phế
 - **Hạng 3:** 1B **Lý do:** nhạc nó bị ngắt
+
+t vẫn xếp 1A hạng nhất về khả năng giữ music flow vì dễ hiểu và chặn được thông báo. Tuy nhiên, t thấy việc tạo riêng tính năng này trong app có thể không cần thiết vì điện thoại đã có không làm phiền. Nếu 1A không cung cấp thêm khả năng cấu hình hoặc tự động hóa tốt hơn DND thì t sẽ dùng DND có sẵn.
 
 Prototype nào phiền nhất, và bạn muốn sửa một điểm gì ở prototype hạng nhất?
 **Trả lời:** phiền nhất chắc là 1B do nó ảnh hưởng nhạc. prototype hạng nhất chắc là sẽ lưu lựa chọn của t lại để lần sau nó auto chọn luôn
@@ -194,7 +196,7 @@ Chấm retrospective ease score:
 
 - **3A Run Lock:** 4/7. **Lý do:** dễ nhấn lộn nút, với không biết khi nào là hold đủ
 - **3B Earbud Controls:** 6/7. **Lý do:** dễ xài nhưng mà sợ tai nghe của t nó không support
-- **3C Whole-screen Quick Actions:** 7/7. **Lý do:** dễ xài không cần nhìn điện thoại, cái long press cũng không biết như nào cho đủ
+- **3C Whole-screen Quick Actions:** 7/7. **Lý do:** dễ hiểu và dễ thực hiện khi chủ động sử dụng, vì không cần nhìn hoặc nhắm đúng nút. điểm này không có nghĩa là 3C ít lỗi nhất, chạm màn hình vẫn có nguy cơ kích hoạt nhầm, đặc biệt khi điện thoại nằm trong túi.
 
 ### P02-FU-S3-RANK
 

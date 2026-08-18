@@ -394,15 +394,21 @@ Nguồn: girl/transcript.md. **Metadata và thứ tự:** P01-FU-META.
 | Prototype | Kết quả chính                                                                                                                                  | SEQ            |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | 3A        | Tự tìm Hold to Pause và Skip Track; 1 giây phù hợp, 3 giây khó chịu; muốn rung khi hold đủ.                                                    | Không ghi nhận |
-| 3B        | Nhớ double tap và swipe; nhớ sai long press pace cue là thao tác trên điện thoại; sẽ thử lại 3–4 lần khi fail; lo khác biệt giữa các tai nghe. | 5/7            |
+| 3B        | Nhớ double tap và swipe; nhớ sai long press pace cue là thao tác trên điện thoại; sẽ thử lại 3–4 lần khi fail. Trong follow-up, sau prompt có nhắc sẵn compatibility, participant tiếp tục bày tỏ lo ngại về khả năng tai nghe hỗ trợ thao tác; không có quote tương ứng trong transcript live P01. | 5/7            |
 | 3C        | Hiểu double tap pause nhạc và thích no-target; lo accidental activation trong túi; muốn rung xác nhận.                                         | Không ghi nhận |
 
 **Pause semantics:** double tap chỉ pause nhạc.  
 **Failure findings:** long press dễ lỗi nhất vì không biết giữ bao lâu; hold chưa đủ thì không
 thực hiện, hold đủ cần rung.  
-**Ranking:** 3C → 3B → 3A.  
-**Nhanh nhất:** 3B · **An toàn nhất:** 3A · **Dễ lỗi nhất:** 3B.  
-**Cải tiến 3C:** thêm rung xác nhận thao tác.
+> **Lưu ý diễn giải:** preference, lỗi khi chủ động thao tác và accidental activation là các tiêu chí riêng, không được đọc như cùng một kết quả.
+
+**Ranking theo khả năng làm đúng thao tác mong muốn ngay lần đầu:** 3C → 3B → 3A.  
+**Nhanh nhất:** 3B · **An toàn/ít kích hoạt nhầm nhất:** 3A.  
+**Gesture chủ động dễ thực hiện lỗi nhất:** 3B, đặc biệt long press vì participant không biết giữ đến khi nào là đủ.  
+**Rủi ro riêng của 3C:** trong live failure path, participant cho biết nếu double tap bị kích hoạt nhầm trong túi liên tục 3–4 lần thì sẽ muốn bỏ tính năng.  
+**Cải tiến 3C:** thêm rung xác nhận thao tác và cơ chế chống kích hoạt trong túi.
+
+> **Giới hạn provenance của 3B:** concern “mỗi tai nghe mỗi khác” được nhắc sẵn trong prompt follow-up và không xuất hiện trong transcript live P01. Không xem đây là quote hoặc phát hiện live tự phát của P01.
 
 **Trích dẫn:**
 
@@ -414,6 +420,6 @@ thực hiện, hold đủ cần rung.
 
 | Hạng | Prototype | Lý do                                                    |
 | ---- | --------- | -------------------------------------------------------- |
-| 1    | 3C        | Tiện, dễ dùng, không cần nhắm target; cần rung xác nhận. |
+| 1    | 3C        | Tiện, dễ dùng và không cần nhắm target khi chủ động thao tác; tuy nhiên cần cơ chế chống kích hoạt trong túi và rung xác nhận. |
 | 2    | 3B        | Nhanh, không nhìn màn hình nhưng lo gesture/thiết bị.    |
 | 3    | 3A        | Phải nhìn màn hình và có khả năng nhấn nhầm.             |

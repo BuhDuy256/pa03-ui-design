@@ -501,13 +501,16 @@ Nguồn: quang/transcript_quang.md. Các mã P02-FU nằm trong quang/follow-up-
 | Prototype | Kết quả chính | SEQ |
 | --- | --- | --- |
 | 1A | Nhận ra badge, hiểu số notification và tiếp tục chạy; muốn dùng notification shade theo thói quen. Critical contacts nên do người dùng và hệ thống cùng quyết định. | 7/7 |
-| 1B | Ban đầu hiểu nhầm message bị giữ tới cuối run; không muốn nghe nội dung giữa run, chỉ muốn chủ động xem người gửi. | 5/7 |
+| 1B | Trước `1B-4`, participant đoán message bị giữ tới cuối run. Sau khi `1B-4` tiết lộ delivery giữa hai bài, participant cho rằng thời điểm này hợp lý nhưng không quan trọng, không muốn nghe nội dung trong lúc chạy và sau đó xếp 1B cuối vì cảm nhận “nhạc nó bị ngắt”. | 5/7 |
 | 1C | Không tự hiểu cue; sau giải thích vẫn thấy ít hữu ích và hơi phân tâm; muốn cue notification khác pace alert. | 4/7 |
 
 **Critical bypass:** muốn nhạc nhỏ dần thay vì ngắt; nút volume/power có thể tắt chuông nhưng
 không reject call.  
-**Ranking:** 1A → 1C → 1B.  
-**Cải tiến 1A:** lưu lựa chọn để lần sau tự áp dụng.
+> **Lưu ý trình tự:** `1B-T2` ghi nhận cách hiểu ban đầu trước khi cơ chế được tiết lộ; ranking ghi nhận thái độ sau khi participant đã xem delivery ở `1B-4`.
+
+**Ranking sau khi xem `1B-4`:** 1A → 1C → 1B.  
+**Cải tiến 1A:** lưu lựa chọn để lần sau tự áp dụng.  
+> **Giới hạn về giá trị sản phẩm:** dù xếp 1A hạng nhất về giữ music flow, ở wrap-up P02 cho rằng chức năng chặn thông báo riêng là thừa vì có thể dùng DND/blocking sẵn của điện thoại. Ranking này không đồng nghĩa participant muốn một feature app riêng.
 
 **Trích dẫn:**
 
@@ -515,10 +518,10 @@ không reject call.
 - “không muốn nghe, thích thì t mở điện thoại ra check”
 - “cái này nó cũng hơi vô ích”
 
-### Preference
+### Preference theo tiêu chí giữ music flow
 
 | Hạng | Prototype | Lý do |
 | --- | --- | --- |
-| 1 | 1A | Dễ hiểu; nên lưu lựa chọn cho lần sau. |
+| 1 | 1A | Dễ hiểu và giữ music flow tốt nhất trong ba alternative; nên lưu lựa chọn cho lần sau. Tuy nhiên participant cho rằng chức năng riêng này có thể thừa vì điện thoại đã có DND/blocking. |
 | 2 | 1C | Không ngắt nhạc nhưng participant thấy ít hữu ích. |
 | 3 | 1B | Participant cảm nhận delivery làm gián đoạn nhạc. |

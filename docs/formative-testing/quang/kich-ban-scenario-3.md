@@ -401,20 +401,23 @@ Nguồn: quang/transcript_quang.md. **Metadata và thứ tự:** P02-FU-META.
 **Pause semantics:** 3B và 3C chỉ pause nhạc, run tiếp tục recording.  
 **Failure findings:** F-3B sẽ thử lại 1–2 lần; F-3C có thể khiến participant bỏ tính năng;
 hold/long press cần rung xác nhận.  
-**Ranking:** 3C → 3B → 3A.  
-**Nhanh nhất:** 3B · **An toàn nhất:** 3A.  
-**Cải tiến 3C:** thêm rung để biết long press đã đủ.
+> **Lưu ý diễn giải:** ease retrospective được tách khỏi độ tin cậy và lỗi quan sát được trong live session.
+
+**Ranking retrospective theo khả năng làm đúng việc mong muốn ngay lần đầu:** 3C → 3B → 3A.  
+**Dễ dùng nhất theo follow-up:** 3C (`7/7`) · **Nhanh nhất:** 3B · **An toàn/ít kích hoạt nhầm nhất:** 3A.  
+**Đánh giá lỗi trong live session:** participant nói thao tác chạm màn hình của 3C dễ lỗi nhất; khi thấy F-3C kích hoạt nhầm trong túi, participant cho biết sẽ bỏ tính năng vì quá phiền. Vì vậy `7/7` chỉ phản ánh ease khi chủ động thao tác, không chứng minh độ tin cậy.  
+**Cải tiến 3C:** thêm rung xác nhận long press và cơ chế chống pocket activation.
 
 **Trích dẫn:**
 
 - “không dùng sẽ đỡ bị gián đoạn việc chạy hơn”
-- “chạm trên màn hình dễ lỗi nhất, rồi tới tai nghe, cuối cùng là nhấn nút”
+- “chạm trên màn hình dễ lỗi nhất, rồi tới tai nghe, cuối cùng là nhấn nút” — đánh giá live về xác suất thao tác sai, không phải ranking preference ở follow-up.
 - “cái tap anywhere nghe cũng hay, không cần phải nhìn điện thoại”
 
 ### Preference
 
 | Hạng | Prototype | Lý do |
 | --- | --- | --- |
-| 1 | 3C | Dễ dùng, không cần nhìn màn hình; cần rung cho long press. |
+| 1 | 3C | Dễ dùng và không cần nhìn màn hình khi chủ động thao tác; dù vậy participant đánh giá screen tapping dễ lỗi nhất và không chấp nhận kích hoạt nhầm trong túi. |
 | 2 | 3B | Nhanh và tiện nhưng lo tai nghe không hỗ trợ. |
 | 3 | 3A | Dễ nhấn nhầm và phải nhìn màn hình. |

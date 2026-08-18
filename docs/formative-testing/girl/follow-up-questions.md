@@ -31,7 +31,7 @@ trong drawing-workspace.
 
 Cho xem 1B-1 rồi 1B-2, không giải thích. Có gì thay đổi? Tin nhắn đang ở đâu và khi nào bạn
 nghĩ mình sẽ nhận được nó?
-=> có cái icon thông báo ở trên góc, tin nhắn đang được chặn thông báo bởi app, em nghĩ là chạy xong là sẽ nhận được tin nhắn
+=> có một tin nhắn đang chờ. em nghĩ tin nhắn sẽ được đọc khi bài hát hiện tại kết thúc, trong khoảng trống trước bài tiếp theo
 
 ### P01-FU-S1-3 — 1B delivery
 
@@ -71,7 +71,7 @@ Trong đó 1 là rất khó hiểu, 7 là rất dễ hiểu.
 
 Xếp hạng 1A Focus Run, 1B Between-Track Delivery và 1C Ambient Audio Cue theo khả năng giữ
 music flow. Ghi lý do từng hạng; cách nào phiền nhất; participant muốn sửa gì ở hạng nhất?
-=> 1B là phiền nhất vì nó interrupt nhạc, rồi tới 1A do hơi phức tạp ở setup vì phải tốn thời gian đọc, rồi cuối cùng là 1C là tốt nhất. Hạng nhất nên nhỏ volumn nhạc lại một chút rồi để âm thanh reo chuông nhỏ rồi lớn dần lên
+=> 1B là phiền nhất vì nó interrupt nhạc, rồi tới 1A do hơi phức tạp ở setup vì phải tốn thời gian đọc, rồi cuối cùng là 1C là tốt nhất. Đối với 1C, em muốn nhạc giảm nhẹ và cue bắt đầu nhỏ rồi lớn dần. 
 
 ## Scenario 2 — chạy đầy đủ
 
@@ -195,10 +195,13 @@ về 0, hay cách khác?
 Xếp hạng 3A/3B/3C theo khả năng làm đúng ngay lần đầu. Hỏi cách nhanh nhất, an toàn nhất, dễ
 lỗi nhất và một cải tiến cho hạng nhất.
 => 3C thao tác tiện nhất, dễ sử dụng. rồi đến 3B, vừa chạy vừa thao tác với tai nghe thì hơi khó vì lúc đó tai mình cũng lắc lắc, nhưng vẫn tiện hơn vì không cần nhìn màn hình. 3A phải nhìn vào màn hình và có khả năng bấm lộn nữa.
+Em vẫn xếp 3C hạng nhất khi chủ động sử dụng vì dễ thao tác và không cần nhìn hoặc nhắm đúng nút. Tuy nhiên, nếu
+double tap có thể tự kích hoạt khi điện thoại nằm trong túi thì em sẽ không dùng 3C, trừ khi có cơ chế chống chạm
+nhầm.
 
-> 1. Cách nào nhanh nhất? **Trả lời:** 3B 
+> 1. Cách nào nhanh nhất? **Trả lời:** 3B
 > 2. Cách nào an toàn/ít kích hoạt nhầm nhất? **Trả lời:** 3A
-> 3. Cách nào dễ lỗi nhất? **Trả lời:** 3B
+> 3. Cách nào dễ lỗi nhất? **Trả lời:** Khi chủ động thao tác, 3B dễ lỗi nhất vì long press khó biết khi nào giữ đủ. Nhưng xét kích hoạt ngoài ý muốn, 3C có rủi ro lớn nhất khi điện thoại nằm trong túi
 > 4. Bạn muốn sửa một điểm gì ở 3C, prototype hạng nhất? **Trả lời:** thêm cái rung để biết được là nó có phản hồi hay không
 
 ## Wrap-up
@@ -206,7 +209,7 @@ lỗi nhất và một cải tiến cho hạng nhất.
 Thiết kế nào nhớ rõ nhất? Nếu chỉ làm một thiết kế thành app thì chọn gì? Cái nào phiền hơn
 giúp ích? Trời mưa/tay ướt/chạy đường đông thì cái nào hỏng? Còn thiếu tính năng gì?
 
-=> thiết kế nhớ rõ là thao tác giữ trên màn hình, cần thêm phản hồi rung để biết được là mình đang thực hiện được thao tác nào hay không hay là bị ignore. nếu chỉ làm một thiết kế thành app thì chọn 3C. 
+=> thiết kế nhớ rõ là thao tác giữ trên màn hình, cần thêm phản hồi rung để biết được là mình đang thực hiện được thao tác nào hay không hay là bị ignore. nếu chỉ làm một thiết kế thành app thì chọn 3C.
 
 Bạn đã trả lời thiết kế nhớ rõ nhất và thiết kế muốn làm thành app. Hãy trả lời thêm:
 

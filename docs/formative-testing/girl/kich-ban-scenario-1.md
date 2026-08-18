@@ -505,13 +505,16 @@ Nguồn: girl/transcript.md. Các mã P01-FU nằm trong girl/follow-up-question
 | Prototype | Kết quả chính                                                                                                                                              | SEQ |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | 1A        | Hiểu Focus Run và badge; muốn tự đặt critical contacts, lưu setup cho lần sau; sẽ tiếp tục chạy và xem notification sau.                                   | 6/7 |
-| 1B        | Ban đầu hiểu nhầm message là bị chặn tới cuối run; không muốn nghe message giữa lúc chạy và ưu tiên tự kiểm tra người gửi. Không đưa ra con số chờ cụ thể. | 6/7 |
+| 1B        | Trước `1B-4`, participant hiểu `✉` là tin nhắn bị giữ tới cuối run nên không tự nhận ra cơ chế between-track. Sau khi `1B-4` tiết lộ việc giao tin giữa hai bài, participant vẫn không muốn nghe tin trong lúc chạy, cho rằng cách này “interrupt nhạc” và xếp 1B cuối. Không đưa ra con số chờ cụ thể. | 6/7 |
 | 1C        | Hiểu cue là event từ app nhưng sẽ mở điện thoại kiểm tra; muốn notification và pace alert dùng âm khác nhau.                                               | 5/7 |
 
 **Critical bypass:** chấp nhận duck nhạc cho cuộc gọi khẩn cấp; muốn thao tác tắt chuông mà
 không từ chối cuộc gọi.  
-**Ranking:** 1C → 1A → 1B. 1B phiền nhất vì interrupt nhạc; 1A tốn công đọc setup.  
-**Cải tiến 1C:** giảm volume nhạc nhẹ, cue bắt đầu nhỏ rồi lớn dần.
+> **Lưu ý trình tự:** kết quả `1B-T2` đo khả năng tự suy ra cơ chế trước khi được giải thích; ranking được hỏi sau khi participant đã xem hành vi delivery ở `1B-4`.
+
+**Ranking sau khi xem `1B-4`:** 1C → 1A → 1B. 1B phiền nhất vì interrupt nhạc; 1A tốn công đọc setup.  
+**Cải tiến 1C hiện hành:** giảm nhẹ volume nhạc; cue non-critical bắt đầu nhỏ rồi lớn dần.  
+> **Tách phiên bản:** nhận xét live về tone ngắn và “tăng liên tục” thuộc phiên bản 1C cũ dùng pace cue. Đây là historical evidence, không phải recommendation cho 1C hiện hành dùng non-critical-event cue.
 
 **Trích dẫn:**
 
